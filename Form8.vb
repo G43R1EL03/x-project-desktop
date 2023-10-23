@@ -1,5 +1,5 @@
 ﻿Imports FontAwesome.Sharp
-Public Class Form1
+Public Class Form8
     Private currentBtn As IconButton
     Private leftBorderBtn As Panel
 
