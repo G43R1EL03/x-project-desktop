@@ -159,6 +159,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ayuda.resx">
+      <DependentUpon>Ayuda.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Blog.resx">
       <DependentUpon>Blog.vb</DependentUpon>
     </EmbeddedResource>
