@@ -1,6 +1,6 @@
 ﻿Imports System.Windows.Documents
 Imports FontAwesome.Sharp
-Public Class Main
+Public Class frmMenu
     Private currentBtn As IconButton
     Private leftBorderBtn As Panel
 
@@ -9,17 +9,7 @@ Public Class Main
         Me.FormBorderStyle = FormBorderStyle.Sizable
         Me.Bounds = Screen.PrimaryScreen.Bounds
 
-        ActivateButton(btnHome, RGBColors.Purple, "Home")
-
-        Dim homeForm As New Home()
-        homeForm.TopLevel = False
-        homeForm.FormBorderStyle = FormBorderStyle.None
-        homeForm.Dock = DockStyle.Fill
-        PanelContent.Controls.Clear()
-        PanelContent.Controls.Add(homeForm)
-        homeForm.Show()
-
-
+        ActivateButton(btnInventory, RGBColors.Purple, "Inventario")
 
     End Sub
 
@@ -71,24 +61,13 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
-        ActivateButton(sender, RGBColors.Purple, "Home")
 
-        Dim homeForm As New Home()
-        homeForm.TopLevel = False
-        homeForm.FormBorderStyle = FormBorderStyle.None
-        homeForm.Dock = DockStyle.Fill
-        PanelContent.Controls.Clear()
-        PanelContent.Controls.Add(homeForm)
-        homeForm.Show()
-
-    End Sub
 
     Private Sub btnInventory_Click(sender As Object, e As EventArgs) Handles btnInventory.Click
         ActivateButton(sender, RGBColors.Pink, "Inventario")
 
 
-        Dim inventoryForm As New Inventario()
+        Dim inventoryForm As New frmInventario()
 
         inventoryForm.TopLevel = False
         inventoryForm.FormBorderStyle = FormBorderStyle.None
@@ -102,7 +81,7 @@ Public Class Main
     Private Sub btnSales_Click(sender As Object, e As EventArgs) Handles btnSales.Click
         ActivateButton(sender, RGBColors.PalePink, "Ventas")
 
-        Dim ventasForm As New Ventas()
+        Dim ventasForm As New frmVentas()
 
 
         ventasForm.TopLevel = False
@@ -120,7 +99,7 @@ Public Class Main
         ActivateButton(sender, RGBColors.ShadeBlue, "Clientes")
 
 
-        Dim clientesForm As New Clientes()
+        Dim clientesForm As New frmClientes()
 
 
         clientesForm.TopLevel = False
@@ -136,7 +115,7 @@ Public Class Main
     Private Sub btnTickets_Click(sender As Object, e As EventArgs) Handles btnTickets.Click
         ActivateButton(sender, RGBColors.ShadePink, "Tickets")
 
-        Dim TicketsForm As New Tickets()
+        Dim TicketsForm As New frmTickets()
 
         TicketsForm.TopLevel = False
         TicketsForm.FormBorderStyle = FormBorderStyle.None
@@ -149,26 +128,10 @@ Public Class Main
 
     End Sub
 
-    Private Sub btnChat_Click(sender As Object, e As EventArgs) Handles btnChat.Click
-        ActivateButton(sender, RGBColors.LightBlue, "Chat")
-
-        Dim ChatForm As New Chat()
-
-        ChatForm.TopLevel = False
-        ChatForm.FormBorderStyle = FormBorderStyle.None
-        ChatForm.Dock = DockStyle.Fill
-
-        PanelContent.Controls.Clear()
-        PanelContent.Controls.Add(ChatForm)
-
-        ChatForm.Show()
-
-    End Sub
-
     Private Sub btnBlog_Click(sender As Object, e As EventArgs) Handles btnBlog.Click
         ActivateButton(sender, RGBColors.SugarCaneGreen, "Blog")
 
-        Dim BlogForm As New Blog()
+        Dim BlogForm As New frmBlogSugerencias()
 
         BlogForm.TopLevel = False
         BlogForm.FormBorderStyle = FormBorderStyle.None
@@ -185,7 +148,7 @@ Public Class Main
     Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
         ActivateButton(sender, RGBColors.Ambar, "Usuarios")
 
-        Dim UsuariosForm As New Usuario()
+        Dim UsuariosForm As New frmUsuarios()
 
 
         UsuariosForm.TopLevel = False
@@ -199,25 +162,18 @@ Public Class Main
     End Sub
 
     Private Sub btnHelp_Click(sender As Object, e As EventArgs) Handles btnHelp.Click
-        ActivateButton(sender, RGBColors.LimeGreen, "Ayuda")
+        ActivateButton(sender, RGBColors.RedAlert, "Ayuda")
+
+        Dim AyudaForm As New frmAyuda()
 
 
-        Dim AyudaForm As New Ayuda()
         AyudaForm.TopLevel = False
         AyudaForm.FormBorderStyle = FormBorderStyle.None
         AyudaForm.Dock = DockStyle.Fill
 
         PanelContent.Controls.Clear()
-
         PanelContent.Controls.Add(AyudaForm)
+
         AyudaForm.Show()
-
-    End Sub
-
-    Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Home.MdiParent = Me
-        Home.WindowState = FormWindowState.Normal
-        Home.FormBorderStyle = FormBorderStyle.None
-        Home.Show()
     End Sub
 End Class

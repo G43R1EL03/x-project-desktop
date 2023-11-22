@@ -8,4 +8,5 @@
     Public Shared SugarCaneGreen As Color = Color.FromArgb(74, 210, 141)
     Public Shared Ambar As Color = Color.FromArgb(255, 193, 7)
     Public Shared LimeGreen As Color = Color.FromArgb(139, 195, 74)
+    Public Shared RedAlert As Color = Color.FromArgb(255, 0, 0)
 End Structure

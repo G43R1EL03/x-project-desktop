@@ -80,46 +80,46 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ayuda.Designer.vb">
-      <DependentUpon>Ayuda.vb</DependentUpon>
+    <Compile Include="Forms Modules\frmsAnaliticas\frmAnalitica.Designer.vb">
+      <DependentUpon>frmAnalitica.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ayuda.vb">
+    <Compile Include="Forms Modules\frmsAnaliticas\frmAnalitica.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Blog.Designer.vb">
-      <DependentUpon>Blog.vb</DependentUpon>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyuda.Designer.vb">
+      <DependentUpon>frmAyuda.vb</DependentUpon>
     </Compile>
-    <Compile Include="Blog.vb">
+    <Compile Include="Forms Modules\frmsAyuda\frmAyuda.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Chat.Designer.vb">
-      <DependentUpon>Chat.vb</DependentUpon>
+    <Compile Include="Forms Modules\frmsBlogSugerencias\frmBlogSugerencias.Designer.vb">
+      <DependentUpon>frmBlogSugerencias.vb</DependentUpon>
     </Compile>
-    <Compile Include="Chat.vb">
+    <Compile Include="Forms Modules\frmsBlogSugerencias\frmBlogSugerencias.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clientes.Designer.vb">
-      <DependentUpon>Clientes.vb</DependentUpon>
+    <Compile Include="Forms Modules\frmsClientes\frmClientes.Designer.vb">
+      <DependentUpon>frmClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="Clientes.vb">
+    <Compile Include="Forms Modules\frmsClientes\frmClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.vb">
-      <DependentUpon>Home.vb</DependentUpon>
+    <Compile Include="frmBienvenidaLogin.Designer.vb">
+      <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="Home.vb">
+    <Compile Include="frmBienvenidaLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.vb">
-      <DependentUpon>Main.vb</DependentUpon>
+    <Compile Include="frmMenu.Designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
     </Compile>
-    <Compile Include="Main.vb">
+    <Compile Include="frmMenu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventario.Designer.vb">
-      <DependentUpon>Inventario.vb</DependentUpon>
+    <Compile Include="Forms Modules\frmsInventario\frmInventario.Designer.vb">
+      <DependentUpon>frmInventario.vb</DependentUpon>
     </Compile>
-    <Compile Include="Inventario.vb">
+    <Compile Include="Forms Modules\frmsInventario\frmInventario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -139,46 +139,40 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="RGBColorsvb.vb" />
-    <Compile Include="Tickets.Designer.vb">
-      <DependentUpon>Tickets.vb</DependentUpon>
+    <Compile Include="Forms Modules\frmsTickets\frmTickets.Designer.vb">
+      <DependentUpon>frmTickets.vb</DependentUpon>
     </Compile>
-    <Compile Include="Tickets.vb">
+    <Compile Include="Forms Modules\frmsTickets\frmTickets.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuario.Designer.vb">
-      <DependentUpon>Usuario.vb</DependentUpon>
+    <Compile Include="Forms Modules\frmsClientes\frmUsuarios.Designer.vb">
+      <DependentUpon>frmUsuarios.vb</DependentUpon>
     </Compile>
-    <Compile Include="Usuario.vb">
+    <Compile Include="Forms Modules\frmsClientes\frmUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventas.Designer.vb">
-      <DependentUpon>Ventas.vb</DependentUpon>
+    <Compile Include="Forms Modules\frmsVentas\frmVentas.Designer.vb">
+      <DependentUpon>frmVentas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ventas.vb">
+    <Compile Include="Forms Modules\frmsVentas\frmVentas.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Ayuda.resx">
-      <DependentUpon>Ayuda.vb</DependentUpon>
+    <EmbeddedResource Include="Forms Modules\frmsBlogSugerencias\frmBlogSugerencias.resx">
+      <DependentUpon>frmBlogSugerencias.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Blog.resx">
-      <DependentUpon>Blog.vb</DependentUpon>
+    <EmbeddedResource Include="Forms Modules\frmsClientes\frmClientes.resx">
+      <DependentUpon>frmClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Chat.resx">
-      <DependentUpon>Chat.vb</DependentUpon>
+    <EmbeddedResource Include="frmBienvenidaLogin.resx">
+      <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clientes.resx">
-      <DependentUpon>Clientes.vb</DependentUpon>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inventario.resx">
-      <DependentUpon>Inventario.vb</DependentUpon>
+    <EmbeddedResource Include="Forms Modules\frmsInventario\frmInventario.resx">
+      <DependentUpon>frmInventario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -186,14 +180,14 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tickets.resx">
-      <DependentUpon>Tickets.vb</DependentUpon>
+    <EmbeddedResource Include="Forms Modules\frmsTickets\frmTickets.resx">
+      <DependentUpon>frmTickets.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuario.resx">
-      <DependentUpon>Usuario.vb</DependentUpon>
+    <EmbeddedResource Include="Forms Modules\frmsClientes\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventas.resx">
-      <DependentUpon>Ventas.vb</DependentUpon>
+    <EmbeddedResource Include="Forms Modules\frmsVentas\frmVentas.resx">
+      <DependentUpon>frmVentas.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -211,6 +205,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Class Modules\analitica\" />
+    <Folder Include="Class Modules\blog %28sugerencias%29\" />
+    <Folder Include="Class Modules\clientes\" />
+    <Folder Include="Class Modules\inventario\" />
+    <Folder Include="Class Modules\tickets\" />
+    <Folder Include="Class Modules\ventas\" />
+    <Folder Include="Database Scripts\Database Script\" />
+    <Folder Include="Database Scripts\Store Procedures\analitica\" />
+    <Folder Include="Database Scripts\Store Procedures\ayuda\" />
+    <Folder Include="Database Scripts\Store Procedures\clientes\" />
+    <Folder Include="Database Scripts\Store Procedures\inventario\" />
+    <Folder Include="Database Scripts\Store Procedures\tickets-blog\" />
+    <Folder Include="Database Scripts\Store Procedures\ventas\" />
+    <Folder Include="Standard Modules\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

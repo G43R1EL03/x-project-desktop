@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Tickets
+Partial Class frmUsuarios
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -28,20 +28,20 @@ Partial Class Tickets
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(384, 13)
+        Me.Label1.Location = New System.Drawing.Point(362, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(42, 13)
+        Me.Label1.Size = New System.Drawing.Size(48, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Tickets"
+        Me.Label1.Text = "Usuarios"
         '
-        'Tickets
+        'Usuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Tickets"
-        Me.Text = "Tickets"
+        Me.Name = "Usuario"
+        Me.Text = "Usuario"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

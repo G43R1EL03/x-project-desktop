@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Ayuda
+Partial Class frmTickets
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -28,22 +28,20 @@ Partial Class Ayuda
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label1.Location = New System.Drawing.Point(363, 40)
+        Me.Label1.Location = New System.Drawing.Point(384, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 16)
+        Me.Label1.Size = New System.Drawing.Size(42, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Ayuda"
+        Me.Label1.Text = "Tickets"
         '
-        'Ayuda
+        'Tickets
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Ayuda"
-        Me.Text = "Ayuda"
+        Me.Name = "Tickets"
+        Me.Text = "Tickets"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
