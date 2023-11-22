@@ -80,6 +80,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class Modules\analitica\Class1.vb" />
+    <Compile Include="Class Modules\blog %28sugerencias%29\Class2.vb" />
+    <Compile Include="Class Modules\clientes\Class3.vb" />
+    <Compile Include="Class Modules\inventario\Class4.vb" />
+    <Compile Include="Class Modules\tickets\Class5.vb" />
+    <Compile Include="Class Modules\ventas\Class6.vb" />
     <Compile Include="Forms Modules\frmsAnaliticas\frmAnalitica.Designer.vb">
       <DependentUpon>frmAnalitica.vb</DependentUpon>
     </Compile>
@@ -157,8 +163,13 @@
     <Compile Include="Forms Modules\frmsVentas\frmVentas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Standard Modules\ButtonModule.vb" />
+    <Compile Include="Standard Modules\PanelModule.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyuda.resx">
+      <DependentUpon>frmAyuda.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsBlogSugerencias\frmBlogSugerencias.resx">
       <DependentUpon>frmBlogSugerencias.vb</DependentUpon>
     </EmbeddedResource>
@@ -207,12 +218,6 @@
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Class Modules\analitica\" />
-    <Folder Include="Class Modules\blog %28sugerencias%29\" />
-    <Folder Include="Class Modules\clientes\" />
-    <Folder Include="Class Modules\inventario\" />
-    <Folder Include="Class Modules\tickets\" />
-    <Folder Include="Class Modules\ventas\" />
     <Folder Include="Database Scripts\Database Script\" />
     <Folder Include="Database Scripts\Store Procedures\analitica\" />
     <Folder Include="Database Scripts\Store Procedures\ayuda\" />
@@ -220,7 +225,6 @@
     <Folder Include="Database Scripts\Store Procedures\inventario\" />
     <Folder Include="Database Scripts\Store Procedures\tickets-blog\" />
     <Folder Include="Database Scripts\Store Procedures\ventas\" />
-    <Folder Include="Standard Modules\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
