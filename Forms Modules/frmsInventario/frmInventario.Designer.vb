@@ -44,7 +44,6 @@ Partial Class frmInventario
         Me.btnAgregarInventario = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.panelTodo = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.Panel9 = New System.Windows.Forms.Panel()
@@ -63,6 +62,7 @@ Partial Class frmInventario
         Me.btnAgregarEntradas = New System.Windows.Forms.Button()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.panelTodo = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -76,7 +76,6 @@ Partial Class frmInventario
         Me.panelSplitButonInventario.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.panelTodo.SuspendLayout()
         Me.Panel8.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
@@ -86,6 +85,7 @@ Partial Class frmInventario
         Me.Panel13.SuspendLayout()
         Me.panelSplitButonEntradas.SuspendLayout()
         Me.Panel15.SuspendLayout()
+        Me.panelTodo.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -350,18 +350,6 @@ Partial Class frmInventario
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Entradas"
         '
-        'panelTodo
-        '
-        Me.panelTodo.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
-        Me.panelTodo.Controls.Add(Me.TabControl1)
-        Me.panelTodo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelTodo.Location = New System.Drawing.Point(0, 0)
-        Me.panelTodo.Margin = New System.Windows.Forms.Padding(75, 77, 75, 77)
-        Me.panelTodo.Name = "panelTodo"
-        Me.panelTodo.Padding = New System.Windows.Forms.Padding(20)
-        Me.panelTodo.Size = New System.Drawing.Size(1370, 749)
-        Me.panelTodo.TabIndex = 4
-        '
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
@@ -575,6 +563,18 @@ Partial Class frmInventario
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Entradas"
         '
+        'panelTodo
+        '
+        Me.panelTodo.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
+        Me.panelTodo.Controls.Add(Me.TabControl1)
+        Me.panelTodo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelTodo.Location = New System.Drawing.Point(0, 0)
+        Me.panelTodo.Margin = New System.Windows.Forms.Padding(75, 77, 75, 77)
+        Me.panelTodo.Name = "panelTodo"
+        Me.panelTodo.Padding = New System.Windows.Forms.Padding(20)
+        Me.panelTodo.Size = New System.Drawing.Size(1370, 749)
+        Me.panelTodo.TabIndex = 4
+        '
         'frmInventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -607,7 +607,6 @@ Partial Class frmInventario
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
-        Me.panelTodo.ResumeLayout(False)
         Me.Panel8.ResumeLayout(False)
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel9.ResumeLayout(False)
@@ -619,6 +618,7 @@ Partial Class frmInventario
         Me.panelSplitButonEntradas.ResumeLayout(False)
         Me.Panel15.ResumeLayout(False)
         Me.Panel15.PerformLayout()
+        Me.panelTodo.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

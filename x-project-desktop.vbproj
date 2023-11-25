@@ -162,6 +162,12 @@
     <Compile Include="Forms Modules\frmsClientes\frmClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms Modules\frmsInventario\Agregar Marca.designer.vb">
+      <DependentUpon>Agregar Marca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsInventario\Agregar Marca.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBienvenidaLogin.Designer.vb">
       <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>
     </Compile>
@@ -228,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsClientes\frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsInventario\Agregar Marca.resx">
+      <DependentUpon>Agregar Marca.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBienvenidaLogin.resx">
       <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>
