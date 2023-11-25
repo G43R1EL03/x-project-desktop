@@ -110,6 +110,12 @@
     <Compile Include="Forms Modules\frmsClientes\frmClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmDetalleTicket.Designer.vb">
+      <DependentUpon>frmDetalleTicket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmDetalleTicket.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBienvenidaLogin.Designer.vb">
       <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsClientes\frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsTickets\frmDetalleTicket.resx">
+      <DependentUpon>frmDetalleTicket.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBienvenidaLogin.resx">
       <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>
