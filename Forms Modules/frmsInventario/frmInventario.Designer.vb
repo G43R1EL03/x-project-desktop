@@ -63,7 +63,6 @@ Partial Class frmInventario
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.panelTodo = New System.Windows.Forms.Panel()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -243,7 +242,6 @@ Partial Class frmInventario
         '
         'Panel4
         '
-        Me.Panel4.Controls.Add(Me.ComboBox1)
         Me.Panel4.Controls.Add(Me.panelSplitButonInventario)
         Me.Panel4.Controls.Add(Me.btnAgregarInventario)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
@@ -577,16 +575,6 @@ Partial Class frmInventario
         Me.panelTodo.Size = New System.Drawing.Size(1370, 749)
         Me.panelTodo.TabIndex = 4
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Producto", "Marca", "Categoría"})
-        Me.ComboBox1.Location = New System.Drawing.Point(30, 13)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(162, 28)
-        Me.ComboBox1.TabIndex = 5
-        Me.ComboBox1.Text = "Agregar"
-        '
         'frmInventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -676,5 +664,4 @@ Partial Class frmInventario
     Friend WithEvents btnAgregarEntradas As Button
     Friend WithEvents Panel15 As Panel
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox1 As ComboBox
 End Class
