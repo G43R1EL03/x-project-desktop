@@ -162,10 +162,16 @@
     <Compile Include="Forms Modules\frmsClientes\frmClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Modules\frmsInventario\Agregar Marca.designer.vb">
-      <DependentUpon>Agregar Marca.vb</DependentUpon>
+    <Compile Include="Forms Modules\frmsInventario\FrmAgregarCategoria.Designer.vb">
+      <DependentUpon>FrmAgregarCategoria.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms Modules\frmsInventario\Agregar Marca.vb">
+    <Compile Include="Forms Modules\frmsInventario\FrmAgregarCategoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsInventario\frmAgregarMarca.designer.vb">
+      <DependentUpon>frmAgregarMarca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsInventario\frmAgregarMarca.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBienvenidaLogin.Designer.vb">
@@ -235,8 +241,11 @@
     <EmbeddedResource Include="Forms Modules\frmsClientes\frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms Modules\frmsInventario\Agregar Marca.resx">
-      <DependentUpon>Agregar Marca.vb</DependentUpon>
+    <EmbeddedResource Include="Forms Modules\frmsInventario\FrmAgregarCategoria.resx">
+      <DependentUpon>FrmAgregarCategoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsInventario\frmAgregarMarca.resx">
+      <DependentUpon>frmAgregarMarca.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBienvenidaLogin.resx">
       <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>
