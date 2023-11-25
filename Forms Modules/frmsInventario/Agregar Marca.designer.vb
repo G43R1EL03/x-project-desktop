@@ -22,176 +22,172 @@ Partial Class Agregar_Marca
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Label1 = New Label()
-        GroupBox1 = New GroupBox()
-        TextBox2 = New TextBox()
-        Button1 = New Button()
-        TextBox1 = New TextBox()
-        Label5 = New Label()
-        Label4 = New Label()
-        Label3 = New Label()
-        Label2 = New Label()
-        ComboBox1 = New ComboBox()
-        PictureBox1 = New PictureBox()
-        Button2 = New Button()
-        Button3 = New Button()
-        GroupBox1.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label1.Location = New Point(46, 41)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(138, 25)
-        Label1.TabIndex = 0
-        Label1.Text = "Agregar Marca"
-        ' 
-        ' GroupBox1
-        ' 
-        GroupBox1.Controls.Add(TextBox2)
-        GroupBox1.Controls.Add(Button1)
-        GroupBox1.Controls.Add(TextBox1)
-        GroupBox1.Controls.Add(Label5)
-        GroupBox1.Controls.Add(Label4)
-        GroupBox1.Controls.Add(Label3)
-        GroupBox1.Controls.Add(Label2)
-        GroupBox1.Controls.Add(ComboBox1)
-        GroupBox1.Location = New Point(234, 65)
-        GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(554, 363)
-        GroupBox1.TabIndex = 1
-        GroupBox1.TabStop = False
-        GroupBox1.Text = "GroupBox1"
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.Location = New Point(37, 46)
-        TextBox2.Multiline = True
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(164, 35)
-        TextBox2.TabIndex = 7
-        ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(362, 318)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(151, 23)
-        Button1.TabIndex = 6
-        Button1.Text = "Agregar Marca"
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Location = New Point(37, 203)
-        TextBox1.Multiline = True
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(332, 87)
-        TextBox1.TabIndex = 5
-        TextBox1.Text = "hola agrego cualquier producto por si acaso"
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Location = New Point(314, 318)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(0, 15)
-        Label5.TabIndex = 4
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(37, 174)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(69, 15)
-        Label4.TabIndex = 3
-        Label4.Text = "Descripcion"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(37, 103)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(58, 15)
-        Label3.TabIndex = 2
-        Label3.Text = "Categoria"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(37, 19)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(51, 15)
-        Label2.TabIndex = 1
-        Label2.Text = "Nombre"
-        ' 
-        ' ComboBox1
-        ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"Coca Cola", "Pepsi"})
-        ComboBox1.Location = New Point(37, 130)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(121, 23)
-        ComboBox1.TabIndex = 0
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Location = New Point(24, 84)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(186, 112)
-        PictureBox1.TabIndex = 8
-        PictureBox1.TabStop = False
-        ' 
-        ' Button2
-        ' 
-        Button2.Location = New Point(24, 231)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(75, 23)
-        Button2.TabIndex = 9
-        Button2.Text = "Importar"
-        Button2.UseVisualStyleBackColor = True
-        ' 
-        ' Button3
-        ' 
-        Button3.Location = New Point(135, 231)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(75, 23)
-        Button3.TabIndex = 10
-        Button3.Text = "Exportar"
-        Button3.UseVisualStyleBackColor = True
-        ' 
-        ' Agregar_Marca
-        ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
-        Controls.Add(Button3)
-        Controls.Add(Button2)
-        Controls.Add(PictureBox1)
-        Controls.Add(GroupBox1)
-        Controls.Add(Label1)
-        Name = "Agregar_Marca"
-        Text = "Agregar_Marca"
-        GroupBox1.ResumeLayout(False)
-        GroupBox1.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
-        PerformLayout()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!)
+        Me.Label1.Location = New System.Drawing.Point(91, 47)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(138, 25)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Agregar Marca"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(318, 56)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(840, 262)
+        Me.GroupBox1.TabIndex = 1
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Informacion General de la Marca"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(25, 61)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(437, 31)
+        Me.TextBox2.TabIndex = 7
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(25, 222)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(164, 34)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Agregar Marca"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(25, 144)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(437, 55)
+        Me.TextBox1.TabIndex = 5
+        Me.TextBox1.Text = "hola agrego cualquier producto por si acaso"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(269, 276)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(0, 20)
+        Me.Label5.TabIndex = 4
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(21, 117)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(110, 24)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Descripcion"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(21, 34)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(79, 24)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Nombre"
+        '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(172, 311)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(89, 32)
+        Me.Button3.TabIndex = 10
+        Me.Button3.Text = "Subir"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(66, 90)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(195, 177)
+        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.TabStop = False
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(66, 311)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(89, 32)
+        Me.Button2.TabIndex = 11
+        Me.Button2.Text = "Escoger"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(66, 360)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(89, 32)
+        Me.Button4.TabIndex = 12
+        Me.Button4.Text = "Cancelar"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Agregar_Marca
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(1354, 710)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Label1)
+        Me.Name = "Agregar_Marca"
+        Me.Text = "Agregar_Marca"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button4 As Button
 End Class
