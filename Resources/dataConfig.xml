@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <conexion>
 	<!-- DEBEN AGREGAR SUS CREDENCIALES -->
-	<serverDb></serverDb>
-	<dbName></dbName>
-	<user></user>
-	<password></password>
+	<serverDb>bG9jYWxob3N0</serverDb> <!-- localhost -->
+	<dbName>bGFiM19kczg=</dbName>     <!-- lab3_ds8 -->
+	<user>ZHM3MjAyMw==</user>         <!-- ds72023 -->
+	<password>ZHM3MjAyMw==</password> <!-- ds72023 -->
 </conexion>
