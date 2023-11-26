@@ -22,6 +22,7 @@ Partial Class frmInventario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInventario))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -32,37 +33,37 @@ Partial Class frmInventario
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.panelSplitButonInventario = New System.Windows.Forms.Panel()
-        Me.btnRealizarCompra = New System.Windows.Forms.Button()
-        Me.btnCategoria = New System.Windows.Forms.Button()
-        Me.btnProducto = New System.Windows.Forms.Button()
-        Me.btnMarca = New System.Windows.Forms.Button()
-        Me.btnAgregarInventario = New System.Windows.Forms.Button()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.MarcaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CategoriaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RealizarCompraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Panel13 = New System.Windows.Forms.Panel()
-        Me.panelSplitButonEntradas = New System.Windows.Forms.Panel()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.btnAgregarEntradas = New System.Windows.Forms.Button()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.panelTodo = New System.Windows.Forms.Panel()
+        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -73,7 +74,7 @@ Partial Class frmInventario
         Me.Panel6.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        Me.panelSplitButonInventario.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.Panel8.SuspendLayout()
@@ -83,9 +84,9 @@ Partial Class frmInventario
         Me.Panel11.SuspendLayout()
         Me.Panel12.SuspendLayout()
         Me.Panel13.SuspendLayout()
-        Me.panelSplitButonEntradas.SuspendLayout()
         Me.Panel15.SuspendLayout()
         Me.panelTodo.SuspendLayout()
+        Me.ToolStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -110,7 +111,7 @@ Partial Class frmInventario
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.Padding = New System.Drawing.Point(15, 3)
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(944, 462)
+        Me.TabControl1.Size = New System.Drawing.Size(944, 529)
         Me.TabControl1.TabIndex = 1
         '
         'TabPage1
@@ -121,7 +122,7 @@ Partial Class frmInventario
         Me.TabPage1.Location = New System.Drawing.Point(4, 29)
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(0)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(1322, 676)
+        Me.TabPage1.Size = New System.Drawing.Size(936, 496)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Inventario"
         '
@@ -133,7 +134,7 @@ Partial Class frmInventario
         Me.Panel2.Location = New System.Drawing.Point(0, 53)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1322, 623)
+        Me.Panel2.Size = New System.Drawing.Size(936, 443)
         Me.Panel2.TabIndex = 7
         '
         'Panel5
@@ -145,7 +146,7 @@ Partial Class frmInventario
         Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Padding = New System.Windows.Forms.Padding(15, 0, 15, 15)
-        Me.Panel5.Size = New System.Drawing.Size(1322, 556)
+        Me.Panel5.Size = New System.Drawing.Size(936, 376)
         Me.Panel5.TabIndex = 5
         '
         'DataGridView1
@@ -158,7 +159,7 @@ Partial Class frmInventario
         Me.DataGridView1.Location = New System.Drawing.Point(20, 1)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1282, 535)
+        Me.DataGridView1.Size = New System.Drawing.Size(896, 355)
         Me.DataGridView1.TabIndex = 2
         '
         'pan
@@ -170,7 +171,7 @@ Partial Class frmInventario
         Me.pan.Location = New System.Drawing.Point(0, 0)
         Me.pan.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pan.Name = "pan"
-        Me.pan.Size = New System.Drawing.Size(1322, 67)
+        Me.pan.Size = New System.Drawing.Size(936, 67)
         Me.pan.TabIndex = 4
         '
         'Panel7
@@ -178,7 +179,7 @@ Partial Class frmInventario
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.Panel7.Controls.Add(Me.TextBox1)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel7.Location = New System.Drawing.Point(1022, 0)
+        Me.Panel7.Location = New System.Drawing.Point(636, 0)
         Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(300, 67)
@@ -186,47 +187,25 @@ Partial Class frmInventario
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(98, 15)
+        Me.TextBox1.Location = New System.Drawing.Point(54, 15)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(181, 41)
+        Me.TextBox1.Size = New System.Drawing.Size(226, 41)
         Me.TextBox1.TabIndex = 4
         '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.Panel6.Controls.Add(Me.Button1)
-        Me.Panel6.Controls.Add(Me.Button4)
+        Me.Panel6.Controls.Add(Me.IconButton4)
+        Me.Panel6.Controls.Add(Me.IconButton3)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel6.Location = New System.Drawing.Point(0, 0)
         Me.Panel6.Margin = New System.Windows.Forms.Padding(30, 5, 4, 5)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Padding = New System.Windows.Forms.Padding(30, 31, 30, 31)
-        Me.Panel6.Size = New System.Drawing.Size(300, 67)
+        Me.Panel6.Size = New System.Drawing.Size(325, 67)
         Me.Panel6.TabIndex = 6
-        '
-        'Button1
-        '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Location = New System.Drawing.Point(20, 15)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(112, 43)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Limpiar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button4.Location = New System.Drawing.Point(141, 15)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(112, 43)
-        Me.Button4.TabIndex = 5
-        Me.Button4.Text = "Reporte"
-        Me.Button4.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -237,94 +216,64 @@ Partial Class frmInventario
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1322, 53)
+        Me.Panel1.Size = New System.Drawing.Size(936, 53)
         Me.Panel1.TabIndex = 6
         '
         'Panel4
         '
-        Me.Panel4.Controls.Add(Me.panelSplitButonInventario)
-        Me.Panel4.Controls.Add(Me.btnAgregarInventario)
+        Me.Panel4.Controls.Add(Me.ToolStrip1)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel4.Location = New System.Drawing.Point(1120, 0)
+        Me.Panel4.Location = New System.Drawing.Point(675, 0)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Padding = New System.Windows.Forms.Padding(30, 10, 10, 10)
-        Me.Panel4.Size = New System.Drawing.Size(202, 53)
+        Me.Panel4.Size = New System.Drawing.Size(261, 53)
         Me.Panel4.TabIndex = 1
         '
-        'panelSplitButonInventario
+        'ToolStrip1
         '
-        Me.panelSplitButonInventario.Controls.Add(Me.btnRealizarCompra)
-        Me.panelSplitButonInventario.Controls.Add(Me.btnCategoria)
-        Me.panelSplitButonInventario.Controls.Add(Me.btnProducto)
-        Me.panelSplitButonInventario.Controls.Add(Me.btnMarca)
-        Me.panelSplitButonInventario.Dock = System.Windows.Forms.DockStyle.Top
-        Me.panelSplitButonInventario.Location = New System.Drawing.Point(30, 45)
-        Me.panelSplitButonInventario.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.panelSplitButonInventario.Name = "panelSplitButonInventario"
-        Me.panelSplitButonInventario.Padding = New System.Windows.Forms.Padding(0, 0, 15, 15)
-        Me.panelSplitButonInventario.Size = New System.Drawing.Size(162, 141)
-        Me.panelSplitButonInventario.TabIndex = 5
+        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1})
+        Me.ToolStrip1.Location = New System.Drawing.Point(15, 16)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(106, 32)
+        Me.ToolStrip1.TabIndex = 0
+        Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'btnRealizarCompra
+        'ToolStripButton1
         '
-        Me.btnRealizarCompra.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnRealizarCompra.Location = New System.Drawing.Point(0, 105)
-        Me.btnRealizarCompra.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnRealizarCompra.Name = "btnRealizarCompra"
-        Me.btnRealizarCompra.Size = New System.Drawing.Size(147, 35)
-        Me.btnRealizarCompra.TabIndex = 6
-        Me.btnRealizarCompra.Text = "Realizar compra"
-        Me.btnRealizarCompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRealizarCompra.UseVisualStyleBackColor = True
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MarcaToolStripMenuItem, Me.ProductoToolStripMenuItem, Me.CategoriaToolStripMenuItem, Me.RealizarCompraToolStripMenuItem})
+        Me.ToolStripButton1.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(94, 29)
+        Me.ToolStripButton1.Text = "Agregar"
         '
-        'btnCategoria
+        'MarcaToolStripMenuItem
         '
-        Me.btnCategoria.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnCategoria.Location = New System.Drawing.Point(0, 70)
-        Me.btnCategoria.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnCategoria.Name = "btnCategoria"
-        Me.btnCategoria.Size = New System.Drawing.Size(147, 35)
-        Me.btnCategoria.TabIndex = 7
-        Me.btnCategoria.Text = "Categoría"
-        Me.btnCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCategoria.UseVisualStyleBackColor = True
+        Me.MarcaToolStripMenuItem.Name = "MarcaToolStripMenuItem"
+        Me.MarcaToolStripMenuItem.Size = New System.Drawing.Size(224, 30)
+        Me.MarcaToolStripMenuItem.Text = "Marca"
         '
-        'btnProducto
+        'ProductoToolStripMenuItem
         '
-        Me.btnProducto.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnProducto.Location = New System.Drawing.Point(0, 35)
-        Me.btnProducto.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnProducto.Name = "btnProducto"
-        Me.btnProducto.Size = New System.Drawing.Size(147, 35)
-        Me.btnProducto.TabIndex = 8
-        Me.btnProducto.Text = "Producto"
-        Me.btnProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnProducto.UseVisualStyleBackColor = True
+        Me.ProductoToolStripMenuItem.Name = "ProductoToolStripMenuItem"
+        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(224, 30)
+        Me.ProductoToolStripMenuItem.Text = "Producto"
         '
-        'btnMarca
+        'CategoriaToolStripMenuItem
         '
-        Me.btnMarca.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnMarca.Location = New System.Drawing.Point(0, 0)
-        Me.btnMarca.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnMarca.Name = "btnMarca"
-        Me.btnMarca.Size = New System.Drawing.Size(147, 35)
-        Me.btnMarca.TabIndex = 0
-        Me.btnMarca.Text = "Marca"
-        Me.btnMarca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnMarca.UseVisualStyleBackColor = True
+        Me.CategoriaToolStripMenuItem.Name = "CategoriaToolStripMenuItem"
+        Me.CategoriaToolStripMenuItem.Size = New System.Drawing.Size(224, 30)
+        Me.CategoriaToolStripMenuItem.Text = "Categoria"
         '
-        'btnAgregarInventario
+        'RealizarCompraToolStripMenuItem
         '
-        Me.btnAgregarInventario.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAgregarInventario.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnAgregarInventario.Location = New System.Drawing.Point(30, 10)
-        Me.btnAgregarInventario.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnAgregarInventario.Name = "btnAgregarInventario"
-        Me.btnAgregarInventario.Size = New System.Drawing.Size(162, 35)
-        Me.btnAgregarInventario.TabIndex = 3
-        Me.btnAgregarInventario.Text = "Agregar"
-        Me.btnAgregarInventario.UseVisualStyleBackColor = True
+        Me.RealizarCompraToolStripMenuItem.Name = "RealizarCompraToolStripMenuItem"
+        Me.RealizarCompraToolStripMenuItem.Size = New System.Drawing.Size(224, 30)
+        Me.RealizarCompraToolStripMenuItem.Text = "Realizar Compra"
         '
         'Panel3
         '
@@ -346,7 +295,7 @@ Partial Class frmInventario
         Me.TabPage2.Location = New System.Drawing.Point(4, 29)
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(0)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Size = New System.Drawing.Size(936, 429)
+        Me.TabPage2.Size = New System.Drawing.Size(936, 496)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Entradas"
         '
@@ -359,7 +308,7 @@ Partial Class frmInventario
         Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Padding = New System.Windows.Forms.Padding(15, 0, 15, 15)
-        Me.Panel8.Size = New System.Drawing.Size(936, 309)
+        Me.Panel8.Size = New System.Drawing.Size(936, 376)
         Me.Panel8.TabIndex = 8
         '
         'DataGridView2
@@ -372,7 +321,7 @@ Partial Class frmInventario
         Me.DataGridView2.Location = New System.Drawing.Point(20, 1)
         Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(897, 288)
+        Me.DataGridView2.Size = New System.Drawing.Size(897, 355)
         Me.DataGridView2.TabIndex = 2
         '
         'Panel9
@@ -398,49 +347,18 @@ Partial Class frmInventario
         Me.Panel10.Size = New System.Drawing.Size(300, 67)
         Me.Panel10.TabIndex = 8
         '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(98, 15)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(181, 41)
-        Me.TextBox2.TabIndex = 4
-        '
         'Panel11
         '
         Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.Panel11.Controls.Add(Me.Button2)
-        Me.Panel11.Controls.Add(Me.Button3)
+        Me.Panel11.Controls.Add(Me.IconButton2)
+        Me.Panel11.Controls.Add(Me.IconButton1)
         Me.Panel11.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel11.Location = New System.Drawing.Point(0, 0)
         Me.Panel11.Margin = New System.Windows.Forms.Padding(30, 5, 4, 5)
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Padding = New System.Windows.Forms.Padding(30, 31, 30, 31)
-        Me.Panel11.Size = New System.Drawing.Size(300, 67)
+        Me.Panel11.Size = New System.Drawing.Size(327, 67)
         Me.Panel11.TabIndex = 6
-        '
-        'Button2
-        '
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.Location = New System.Drawing.Point(20, 15)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(112, 43)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Limpiar"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.Location = New System.Drawing.Point(141, 15)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(112, 43)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "Reporte"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'Panel12
         '
@@ -456,89 +374,14 @@ Partial Class frmInventario
         '
         'Panel13
         '
-        Me.Panel13.Controls.Add(Me.panelSplitButonEntradas)
-        Me.Panel13.Controls.Add(Me.btnAgregarEntradas)
+        Me.Panel13.Controls.Add(Me.ToolStrip2)
         Me.Panel13.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel13.Location = New System.Drawing.Point(734, 0)
+        Me.Panel13.Location = New System.Drawing.Point(654, 0)
         Me.Panel13.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel13.Name = "Panel13"
         Me.Panel13.Padding = New System.Windows.Forms.Padding(30, 10, 10, 10)
-        Me.Panel13.Size = New System.Drawing.Size(202, 53)
+        Me.Panel13.Size = New System.Drawing.Size(282, 53)
         Me.Panel13.TabIndex = 1
-        '
-        'panelSplitButonEntradas
-        '
-        Me.panelSplitButonEntradas.Controls.Add(Me.Button5)
-        Me.panelSplitButonEntradas.Controls.Add(Me.Button6)
-        Me.panelSplitButonEntradas.Controls.Add(Me.Button7)
-        Me.panelSplitButonEntradas.Controls.Add(Me.Button8)
-        Me.panelSplitButonEntradas.Dock = System.Windows.Forms.DockStyle.Top
-        Me.panelSplitButonEntradas.Location = New System.Drawing.Point(30, 45)
-        Me.panelSplitButonEntradas.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.panelSplitButonEntradas.Name = "panelSplitButonEntradas"
-        Me.panelSplitButonEntradas.Padding = New System.Windows.Forms.Padding(0, 0, 15, 15)
-        Me.panelSplitButonEntradas.Size = New System.Drawing.Size(162, 141)
-        Me.panelSplitButonEntradas.TabIndex = 5
-        '
-        'Button5
-        '
-        Me.Button5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button5.Location = New System.Drawing.Point(0, 105)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(147, 35)
-        Me.Button5.TabIndex = 6
-        Me.Button5.Text = "Realizar compra"
-        Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button6
-        '
-        Me.Button6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button6.Location = New System.Drawing.Point(0, 70)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(147, 35)
-        Me.Button6.TabIndex = 7
-        Me.Button6.Text = "Categoría"
-        Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button7.Location = New System.Drawing.Point(0, 35)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(147, 35)
-        Me.Button7.TabIndex = 8
-        Me.Button7.Text = "Producto"
-        Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button8.Location = New System.Drawing.Point(0, 0)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(147, 35)
-        Me.Button8.TabIndex = 0
-        Me.Button8.Text = "Marca"
-        Me.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'btnAgregarEntradas
-        '
-        Me.btnAgregarEntradas.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAgregarEntradas.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnAgregarEntradas.Location = New System.Drawing.Point(30, 10)
-        Me.btnAgregarEntradas.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnAgregarEntradas.Name = "btnAgregarEntradas"
-        Me.btnAgregarEntradas.Size = New System.Drawing.Size(162, 35)
-        Me.btnAgregarEntradas.TabIndex = 3
-        Me.btnAgregarEntradas.Text = "Agregar"
-        Me.btnAgregarEntradas.UseVisualStyleBackColor = True
         '
         'Panel15
         '
@@ -572,15 +415,125 @@ Partial Class frmInventario
         Me.panelTodo.Margin = New System.Windows.Forms.Padding(75, 77, 75, 77)
         Me.panelTodo.Name = "panelTodo"
         Me.panelTodo.Padding = New System.Windows.Forms.Padding(20)
-        Me.panelTodo.Size = New System.Drawing.Size(984, 502)
+        Me.panelTodo.Size = New System.Drawing.Size(984, 569)
         Me.panelTodo.TabIndex = 4
+        '
+        'ToolStrip2
+        '
+        Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.None
+        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1})
+        Me.ToolStrip2.Location = New System.Drawing.Point(39, 16)
+        Me.ToolStrip2.Name = "ToolStrip2"
+        Me.ToolStrip2.Size = New System.Drawing.Size(106, 32)
+        Me.ToolStrip2.TabIndex = 1
+        Me.ToolStrip2.Text = "ToolStrip2"
+        '
+        'ToolStripDropDownButton1
+        '
+        Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.ToolStripMenuItem4})
+        Me.ToolStripDropDownButton1.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripDropDownButton1.Image = CType(resources.GetObject("ToolStripDropDownButton1.Image"), System.Drawing.Image)
+        Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
+        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(94, 29)
+        Me.ToolStripDropDownButton1.Text = "Agregar"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(224, 30)
+        Me.ToolStripMenuItem1.Text = "Marca"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(224, 30)
+        Me.ToolStripMenuItem2.Text = "Producto"
+        '
+        'ToolStripMenuItem3
+        '
+        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(224, 30)
+        Me.ToolStripMenuItem3.Text = "Categoria"
+        '
+        'ToolStripMenuItem4
+        '
+        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(224, 30)
+        Me.ToolStripMenuItem4.Text = "Realizar Compra"
+        '
+        'IconButton1
+        '
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.FilterCircleXmark
+        Me.IconButton1.IconColor = System.Drawing.Color.Black
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.IconSize = 35
+        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton1.Location = New System.Drawing.Point(20, 15)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(133, 44)
+        Me.IconButton1.TabIndex = 3
+        Me.IconButton1.Text = "      Limpiar"
+        Me.IconButton1.UseVisualStyleBackColor = True
+        '
+        'IconButton2
+        '
+        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.FileImport
+        Me.IconButton2.IconColor = System.Drawing.Color.Black
+        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton2.IconSize = 35
+        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton2.Location = New System.Drawing.Point(167, 15)
+        Me.IconButton2.Name = "IconButton2"
+        Me.IconButton2.Size = New System.Drawing.Size(133, 44)
+        Me.IconButton2.TabIndex = 3
+        Me.IconButton2.Text = "       Reporte"
+        Me.IconButton2.UseVisualStyleBackColor = True
+        '
+        'IconButton3
+        '
+        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.FilterCircleXmark
+        Me.IconButton3.IconColor = System.Drawing.Color.Black
+        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton3.IconSize = 35
+        Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton3.Location = New System.Drawing.Point(20, 14)
+        Me.IconButton3.Name = "IconButton3"
+        Me.IconButton3.Size = New System.Drawing.Size(133, 44)
+        Me.IconButton3.TabIndex = 4
+        Me.IconButton3.Text = "      Limpiar"
+        Me.IconButton3.UseVisualStyleBackColor = True
+        '
+        'IconButton4
+        '
+        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.FileImport
+        Me.IconButton4.IconColor = System.Drawing.Color.Black
+        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton4.IconSize = 35
+        Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton4.Location = New System.Drawing.Point(167, 14)
+        Me.IconButton4.Name = "IconButton4"
+        Me.IconButton4.Size = New System.Drawing.Size(133, 44)
+        Me.IconButton4.TabIndex = 5
+        Me.IconButton4.Text = "       Reporte"
+        Me.IconButton4.UseVisualStyleBackColor = True
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(57, 15)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(224, 41)
+        Me.TextBox2.TabIndex = 5
         '
         'frmInventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(984, 502)
+        Me.ClientSize = New System.Drawing.Size(984, 569)
         Me.ControlBox = False
         Me.Controls.Add(Me.panelTodo)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -603,7 +556,9 @@ Partial Class frmInventario
         Me.Panel6.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
-        Me.panelSplitButonInventario.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
@@ -615,10 +570,12 @@ Partial Class frmInventario
         Me.Panel11.ResumeLayout(False)
         Me.Panel12.ResumeLayout(False)
         Me.Panel13.ResumeLayout(False)
-        Me.panelSplitButonEntradas.ResumeLayout(False)
+        Me.Panel13.PerformLayout()
         Me.Panel15.ResumeLayout(False)
         Me.Panel15.PerformLayout()
         Me.panelTodo.ResumeLayout(False)
+        Me.ToolStrip2.ResumeLayout(False)
+        Me.ToolStrip2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -628,16 +585,8 @@ Partial Class frmInventario
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents btnAgregarInventario As Button
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
     Friend WithEvents pan As Panel
-    Friend WithEvents Button4 As Button
-    Friend WithEvents panelSplitButonInventario As Panel
-    Friend WithEvents btnMarca As Button
-    Friend WithEvents btnRealizarCompra As Button
-    Friend WithEvents btnCategoria As Button
-    Friend WithEvents btnProducto As Button
     Friend WithEvents panelTodo As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
@@ -650,18 +599,26 @@ Partial Class frmInventario
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Panel10 As Panel
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Panel11 As Panel
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents Panel12 As Panel
     Friend WithEvents Panel13 As Panel
-    Friend WithEvents panelSplitButonEntradas As Panel
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button8 As Button
-    Friend WithEvents btnAgregarEntradas As Button
     Friend WithEvents Panel15 As Panel
     Friend WithEvents Label2 As Label
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents ToolStripButton1 As ToolStripDropDownButton
+    Friend WithEvents MarcaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProductoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CategoriaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RealizarCompraToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStrip2 As ToolStrip
+    Friend WithEvents ToolStripDropDownButton1 As ToolStripDropDownButton
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem4 As ToolStripMenuItem
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
+    Friend WithEvents TextBox2 As TextBox
 End Class
