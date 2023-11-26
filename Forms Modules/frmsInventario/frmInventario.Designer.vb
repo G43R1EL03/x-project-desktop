@@ -110,7 +110,7 @@ Partial Class frmInventario
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.Padding = New System.Drawing.Point(15, 3)
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1330, 709)
+        Me.TabControl1.Size = New System.Drawing.Size(944, 462)
         Me.TabControl1.TabIndex = 1
         '
         'TabPage1
@@ -346,7 +346,7 @@ Partial Class frmInventario
         Me.TabPage2.Location = New System.Drawing.Point(4, 29)
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(0)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Size = New System.Drawing.Size(1322, 676)
+        Me.TabPage2.Size = New System.Drawing.Size(936, 429)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Entradas"
         '
@@ -359,7 +359,7 @@ Partial Class frmInventario
         Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Padding = New System.Windows.Forms.Padding(15, 0, 15, 15)
-        Me.Panel8.Size = New System.Drawing.Size(1322, 556)
+        Me.Panel8.Size = New System.Drawing.Size(936, 309)
         Me.Panel8.TabIndex = 8
         '
         'DataGridView2
@@ -372,7 +372,7 @@ Partial Class frmInventario
         Me.DataGridView2.Location = New System.Drawing.Point(20, 1)
         Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(1283, 535)
+        Me.DataGridView2.Size = New System.Drawing.Size(897, 288)
         Me.DataGridView2.TabIndex = 2
         '
         'Panel9
@@ -384,7 +384,7 @@ Partial Class frmInventario
         Me.Panel9.Location = New System.Drawing.Point(0, 53)
         Me.Panel9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(1322, 67)
+        Me.Panel9.Size = New System.Drawing.Size(936, 67)
         Me.Panel9.TabIndex = 7
         '
         'Panel10
@@ -392,7 +392,7 @@ Partial Class frmInventario
         Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.Panel10.Controls.Add(Me.TextBox2)
         Me.Panel10.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel10.Location = New System.Drawing.Point(1022, 0)
+        Me.Panel10.Location = New System.Drawing.Point(636, 0)
         Me.Panel10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(300, 67)
@@ -451,7 +451,7 @@ Partial Class frmInventario
         Me.Panel12.Location = New System.Drawing.Point(0, 0)
         Me.Panel12.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(1322, 53)
+        Me.Panel12.Size = New System.Drawing.Size(936, 53)
         Me.Panel12.TabIndex = 9
         '
         'Panel13
@@ -459,7 +459,7 @@ Partial Class frmInventario
         Me.Panel13.Controls.Add(Me.panelSplitButonEntradas)
         Me.Panel13.Controls.Add(Me.btnAgregarEntradas)
         Me.Panel13.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel13.Location = New System.Drawing.Point(1120, 0)
+        Me.Panel13.Location = New System.Drawing.Point(734, 0)
         Me.Panel13.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel13.Name = "Panel13"
         Me.Panel13.Padding = New System.Windows.Forms.Padding(30, 10, 10, 10)
@@ -572,7 +572,7 @@ Partial Class frmInventario
         Me.panelTodo.Margin = New System.Windows.Forms.Padding(75, 77, 75, 77)
         Me.panelTodo.Name = "panelTodo"
         Me.panelTodo.Padding = New System.Windows.Forms.Padding(20)
-        Me.panelTodo.Size = New System.Drawing.Size(1370, 749)
+        Me.panelTodo.Size = New System.Drawing.Size(984, 502)
         Me.panelTodo.TabIndex = 4
         '
         'frmInventario
@@ -580,7 +580,7 @@ Partial Class frmInventario
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1370, 749)
+        Me.ClientSize = New System.Drawing.Size(984, 502)
         Me.ControlBox = False
         Me.Controls.Add(Me.panelTodo)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
