@@ -27,7 +27,7 @@ Partial Class frmInventario
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvInventario = New System.Windows.Forms.DataGridView()
         Me.pan = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -45,7 +45,7 @@ Partial Class frmInventario
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.dgvEntradas = New System.Windows.Forms.DataGridView()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -63,11 +63,12 @@ Partial Class frmInventario
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.panelTodo = New System.Windows.Forms.Panel()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvInventario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pan.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel6.SuspendLayout()
@@ -77,7 +78,7 @@ Partial Class frmInventario
         Me.Panel3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.Panel8.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvEntradas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
         Me.Panel10.SuspendLayout()
         Me.Panel11.SuspendLayout()
@@ -121,7 +122,7 @@ Partial Class frmInventario
         Me.TabPage1.Location = New System.Drawing.Point(4, 29)
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(0)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(1322, 676)
+        Me.TabPage1.Size = New System.Drawing.Size(936, 429)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Inventario"
         '
@@ -133,33 +134,38 @@ Partial Class frmInventario
         Me.Panel2.Location = New System.Drawing.Point(0, 53)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1322, 623)
+        Me.Panel2.Size = New System.Drawing.Size(936, 376)
         Me.Panel2.TabIndex = 7
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.Panel5.Controls.Add(Me.DataGridView1)
+        Me.Panel5.Controls.Add(Me.IconButton1)
+        Me.Panel5.Controls.Add(Me.dgvInventario)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel5.Location = New System.Drawing.Point(0, 67)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Padding = New System.Windows.Forms.Padding(15, 0, 15, 15)
-        Me.Panel5.Size = New System.Drawing.Size(1322, 556)
+        Me.Panel5.Size = New System.Drawing.Size(936, 309)
         Me.Panel5.TabIndex = 5
         '
-        'DataGridView1
+        'dgvInventario
         '
-        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.dgvInventario.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(20, 1)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1282, 535)
-        Me.DataGridView1.TabIndex = 2
+        Me.dgvInventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvInventario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvInventario.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.dgvInventario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvInventario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvInventario.Location = New System.Drawing.Point(20, 1)
+        Me.dgvInventario.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dgvInventario.Name = "dgvInventario"
+        Me.dgvInventario.Size = New System.Drawing.Size(896, 288)
+        Me.dgvInventario.TabIndex = 2
         '
         'pan
         '
@@ -170,7 +176,7 @@ Partial Class frmInventario
         Me.pan.Location = New System.Drawing.Point(0, 0)
         Me.pan.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pan.Name = "pan"
-        Me.pan.Size = New System.Drawing.Size(1322, 67)
+        Me.pan.Size = New System.Drawing.Size(936, 67)
         Me.pan.TabIndex = 4
         '
         'Panel7
@@ -178,7 +184,7 @@ Partial Class frmInventario
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.Panel7.Controls.Add(Me.TextBox1)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel7.Location = New System.Drawing.Point(1022, 0)
+        Me.Panel7.Location = New System.Drawing.Point(636, 0)
         Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(300, 67)
@@ -220,6 +226,7 @@ Partial Class frmInventario
         'Button4
         '
         Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button4.Location = New System.Drawing.Point(141, 15)
         Me.Button4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button4.Name = "Button4"
@@ -237,7 +244,7 @@ Partial Class frmInventario
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1322, 53)
+        Me.Panel1.Size = New System.Drawing.Size(936, 53)
         Me.Panel1.TabIndex = 6
         '
         'Panel4
@@ -245,7 +252,7 @@ Partial Class frmInventario
         Me.Panel4.Controls.Add(Me.panelSplitButonInventario)
         Me.Panel4.Controls.Add(Me.btnAgregarInventario)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel4.Location = New System.Drawing.Point(1120, 0)
+        Me.Panel4.Location = New System.Drawing.Point(734, 0)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Padding = New System.Windows.Forms.Padding(30, 10, 10, 10)
@@ -353,7 +360,7 @@ Partial Class frmInventario
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.Panel8.Controls.Add(Me.DataGridView2)
+        Me.Panel8.Controls.Add(Me.dgvEntradas)
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel8.Location = New System.Drawing.Point(0, 120)
         Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -362,18 +369,18 @@ Partial Class frmInventario
         Me.Panel8.Size = New System.Drawing.Size(936, 309)
         Me.Panel8.TabIndex = 8
         '
-        'DataGridView2
+        'dgvEntradas
         '
-        Me.DataGridView2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.dgvEntradas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(20, 1)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(897, 288)
-        Me.DataGridView2.TabIndex = 2
+        Me.dgvEntradas.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvEntradas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEntradas.Location = New System.Drawing.Point(20, 1)
+        Me.dgvEntradas.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dgvEntradas.Name = "dgvEntradas"
+        Me.dgvEntradas.Size = New System.Drawing.Size(897, 288)
+        Me.dgvEntradas.TabIndex = 2
         '
         'Panel9
         '
@@ -575,6 +582,25 @@ Partial Class frmInventario
         Me.panelTodo.Size = New System.Drawing.Size(984, 502)
         Me.panelTodo.TabIndex = 4
         '
+        'IconButton1
+        '
+        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.IconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.IconButton1.FlatAppearance.BorderSize = 2
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Filter
+        Me.IconButton1.IconColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.IconSize = 20
+        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton1.Location = New System.Drawing.Point(99, 30)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(138, 46)
+        Me.IconButton1.TabIndex = 2
+        Me.IconButton1.Text = "Limpiar"
+        Me.IconButton1.UseVisualStyleBackColor = False
+        '
         'frmInventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -596,7 +622,7 @@ Partial Class frmInventario
         Me.TabPage1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvInventario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pan.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
@@ -608,7 +634,7 @@ Partial Class frmInventario
         Me.Panel3.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.Panel8.ResumeLayout(False)
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvEntradas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel9.ResumeLayout(False)
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
@@ -627,7 +653,7 @@ Partial Class frmInventario
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvInventario As DataGridView
     Friend WithEvents btnAgregarInventario As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button1 As Button
@@ -647,7 +673,7 @@ Partial Class frmInventario
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Panel8 As Panel
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents dgvEntradas As DataGridView
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Panel10 As Panel
     Friend WithEvents TextBox2 As TextBox
@@ -664,4 +690,5 @@ Partial Class frmInventario
     Friend WithEvents btnAgregarEntradas As Button
     Friend WithEvents Panel15 As Panel
     Friend WithEvents Label2 As Label
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
 End Class

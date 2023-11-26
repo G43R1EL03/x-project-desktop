@@ -1,6 +1,9 @@
-﻿Public Class frmInventario
+﻿Imports MySql.Data.MySqlClient
+
+Public Class frmInventario
     Private Sub frmInventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         hideSubMenu()
+        LlenarDGVInventario()
     End Sub
 
     Private Sub hideSubMenu()
@@ -29,7 +32,26 @@
 
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub LlenarDGVInventario()
+        Dim sqlDa As MySqlDataAdapter
+        Dim dtResultado As New DataTable
+        Try
+            conexionDB()
+            myConnection.Open()
 
+            Dim cmd As New MySqlCommand("SP_LlenarDGVInventario", myConnection)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            sqlDa = New MySqlDataAdapter(cmd)
+            sqlDa.Fill(dtResultado)
+
+            If dtResultado.Rows.Count <> 0 Then
+                dgvInventario.DataSource = dtResultado
+            End If
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message)
+        Finally
+            If myConnection.State <> ConnectionState.Closed Then myConnection.Close()
+        End Try
     End Sub
 End Class
