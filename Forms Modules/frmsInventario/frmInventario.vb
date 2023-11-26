@@ -2,7 +2,7 @@
 
 Public Class frmInventario
     Private Sub frmInventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LlenarDGVInventario()
+        LlenarDGVInventario() ' a
     End Sub
 
     Private Sub LlenarDGVInventario()
