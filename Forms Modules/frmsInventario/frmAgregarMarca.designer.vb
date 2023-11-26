@@ -175,7 +175,7 @@ Partial Class Agregar_Marca
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(289, 25)
         Me.Label4.TabIndex = 19
-        Me.Label4.Text = "Informacion General de la Marca"
+        Me.Label4.Text = "Información General de la Marca"
         '
         'Agregar_Marca
         '
