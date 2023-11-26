@@ -1,5 +1,4 @@
-﻿Imports System.Windows.Documents
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 
 Public Class frmInventario
     Private Sub frmInventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -27,21 +26,5 @@ Public Class frmInventario
         Finally
             If myConnection.State <> ConnectionState.Closed Then myConnection.Close()
         End Try
-    End Sub
-
-    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
-
-    End Sub
-
-    Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem2.Click
-
-    End Sub
-
-    Private Sub ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem3.Click
-
-    End Sub
-
-    Private Sub ToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem4.Click
-
     End Sub
 End Class
