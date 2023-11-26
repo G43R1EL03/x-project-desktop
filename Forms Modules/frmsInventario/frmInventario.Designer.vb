@@ -533,6 +533,43 @@ Partial Class frmInventario
         Me.IconButton5.Text = "      Limpiar"
         Me.IconButton5.UseVisualStyleBackColor = True
         '
+        'IconButton2
+        '
+        Me.IconButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.IconButton2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.FileImport
+        Me.IconButton2.IconColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton2.IconSize = 35
+        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton2.Location = New System.Drawing.Point(165, 11)
+        Me.IconButton2.Name = "IconButton2"
+        Me.IconButton2.Size = New System.Drawing.Size(118, 45)
+        Me.IconButton2.TabIndex = 7
+        Me.IconButton2.Text = "       Reporte"
+        Me.IconButton2.UseVisualStyleBackColor = False
+        '
+        'IconButton5
+        '
+        Me.IconButton5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.IconButton5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.IconButton5.FlatAppearance.BorderSize = 2
+        Me.IconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.IconButton5.IconChar = FontAwesome.Sharp.IconChar.FilterCircleXmark
+        Me.IconButton5.IconColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.IconButton5.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton5.IconSize = 35
+        Me.IconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton5.Location = New System.Drawing.Point(44, 12)
+        Me.IconButton5.Name = "IconButton5"
+        Me.IconButton5.Size = New System.Drawing.Size(125, 43)
+        Me.IconButton5.TabIndex = 6
+        Me.IconButton5.Text = "      Limpiar"
+        Me.IconButton5.UseVisualStyleBackColor = True
+        '
         'frmInventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -623,8 +660,6 @@ Partial Class frmInventario
     Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem4 As ToolStripMenuItem
-    'Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
     Friend WithEvents TextBox2 As TextBox
