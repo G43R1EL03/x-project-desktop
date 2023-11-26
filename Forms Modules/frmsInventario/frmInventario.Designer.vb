@@ -664,4 +664,5 @@ Partial Class frmInventario
     Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
 End Class
