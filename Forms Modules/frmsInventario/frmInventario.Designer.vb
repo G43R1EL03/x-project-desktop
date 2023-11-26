@@ -92,12 +92,12 @@ Partial Class frmInventario
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(30, 14)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(144, 31)
+        Me.Label1.Size = New System.Drawing.Size(134, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Inventario"
         '
@@ -191,8 +191,6 @@ Partial Class frmInventario
         '
         'TextBox1
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
-        Me.TextBox1.ForeColor = System.Drawing.SystemColors.Window
         Me.TextBox1.Location = New System.Drawing.Point(54, 15)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox1.Multiline = True
@@ -215,26 +213,31 @@ Partial Class frmInventario
         '
         'IconButton4
         '
-        'Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        'Me.Button1.Location = New System.Drawing.Point(20, 15)
-        'Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        'Me.Button1.Name = "Button1"
-        'Me.Button1.Size = New System.Drawing.Size(112, 43)
-        'Me.Button1.TabIndex = 2
-        'Me.Button1.Text = "Limpiar"
-        'Me.Button1.UseVisualStyleBackColor = True
+        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.FileImport
+        Me.IconButton4.IconColor = System.Drawing.Color.Black
+        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton4.IconSize = 35
+        Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton4.Location = New System.Drawing.Point(167, 14)
+        Me.IconButton4.Name = "IconButton4"
+        Me.IconButton4.Size = New System.Drawing.Size(133, 44)
+        Me.IconButton4.TabIndex = 5
+        Me.IconButton4.Text = "       Reporte"
+        Me.IconButton4.UseVisualStyleBackColor = True
         '
         'IconButton3
         '
-        'Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
-        'Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        'Me.Button4.Location = New System.Drawing.Point(141, 15)
-        'Me.Button4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        'Me.Button4.Name = "Button4"
-        'Me.Button4.Size = New System.Drawing.Size(112, 43)
-        'Me.Button4.TabIndex = 5
-        'Me.Button4.Text = "Reporte"
-        'Me.Button4.UseVisualStyleBackColor = True
+        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.FilterCircleXmark
+        Me.IconButton3.IconColor = System.Drawing.Color.Black
+        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton3.IconSize = 35
+        Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton3.Location = New System.Drawing.Point(20, 14)
+        Me.IconButton3.Name = "IconButton3"
+        Me.IconButton3.Size = New System.Drawing.Size(133, 44)
+        Me.IconButton3.TabIndex = 4
+        Me.IconButton3.Text = "      Limpiar"
+        Me.IconButton3.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -399,6 +402,20 @@ Partial Class frmInventario
         Me.Panel11.Size = New System.Drawing.Size(327, 67)
         Me.Panel11.TabIndex = 6
         '
+        'IconButton2
+        '
+        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.FileImport
+        Me.IconButton2.IconColor = System.Drawing.Color.Black
+        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton2.IconSize = 35
+        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton2.Location = New System.Drawing.Point(167, 12)
+        Me.IconButton2.Name = "IconButton2"
+        Me.IconButton2.Size = New System.Drawing.Size(133, 44)
+        Me.IconButton2.TabIndex = 3
+        Me.IconButton2.Text = "       Reporte"
+        Me.IconButton2.UseVisualStyleBackColor = True
+        '
         'Panel12
         '
         Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
@@ -480,54 +497,41 @@ Partial Class frmInventario
         '
         'Label2
         '
-        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.FileImport
-        Me.IconButton2.IconColor = System.Drawing.Color.Black
-        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.IconSize = 35
-        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton2.Location = New System.Drawing.Point(167, 15)
-        Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(133, 44)
-        Me.IconButton2.TabIndex = 3
-        Me.IconButton2.Text = "       Reporte"
-        Me.IconButton2.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(30, 14)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(123, 31)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Entradas"
         '
-        'IconButton3
+        'panelTodo
         '
-        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.FilterCircleXmark
-        Me.IconButton3.IconColor = System.Drawing.Color.Black
-        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton3.IconSize = 35
-        Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton3.Location = New System.Drawing.Point(20, 14)
-        Me.IconButton3.Name = "IconButton3"
-        Me.IconButton3.Size = New System.Drawing.Size(133, 44)
-        Me.IconButton3.TabIndex = 4
-        Me.IconButton3.Text = "      Limpiar"
-        Me.IconButton3.UseVisualStyleBackColor = True
+        Me.panelTodo.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
+        Me.panelTodo.Controls.Add(Me.TabControl1)
+        Me.panelTodo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelTodo.Location = New System.Drawing.Point(0, 0)
+        Me.panelTodo.Margin = New System.Windows.Forms.Padding(75, 77, 75, 77)
+        Me.panelTodo.Name = "panelTodo"
+        Me.panelTodo.Padding = New System.Windows.Forms.Padding(20)
+        Me.panelTodo.Size = New System.Drawing.Size(984, 569)
+        Me.panelTodo.TabIndex = 4
         '
-        'IconButton4
+        'IconButton5
         '
-        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.FileImport
-        Me.IconButton4.IconColor = System.Drawing.Color.Black
-        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton4.IconSize = 35
-        Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton4.Location = New System.Drawing.Point(167, 14)
-        Me.IconButton4.Name = "IconButton4"
-        Me.IconButton4.Size = New System.Drawing.Size(133, 44)
-        Me.IconButton4.TabIndex = 5
-        Me.IconButton4.Text = "       Reporte"
-        Me.IconButton4.UseVisualStyleBackColor = True
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(57, 15)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(224, 41)
-        Me.TextBox2.TabIndex = 5
+        Me.IconButton5.IconChar = FontAwesome.Sharp.IconChar.FilterCircleXmark
+        Me.IconButton5.IconColor = System.Drawing.Color.Black
+        Me.IconButton5.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton5.IconSize = 35
+        Me.IconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton5.Location = New System.Drawing.Point(20, 12)
+        Me.IconButton5.Name = "IconButton5"
+        Me.IconButton5.Size = New System.Drawing.Size(133, 44)
+        Me.IconButton5.TabIndex = 5
+        Me.IconButton5.Text = "      Limpiar"
+        Me.IconButton5.UseVisualStyleBackColor = True
         '
         'frmInventario
         '
