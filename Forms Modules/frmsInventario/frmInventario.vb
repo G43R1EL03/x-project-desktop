@@ -2,7 +2,7 @@
 
 Public Class frmInventario
     Private Sub frmInventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LlenarDGVInventario() ' a
+        LlenarDGVInventario()
     End Sub
 
     Private Sub LlenarDGVInventario()
@@ -19,12 +19,28 @@ Public Class frmInventario
             sqlDa.Fill(dtResultado)
 
             If dtResultado.Rows.Count <> 0 Then
-                dgvInventario.DataSource = dtResultado
+                dgvInv.DataSource = dtResultado
             End If
         Catch ex As Exception
             MsgBox("Error: " & ex.Message)
         Finally
             If myConnection.State <> ConnectionState.Closed Then myConnection.Close()
         End Try
+    End Sub
+
+    Private Sub tsMarcaInv_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub tsProductoInv_Click(sender As Object, e As EventArgs) Handles tsProductoInv.Click
+
+    End Sub
+
+    Private Sub tsCategoriaInv_Click(sender As Object, e As EventArgs) Handles tsCategoriaInv.Click
+
+    End Sub
+
+    Private Sub tsRealizarCompraInv_Click(sender As Object, e As EventArgs) Handles tsRealizarCompraInv.Click
+
     End Sub
 End Class
