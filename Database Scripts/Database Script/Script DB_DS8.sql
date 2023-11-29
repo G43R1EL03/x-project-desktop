@@ -64,8 +64,9 @@ CREATE TABLE Reclamo_prioridad (
 -- Creación de tabla Reclamo_estado
 CREATE TABLE Reclamo_estado (
     id_reclamo_estado INT AUTO_INCREMENT PRIMARY KEY,
-    estado VARCHAR(255) UNIQUE
+    estado ENUM("Resuleto", "Pendiente", "Archivado", "Urgente")
 );
+
 
 -- Creación de tabla Permisos
 CREATE TABLE Permisos (
@@ -84,11 +85,13 @@ CREATE TABLE Usuario (
     nombre VARCHAR(255),
     correo VARCHAR(255) UNIQUE,
     pass VARCHAR(255),
-    rol VARCHAR(255),
+    rol enum("Admin", "Cliente", "Proveedor"),
     foto VARCHAR(255),
     telefono VARCHAR(255),
     detalles VARCHAR(255)
 );
+
+
 
 -- Creación de tabla Admin
 CREATE TABLE Admin (
