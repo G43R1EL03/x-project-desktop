@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmTickets
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,79 +20,40 @@ Partial Class frmTickets
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ID_ticket = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Usuario = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Asunto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Asesor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Prioridad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Estatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgvReclamos = New System.Windows.Forms.DataGridView()
         Me.Accion = New System.Windows.Forms.DataGridViewButtonColumn()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Estatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Prioridad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Asesor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Asunto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Usuario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ID_ticket = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.dgvReclamos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(35, 37)
+        Me.Label1.Location = New System.Drawing.Point(21, 55)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(186, 24)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Tickets pendientes"
         '
-        'DataGridView1
+        'dgvReclamos
         '
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_ticket, Me.Usuario, Me.Asunto, Me.Asesor, Me.Prioridad, Me.Estatus, Me.Fecha, Me.Accion})
-        Me.DataGridView1.Location = New System.Drawing.Point(25, 93)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(860, 304)
-        Me.DataGridView1.TabIndex = 1
-        '
-        'ID_ticket
-        '
-        Me.ID_ticket.HeaderText = "ID"
-        Me.ID_ticket.Name = "ID_ticket"
-        Me.ID_ticket.ReadOnly = True
-        '
-        'Usuario
-        '
-        Me.Usuario.HeaderText = "Usuario"
-        Me.Usuario.Name = "Usuario"
-        Me.Usuario.ReadOnly = True
-        '
-        'Asunto
-        '
-        Me.Asunto.HeaderText = "Asunto"
-        Me.Asunto.Name = "Asunto"
-        Me.Asunto.ReadOnly = True
-        '
-        'Asesor
-        '
-        Me.Asesor.HeaderText = "Asesor"
-        Me.Asesor.Name = "Asesor"
-        Me.Asesor.ReadOnly = True
-        '
-        'Prioridad
-        '
-        Me.Prioridad.HeaderText = "Prioridad"
-        Me.Prioridad.Name = "Prioridad"
-        '
-        'Estatus
-        '
-        Me.Estatus.HeaderText = "Estatus"
-        Me.Estatus.Name = "Estatus"
-        '
-        'Fecha
-        '
-        Me.Fecha.HeaderText = "Fecha"
-        Me.Fecha.Name = "Fecha"
+        Me.dgvReclamos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.dgvReclamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvReclamos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_ticket, Me.Usuario, Me.Asunto, Me.Asesor, Me.Prioridad, Me.Estatus, Me.Fecha, Me.Accion})
+        Me.dgvReclamos.Location = New System.Drawing.Point(25, 93)
+        Me.dgvReclamos.Name = "dgvReclamos"
+        Me.dgvReclamos.Size = New System.Drawing.Size(860, 304)
+        Me.dgvReclamos.TabIndex = 1
         '
         'Accion
         '
@@ -101,23 +62,69 @@ Partial Class frmTickets
         Me.Accion.Text = "----->"
         Me.Accion.UseColumnTextForButtonValue = True
         '
+        'Fecha
+        '
+        Me.Fecha.DataPropertyName = "fecha"
+        Me.Fecha.HeaderText = "Fecha"
+        Me.Fecha.Name = "Fecha"
+        '
+        'Estatus
+        '
+        Me.Estatus.DataPropertyName = "estado"
+        Me.Estatus.HeaderText = "Estatus"
+        Me.Estatus.Name = "Estatus"
+        '
+        'Prioridad
+        '
+        Me.Prioridad.DataPropertyName = "prioridad"
+        Me.Prioridad.HeaderText = "Prioridad"
+        Me.Prioridad.Name = "Prioridad"
+        '
+        'Asesor
+        '
+        Me.Asesor.DataPropertyName = "asesor"
+        Me.Asesor.HeaderText = "Asesor"
+        Me.Asesor.Name = "Asesor"
+        Me.Asesor.ReadOnly = True
+        '
+        'Asunto
+        '
+        Me.Asunto.DataPropertyName = "asunto"
+        Me.Asunto.HeaderText = "Asunto"
+        Me.Asunto.Name = "Asunto"
+        Me.Asunto.ReadOnly = True
+        '
+        'Usuario
+        '
+        Me.Usuario.DataPropertyName = "usuario"
+        Me.Usuario.HeaderText = "Usuario"
+        Me.Usuario.Name = "Usuario"
+        Me.Usuario.ReadOnly = True
+        '
+        'ID_ticket
+        '
+        Me.ID_ticket.DataPropertyName = "id_reclamo"
+        Me.ID_ticket.HeaderText = "ID"
+        Me.ID_ticket.Name = "ID_ticket"
+        Me.ID_ticket.ReadOnly = True
+        '
         'frmTickets
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(924, 450)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvReclamos)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmTickets"
         Me.Text = "Tickets"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvReclamos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvReclamos As DataGridView
     Friend WithEvents ID_ticket As DataGridViewTextBoxColumn
     Friend WithEvents Usuario As DataGridViewTextBoxColumn
     Friend WithEvents Asunto As DataGridViewTextBoxColumn

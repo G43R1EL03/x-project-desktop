@@ -103,10 +103,8 @@ INSERT INTO Empresa (usuario_id, ruc, razon_social, documento, estado) VALUES
 (4, '78901234567', 'Tés del Valle, Inc.', 'JKL-012', 'Inactiva'),
 (5, '23456789012', 'Jugos Tropicales, S.A.', 'MNO-345', 'Activa'),
 (6, '34567890123', 'Bebidas Deportivas Xtreme, Ltda.', 'PQR-678', 'Activa'),
-(7, '45678901234', 'Organic Drinks, Inc.', 'STU-901', 'Inactiva'),
 (8, '56789012345', 'Aguas Minerales del Bosque, S.A.', 'VWX-234', 'Activa'),
-(9, '67890123456', 'Tés Naturales, Ltda.', 'YZA-567', 'Inactiva'),
-(10, '78901234567', 'Bebidas con Gas, S.A.', 'BCD-890', 'Activa');
+(9, '67890123456', 'Tés Naturales, Ltda.', 'YZA-567', 'Inactiva')
 
 
 
