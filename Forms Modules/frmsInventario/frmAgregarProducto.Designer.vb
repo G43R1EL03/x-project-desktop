@@ -42,15 +42,17 @@ Partial Class frmAgregarProducto
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.panelFrmAgregarProducto = New System.Windows.Forms.Panel()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.panelFrmAgregarProducto.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(8, 16)
+        Me.Label1.Location = New System.Drawing.Point(137, 23)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(183, 25)
@@ -65,8 +67,8 @@ Partial Class frmAgregarProducto
         Me.IconPictureBox1.IconColor = System.Drawing.SystemColors.Control
         Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconPictureBox1.IconSize = 162
-        Me.IconPictureBox1.Location = New System.Drawing.Point(12, 41)
-        Me.IconPictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.IconPictureBox1.Location = New System.Drawing.Point(141, 48)
+        Me.IconPictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.IconPictureBox1.Name = "IconPictureBox1"
         Me.IconPictureBox1.Size = New System.Drawing.Size(177, 162)
         Me.IconPictureBox1.TabIndex = 1
@@ -80,8 +82,8 @@ Partial Class frmAgregarProducto
         Me.ButtonChoose.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ButtonChoose.IconSize = 35
         Me.ButtonChoose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonChoose.Location = New System.Drawing.Point(12, 207)
-        Me.ButtonChoose.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ButtonChoose.Location = New System.Drawing.Point(-149, 185)
+        Me.ButtonChoose.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonChoose.Name = "ButtonChoose"
         Me.ButtonChoose.Size = New System.Drawing.Size(87, 33)
         Me.ButtonChoose.TabIndex = 2
@@ -96,8 +98,8 @@ Partial Class frmAgregarProducto
         Me.ButtonUpload.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ButtonUpload.IconSize = 35
         Me.ButtonUpload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonUpload.Location = New System.Drawing.Point(103, 207)
-        Me.ButtonUpload.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ButtonUpload.Location = New System.Drawing.Point(232, 214)
+        Me.ButtonUpload.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonUpload.Name = "ButtonUpload"
         Me.ButtonUpload.Size = New System.Drawing.Size(87, 33)
         Me.ButtonUpload.TabIndex = 3
@@ -112,8 +114,8 @@ Partial Class frmAgregarProducto
         Me.ButtonCancel.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ButtonCancel.IconSize = 25
         Me.ButtonCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonCancel.Location = New System.Drawing.Point(47, 244)
-        Me.ButtonCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ButtonCancel.Location = New System.Drawing.Point(-114, 222)
+        Me.ButtonCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonCancel.Name = "ButtonCancel"
         Me.ButtonCancel.Size = New System.Drawing.Size(87, 33)
         Me.ButtonCancel.TabIndex = 4
@@ -136,8 +138,8 @@ Partial Class frmAgregarProducto
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.txtNombre)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Location = New System.Drawing.Point(193, 62)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Location = New System.Drawing.Point(322, 69)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(383, 400)
         Me.Panel1.TabIndex = 5
@@ -146,7 +148,7 @@ Partial Class frmAgregarProducto
         '
         Me.Button1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(134, 343)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(105, 35)
         Me.Button1.TabIndex = 19
@@ -157,7 +159,7 @@ Partial Class frmAgregarProducto
         '
         Me.txtReorden.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtReorden.Location = New System.Drawing.Point(13, 307)
-        Me.txtReorden.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtReorden.Margin = New System.Windows.Forms.Padding(2)
         Me.txtReorden.Name = "txtReorden"
         Me.txtReorden.Size = New System.Drawing.Size(250, 26)
         Me.txtReorden.TabIndex = 18
@@ -178,7 +180,7 @@ Partial Class frmAgregarProducto
         Me.BoxMarca.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BoxMarca.FormattingEnabled = True
         Me.BoxMarca.Location = New System.Drawing.Point(13, 252)
-        Me.BoxMarca.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BoxMarca.Margin = New System.Windows.Forms.Padding(2)
         Me.BoxMarca.Name = "BoxMarca"
         Me.BoxMarca.Size = New System.Drawing.Size(157, 26)
         Me.BoxMarca.TabIndex = 16
@@ -199,7 +201,7 @@ Partial Class frmAgregarProducto
         Me.BoxCategoria.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BoxCategoria.FormattingEnabled = True
         Me.BoxCategoria.Location = New System.Drawing.Point(13, 201)
-        Me.BoxCategoria.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BoxCategoria.Margin = New System.Windows.Forms.Padding(2)
         Me.BoxCategoria.Name = "BoxCategoria"
         Me.BoxCategoria.Size = New System.Drawing.Size(157, 26)
         Me.BoxCategoria.TabIndex = 14
@@ -219,7 +221,7 @@ Partial Class frmAgregarProducto
         '
         Me.txtCantidad.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCantidad.Location = New System.Drawing.Point(13, 142)
-        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(2)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(250, 26)
         Me.txtCantidad.TabIndex = 12
@@ -239,7 +241,7 @@ Partial Class frmAgregarProducto
         '
         Me.txtPrecio.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrecio.Location = New System.Drawing.Point(13, 86)
-        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(250, 26)
         Me.txtPrecio.TabIndex = 10
@@ -259,7 +261,7 @@ Partial Class frmAgregarProducto
         '
         Me.txtNombre.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.Location = New System.Drawing.Point(13, 34)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(250, 26)
         Me.txtNombre.TabIndex = 8
@@ -279,33 +281,43 @@ Partial Class frmAgregarProducto
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(193, 37)
+        Me.Label2.Location = New System.Drawing.Point(322, 44)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(334, 25)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Información General del Producto"
         '
+        'panelFrmAgregarProducto
+        '
+        Me.panelFrmAgregarProducto.Controls.Add(Me.Panel1)
+        Me.panelFrmAgregarProducto.Controls.Add(Me.Label2)
+        Me.panelFrmAgregarProducto.Controls.Add(Me.Label1)
+        Me.panelFrmAgregarProducto.Controls.Add(Me.IconPictureBox1)
+        Me.panelFrmAgregarProducto.Controls.Add(Me.ButtonCancel)
+        Me.panelFrmAgregarProducto.Controls.Add(Me.ButtonChoose)
+        Me.panelFrmAgregarProducto.Controls.Add(Me.ButtonUpload)
+        Me.panelFrmAgregarProducto.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelFrmAgregarProducto.Location = New System.Drawing.Point(0, 0)
+        Me.panelFrmAgregarProducto.Name = "panelFrmAgregarProducto"
+        Me.panelFrmAgregarProducto.Size = New System.Drawing.Size(935, 494)
+        Me.panelFrmAgregarProducto.TabIndex = 7
+        '
         'frmAgregarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(935, 494)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.ButtonCancel)
-        Me.Controls.Add(Me.ButtonUpload)
-        Me.Controls.Add(Me.ButtonChoose)
-        Me.Controls.Add(Me.IconPictureBox1)
-        Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Controls.Add(Me.panelFrmAgregarProducto)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmAgregarProducto"
         Me.Text = "frmAgregarProducto"
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.panelFrmAgregarProducto.ResumeLayout(False)
+        Me.panelFrmAgregarProducto.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -329,4 +341,5 @@ Partial Class frmAgregarProducto
     Friend WithEvents Label5 As Label
     Friend WithEvents txtPrecio As TextBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents panelFrmAgregarProducto As Panel
 End Class

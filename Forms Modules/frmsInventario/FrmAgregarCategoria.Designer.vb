@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmAgregarCategoria
+Partial Class frmAgregarCategoria
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,31 +22,31 @@ Partial Class FrmAgregarCategoria
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.pnlAgregarCategoria = New System.Windows.Forms.Panel()
+        Me.panelFrmAgregarCategoria = New System.Windows.Forms.Panel()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtCategoria = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.pnlAgregarCategoria.SuspendLayout()
+        Me.panelFrmAgregarCategoria.SuspendLayout()
         Me.SuspendLayout()
         '
-        'pnlAgregarCategoria
+        'panelFrmAgregarCategoria
         '
-        Me.pnlAgregarCategoria.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.pnlAgregarCategoria.Controls.Add(Me.btnCerrar)
-        Me.pnlAgregarCategoria.Controls.Add(Me.Button1)
-        Me.pnlAgregarCategoria.Controls.Add(Me.txtCategoria)
-        Me.pnlAgregarCategoria.Controls.Add(Me.Label1)
-        Me.pnlAgregarCategoria.Location = New System.Drawing.Point(218, 144)
-        Me.pnlAgregarCategoria.Name = "pnlAgregarCategoria"
-        Me.pnlAgregarCategoria.Size = New System.Drawing.Size(365, 163)
-        Me.pnlAgregarCategoria.TabIndex = 1
+        Me.panelFrmAgregarCategoria.Controls.Add(Me.btnCerrar)
+        Me.panelFrmAgregarCategoria.Controls.Add(Me.Button1)
+        Me.panelFrmAgregarCategoria.Controls.Add(Me.txtCategoria)
+        Me.panelFrmAgregarCategoria.Controls.Add(Me.Label1)
+        Me.panelFrmAgregarCategoria.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelFrmAgregarCategoria.Location = New System.Drawing.Point(0, 0)
+        Me.panelFrmAgregarCategoria.Name = "panelFrmAgregarCategoria"
+        Me.panelFrmAgregarCategoria.Size = New System.Drawing.Size(800, 450)
+        Me.panelFrmAgregarCategoria.TabIndex = 1
         '
         'btnCerrar
         '
         Me.btnCerrar.BackColor = System.Drawing.Color.Transparent
         Me.btnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCerrar.Location = New System.Drawing.Point(313, 29)
+        Me.btnCerrar.Location = New System.Drawing.Point(527, 156)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(26, 23)
         Me.btnCerrar.TabIndex = 3
@@ -56,7 +56,7 @@ Partial Class FrmAgregarCategoria
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(248, 88)
+        Me.Button1.Location = New System.Drawing.Point(462, 215)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(92, 35)
         Me.Button1.TabIndex = 2
@@ -66,7 +66,7 @@ Partial Class FrmAgregarCategoria
         'txtCategoria
         '
         Me.txtCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCategoria.Location = New System.Drawing.Point(27, 88)
+        Me.txtCategoria.Location = New System.Drawing.Point(241, 215)
         Me.txtCategoria.Multiline = True
         Me.txtCategoria.Name = "txtCategoria"
         Me.txtCategoria.Size = New System.Drawing.Size(215, 35)
@@ -76,7 +76,7 @@ Partial Class FrmAgregarCategoria
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(22, 29)
+        Me.Label1.Location = New System.Drawing.Point(236, 156)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(204, 25)
         Me.Label1.TabIndex = 0
@@ -87,16 +87,16 @@ Partial Class FrmAgregarCategoria
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.pnlAgregarCategoria)
+        Me.Controls.Add(Me.panelFrmAgregarCategoria)
         Me.Name = "FrmAgregarCategoria"
         Me.Text = "FrmAgregarCategoria"
-        Me.pnlAgregarCategoria.ResumeLayout(False)
-        Me.pnlAgregarCategoria.PerformLayout()
+        Me.panelFrmAgregarCategoria.ResumeLayout(False)
+        Me.panelFrmAgregarCategoria.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents pnlAgregarCategoria As Panel
+    Friend WithEvents panelFrmAgregarCategoria As Panel
     Friend WithEvents btnCerrar As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents txtCategoria As TextBox

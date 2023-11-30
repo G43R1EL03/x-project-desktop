@@ -34,15 +34,17 @@ Partial Class Agregar_Marca
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!)
-        Me.Label1.Location = New System.Drawing.Point(75, 23)
+        Me.Label1.Location = New System.Drawing.Point(106, 43)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(138, 25)
         Me.Label1.TabIndex = 0
@@ -55,7 +57,7 @@ Partial Class Agregar_Marca
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(293, 89)
+        Me.Panel1.Location = New System.Drawing.Point(335, 109)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(687, 302)
         Me.Panel1.TabIndex = 13
@@ -115,7 +117,7 @@ Partial Class Agregar_Marca
         Me.IconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText
         Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconPictureBox1.IconSize = 225
-        Me.IconPictureBox1.Location = New System.Drawing.Point(23, 60)
+        Me.IconPictureBox1.Location = New System.Drawing.Point(54, 80)
         Me.IconPictureBox1.Name = "IconPictureBox1"
         Me.IconPictureBox1.Size = New System.Drawing.Size(264, 225)
         Me.IconPictureBox1.TabIndex = 14
@@ -128,7 +130,7 @@ Partial Class Agregar_Marca
         Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton2.IconSize = 38
         Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton2.Location = New System.Drawing.Point(167, 303)
+        Me.IconButton2.Location = New System.Drawing.Point(198, 323)
         Me.IconButton2.Name = "IconButton2"
         Me.IconButton2.Size = New System.Drawing.Size(97, 45)
         Me.IconButton2.TabIndex = 16
@@ -144,7 +146,7 @@ Partial Class Agregar_Marca
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.IconSize = 38
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton1.Location = New System.Drawing.Point(36, 303)
+        Me.IconButton1.Location = New System.Drawing.Point(67, 323)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(106, 45)
         Me.IconButton1.TabIndex = 17
@@ -159,7 +161,7 @@ Partial Class Agregar_Marca
         Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton3.IconSize = 38
         Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton3.Location = New System.Drawing.Point(108, 354)
+        Me.IconButton3.Location = New System.Drawing.Point(139, 374)
         Me.IconButton3.Name = "IconButton3"
         Me.IconButton3.Size = New System.Drawing.Size(94, 43)
         Me.IconButton3.TabIndex = 18
@@ -171,31 +173,41 @@ Partial Class Agregar_Marca
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 14.25!)
-        Me.Label4.Location = New System.Drawing.Point(294, 60)
+        Me.Label4.Location = New System.Drawing.Point(336, 80)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(289, 25)
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Información General de la Marca"
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.IconButton3)
+        Me.Panel2.Controls.Add(Me.Panel1)
+        Me.Panel2.Controls.Add(Me.IconButton1)
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.IconButton2)
+        Me.Panel2.Controls.Add(Me.IconPictureBox1)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1354, 710)
+        Me.Panel2.TabIndex = 20
         '
         'Agregar_Marca
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1354, 710)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.IconButton3)
-        Me.Controls.Add(Me.IconButton1)
-        Me.Controls.Add(Me.IconButton2)
-        Me.Controls.Add(Me.IconPictureBox1)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Panel2)
         Me.Name = "Agregar_Marca"
         Me.Text = "Agregar_Marca"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -211,4 +223,5 @@ Partial Class Agregar_Marca
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
     Friend WithEvents Label4 As Label
+    Friend WithEvents Panel2 As Panel
 End Class

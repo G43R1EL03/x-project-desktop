@@ -27,10 +27,10 @@ Partial Class frmInventario
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInventario))
         Dim ToolStripDropDownButton3 As System.Windows.Forms.ToolStripDropDownButton
         Dim tsMarcaEnt As System.Windows.Forms.ToolStripMenuItem
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.tsProductoInv = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsCategoriaInv = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsRealizarCompraInv = New System.Windows.Forms.ToolStripMenuItem()
@@ -69,7 +69,7 @@ Partial Class frmInventario
         Me.tsAgregarEnt = New System.Windows.Forms.ToolStrip()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.panelTodo = New System.Windows.Forms.Panel()
+        Me.panelFrmInventario = New System.Windows.Forms.Panel()
         tsMarcaInv = New System.Windows.Forms.ToolStripMenuItem()
         tsAgregarInv = New System.Windows.Forms.ToolStripDropDownButton()
         ToolStripDropDownButton3 = New System.Windows.Forms.ToolStripDropDownButton()
@@ -96,7 +96,7 @@ Partial Class frmInventario
         Me.Panel13.SuspendLayout()
         Me.tsAgregarEnt.SuspendLayout()
         Me.Panel15.SuspendLayout()
-        Me.panelTodo.SuspendLayout()
+        Me.panelFrmInventario.SuspendLayout()
         Me.SuspendLayout()
         '
         'tsMarcaInv
@@ -191,6 +191,7 @@ Partial Class frmInventario
         tsMarcaEnt.ShowShortcutKeys = False
         tsMarcaEnt.Size = New System.Drawing.Size(224, 30)
         tsMarcaEnt.Text = "Marca"
+        AddHandler tsMarcaEnt.Click, AddressOf Me.tsMarcaEnt_Click
         '
         'tsProductoEnt
         '
@@ -294,14 +295,14 @@ Partial Class frmInventario
         Me.dgvInv.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.dgvInv.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvInv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvInv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvInv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle21
         Me.dgvInv.ColumnHeadersHeight = 50
         Me.dgvInv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvInv.EnableHeadersVisualStyles = False
@@ -312,12 +313,12 @@ Partial Class frmInventario
         Me.dgvInv.ReadOnly = True
         Me.dgvInv.RowHeadersVisible = False
         Me.dgvInv.RowHeadersWidth = 100
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvInv.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle22.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvInv.RowsDefaultCellStyle = DataGridViewCellStyle22
         Me.dgvInv.RowTemplate.Height = 50
         Me.dgvInv.RowTemplate.ReadOnly = True
         Me.dgvInv.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
@@ -506,14 +507,14 @@ Partial Class frmInventario
         Me.dgvEnt.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.dgvEnt.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvEnt.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvEnt.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvEnt.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle23
         Me.dgvEnt.ColumnHeadersHeight = 50
         Me.dgvEnt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvEnt.EnableHeadersVisualStyles = False
@@ -524,12 +525,12 @@ Partial Class frmInventario
         Me.dgvEnt.ReadOnly = True
         Me.dgvEnt.RowHeadersVisible = False
         Me.dgvEnt.RowHeadersWidth = 100
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvEnt.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle24.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvEnt.RowsDefaultCellStyle = DataGridViewCellStyle24
         Me.dgvEnt.RowTemplate.Height = 50
         Me.dgvEnt.RowTemplate.ReadOnly = True
         Me.dgvEnt.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
@@ -667,7 +668,7 @@ Partial Class frmInventario
         Me.tsAgregarEnt.Location = New System.Drawing.Point(137, 11)
         Me.tsAgregarEnt.Name = "tsAgregarEnt"
         Me.tsAgregarEnt.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.tsAgregarEnt.Size = New System.Drawing.Size(111, 33)
+        Me.tsAgregarEnt.Size = New System.Drawing.Size(142, 33)
         Me.tsAgregarEnt.Stretch = True
         Me.tsAgregarEnt.TabIndex = 3
         Me.tsAgregarEnt.Text = "ToolStrip3"
@@ -695,17 +696,17 @@ Partial Class frmInventario
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Entradas"
         '
-        'panelTodo
+        'panelFrmInventario
         '
-        Me.panelTodo.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
-        Me.panelTodo.Controls.Add(Me.TabControl1)
-        Me.panelTodo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelTodo.Location = New System.Drawing.Point(0, 0)
-        Me.panelTodo.Margin = New System.Windows.Forms.Padding(75, 77, 75, 77)
-        Me.panelTodo.Name = "panelTodo"
-        Me.panelTodo.Padding = New System.Windows.Forms.Padding(20)
-        Me.panelTodo.Size = New System.Drawing.Size(984, 569)
-        Me.panelTodo.TabIndex = 4
+        Me.panelFrmInventario.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
+        Me.panelFrmInventario.Controls.Add(Me.TabControl1)
+        Me.panelFrmInventario.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelFrmInventario.Location = New System.Drawing.Point(0, 0)
+        Me.panelFrmInventario.Margin = New System.Windows.Forms.Padding(75, 77, 75, 77)
+        Me.panelFrmInventario.Name = "panelFrmInventario"
+        Me.panelFrmInventario.Padding = New System.Windows.Forms.Padding(20)
+        Me.panelFrmInventario.Size = New System.Drawing.Size(984, 569)
+        Me.panelFrmInventario.TabIndex = 4
         '
         'frmInventario
         '
@@ -714,7 +715,7 @@ Partial Class frmInventario
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(984, 569)
         Me.ControlBox = False
-        Me.Controls.Add(Me.panelTodo)
+        Me.Controls.Add(Me.panelFrmInventario)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
@@ -754,7 +755,7 @@ Partial Class frmInventario
         Me.tsAgregarEnt.PerformLayout()
         Me.Panel15.ResumeLayout(False)
         Me.Panel15.PerformLayout()
-        Me.panelTodo.ResumeLayout(False)
+        Me.panelFrmInventario.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -767,7 +768,7 @@ Partial Class frmInventario
     Friend WithEvents btnAgregarInventario As Button
     Friend WithEvents txtBuscarInv As TextBox
     Friend WithEvents pan As Panel
-    Friend WithEvents panelTodo As Panel
+    Friend WithEvents panelFrmInventario As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel4 As Panel
