@@ -133,16 +133,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class Modules\analitica\Class1.vb" />
+    <Compile Include="Class Modules\analitica\analitycDAO.vb" />
     <Compile Include="Class Modules\blog %28sugerencias%29\Class2.vb" />
     <Compile Include="Class Modules\clientes\Class3.vb" />
     <Compile Include="Class Modules\inventario\Class4.vb" />
-    <Compile Include="Class Modules\tickets\Class5.vb" />
+    <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
     <Compile Include="Class Modules\ventas\Class6.vb" />
     <Compile Include="Forms Modules\frmsAnaliticas\frmAnalitica.Designer.vb">
       <DependentUpon>frmAnalitica.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms Modules\frmsAnaliticas\frmAnalitica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\frmAnaliticaVentas.Designer.vb">
+      <DependentUpon>frmAnaliticaVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\frmAnaliticaVentas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms Modules\frmsAyuda\frmAyuda.Designer.vb">
@@ -179,6 +185,16 @@
       <DependentUpon>frmAgregarProducto.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms Modules\frmsInventario\frmAgregarProducto.vb">
+    <Compile Include="Forms Modules\frmsTickets\frmDetalleTicket.Designer.vb">
+      <DependentUpon>frmDetalleTicket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmDetalleTicket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmHomeTicket.Designer.vb">
+      <DependentUpon>frmHomeTicket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmHomeTicket.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBienvenidaLogin.Designer.vb">
@@ -199,6 +215,8 @@
     <Compile Include="Forms Modules\frmsInventario\frmInventario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Interfaces Modules\analitica\analitycInterfaces.vb" />
+    <Compile Include="Interfaces Modules\tickets\ticketsInterfaces.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -239,6 +257,12 @@
     <Compile Include="Standard Modules\PanelModule.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms Modules\frmsAnaliticas\frmAnalitica.resx">
+      <DependentUpon>frmAnalitica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAnaliticas\frmAnaliticaVentas.resx">
+      <DependentUpon>frmAnaliticaVentas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyuda.resx">
       <DependentUpon>frmAyuda.vb</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +280,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsInventario\frmAgregarProducto.resx">
       <DependentUpon>frmAgregarProducto.vb</DependentUpon>
+    <EmbeddedResource Include="Forms Modules\frmsTickets\frmDetalleTicket.resx">
+      <DependentUpon>frmDetalleTicket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsTickets\frmHomeTicket.resx">
+      <DependentUpon>frmHomeTicket.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBienvenidaLogin.resx">
       <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>

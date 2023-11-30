@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmAnalitica
+Partial Class frmDetalleTicket
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,41 +22,31 @@ Partial Class frmAnalitica
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.VENTASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip1.SuspendLayout()
+        Me.lblTicket = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'MenuStrip1
+        'lblTicket
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VENTASToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
-        Me.MenuStrip1.TabIndex = 1
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.lblTicket.AutoSize = True
+        Me.lblTicket.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTicket.Location = New System.Drawing.Point(52, 32)
+        Me.lblTicket.Name = "lblTicket"
+        Me.lblTicket.Size = New System.Drawing.Size(64, 20)
+        Me.lblTicket.TabIndex = 0
+        Me.lblTicket.Text = "Ticket #"
         '
-        'VENTASToolStripMenuItem
-        '
-        Me.VENTASToolStripMenuItem.Name = "VENTASToolStripMenuItem"
-        Me.VENTASToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
-        Me.VENTASToolStripMenuItem.Text = "VENTAS"
-        '
-        'frmAnalitica
+        'frmDetalleTicket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "frmAnalitica"
-        Me.Text = "frmAnalitica"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.Controls.Add(Me.lblTicket)
+        Me.Name = "frmDetalleTicket"
+        Me.Text = "frmDetalleTicket"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents VENTASToolStripMenuItem As ToolStripMenuItem
+
+    Friend WithEvents lblTicket As Label
 End Class

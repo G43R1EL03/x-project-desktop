@@ -1,14 +1,14 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Xml
 Module DB_Conecction
-    Public myConnection As MySqlConnection
+    Public myConnectionDB As MySqlConnection
 
     Sub conexionDB()
         Dim cadenaConec As String
         Dim servidorDb As String = "", nameDb As String = "", usuario As String = "", pass As String = ""
         lecturaXML(servidorDb, nameDb, usuario, pass)
         cadenaConec = "server=" & servidorDb & ";database=" & nameDb & ";userid=" & usuario & ";password=" & pass
-        myConnection = New MySqlConnection(cadenaConec)
+        myConnectionDB = New MySqlConnection(cadenaConec)
     End Sub
 
     Public Function decobeBase64(ByVal mensaje As String) As String
@@ -31,7 +31,7 @@ Module DB_Conecction
             pass = decobeBase64(mxml.ReadElementString("password"))
         End While
         mxml.Close()
-        'MsgBox(servidorDb + " " + nameDb + " " + usuario + " " + pass)
+        MsgBox(servidorDb + " " + nameDb + " " + usuario + " " + pass)
     End Sub
 
 End Module
