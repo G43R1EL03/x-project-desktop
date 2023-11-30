@@ -133,11 +133,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class Modules\analitica\analitycDAO.vb" />
+        <Compile Include="Class Modules\analitica\analitycDAO.vb" />
     <Compile Include="Class Modules\blog %28sugerencias%29\Class2.vb" />
     <Compile Include="Class Modules\clientes\Class3.vb" />
     <Compile Include="Class Modules\inventario\Class4.vb" />
-    <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
+        <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
     <Compile Include="Class Modules\ventas\Class6.vb" />
     <Compile Include="Forms Modules\frmsAnaliticas\frmAnalitica.Designer.vb">
       <DependentUpon>frmAnalitica.vb</DependentUpon>
@@ -185,6 +185,9 @@
       <DependentUpon>frmAgregarProducto.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms Modules\frmsInventario\frmAgregarProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+
     <Compile Include="Forms Modules\frmsTickets\frmDetalleTicket.Designer.vb">
       <DependentUpon>frmDetalleTicket.vb</DependentUpon>
     </Compile>
@@ -195,8 +198,7 @@
       <DependentUpon>frmHomeTicket.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms Modules\frmsTickets\frmHomeTicket.vb">
-      <SubType>Form</SubType>
-    </Compile>
+
     <Compile Include="frmBienvenidaLogin.Designer.vb">
       <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>
     </Compile>
@@ -257,7 +259,7 @@
     <Compile Include="Standard Modules\PanelModule.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms Modules\frmsAnaliticas\frmAnalitica.resx">
+  <EmbeddedResource Include="Forms Modules\frmsAnaliticas\frmAnalitica.resx">
       <DependentUpon>frmAnalitica.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsAnaliticas\frmAnaliticaVentas.resx">
@@ -280,12 +282,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsInventario\frmAgregarProducto.resx">
       <DependentUpon>frmAgregarProducto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsTickets\frmDetalleTicket.resx">
       <DependentUpon>frmDetalleTicket.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsTickets\frmHomeTicket.resx">
       <DependentUpon>frmHomeTicket.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmBienvenidaLogin.resx">
       <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>
     </EmbeddedResource>
