@@ -136,7 +136,7 @@
     <Compile Include="Class Modules\blog %28sugerencias%29\Class2.vb" />
     <Compile Include="Class Modules\clientes\Class3.vb" />
     <Compile Include="Class Modules\inventario\Class4.vb" />
-    <Compile Include="Class Modules\tickets\Class5.vb" />
+    <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
     <Compile Include="Class Modules\ventas\Class6.vb" />
     <Compile Include="Forms Modules\frmsAnaliticas\frmAnalitica.Designer.vb">
       <DependentUpon>frmAnalitica.vb</DependentUpon>
@@ -168,6 +168,18 @@
     <Compile Include="Forms Modules\frmsClientes\frmClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmDetalleTicket.Designer.vb">
+      <DependentUpon>frmDetalleTicket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmDetalleTicket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmHomeTicket.Designer.vb">
+      <DependentUpon>frmHomeTicket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmHomeTicket.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBienvenidaLogin.Designer.vb">
       <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>
     </Compile>
@@ -187,6 +199,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interfaces Modules\analitica\analitycInterfaces.vb" />
+    <Compile Include="Interfaces Modules\tickets\ticketsInterfaces.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -241,6 +254,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsClientes\frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsTickets\frmDetalleTicket.resx">
+      <DependentUpon>frmDetalleTicket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsTickets\frmHomeTicket.resx">
+      <DependentUpon>frmHomeTicket.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBienvenidaLogin.resx">
       <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>

@@ -31,7 +31,7 @@ Module DB_Conecction
             pass = decobeBase64(mxml.ReadElementString("password"))
         End While
         mxml.Close()
-        'MsgBox(servidorDb + " " + nameDb + " " + usuario + " " + pass)
+        MsgBox(servidorDb + " " + nameDb + " " + usuario + " " + pass)
     End Sub
 
 End Module
