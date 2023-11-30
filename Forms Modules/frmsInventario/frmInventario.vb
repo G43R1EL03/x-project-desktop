@@ -29,7 +29,9 @@ Public Class frmInventario
     End Sub
 
     Private Sub tsMarcaInv_Click(sender As Object, e As EventArgs)
-
+        'Debes llamar al metodo y pasarle 2 argumentos
+        'El primer argumento es el formulario que quieres abrir y el segundo el panel que contendra el formulario
+        SetPanel(frmAgregarProducto, Panel5)
     End Sub
 
     Private Sub tsProductoInv_Click(sender As Object, e As EventArgs) Handles tsProductoInv.Click
