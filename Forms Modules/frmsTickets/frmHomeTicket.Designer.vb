@@ -24,12 +24,14 @@ Partial Class frmHomeTicket
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.TicketsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.panelHomeTicket = New System.Windows.Forms.Panel()
+        Me.CrearTicketsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TicketsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TicketsToolStripMenuItem, Me.CrearTicketsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -39,14 +41,29 @@ Partial Class frmHomeTicket
         'TicketsToolStripMenuItem
         '
         Me.TicketsToolStripMenuItem.Name = "TicketsToolStripMenuItem"
-        Me.TicketsToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
-        Me.TicketsToolStripMenuItem.Text = "Tickets"
+        Me.TicketsToolStripMenuItem.Size = New System.Drawing.Size(74, 20)
+        Me.TicketsToolStripMenuItem.Text = "Ver Tickets"
+        '
+        'panelHomeTicket
+        '
+        Me.panelHomeTicket.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelHomeTicket.Location = New System.Drawing.Point(0, 24)
+        Me.panelHomeTicket.Name = "panelHomeTicket"
+        Me.panelHomeTicket.Size = New System.Drawing.Size(800, 426)
+        Me.panelHomeTicket.TabIndex = 3
+        '
+        'CrearTicketsToolStripMenuItem
+        '
+        Me.CrearTicketsToolStripMenuItem.Name = "CrearTicketsToolStripMenuItem"
+        Me.CrearTicketsToolStripMenuItem.Size = New System.Drawing.Size(86, 20)
+        Me.CrearTicketsToolStripMenuItem.Text = "Crear Tickets"
         '
         'frmHomeTicket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.panelHomeTicket)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmHomeTicket"
@@ -60,4 +77,6 @@ Partial Class frmHomeTicket
 
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents TicketsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents panelHomeTicket As Panel
+    Friend WithEvents CrearTicketsToolStripMenuItem As ToolStripMenuItem
 End Class

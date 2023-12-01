@@ -48,7 +48,6 @@ Module ButtonModule
 
         button.IconChar = iconType
         button.IconColor = Color.FromArgb(207, 207, 207)
-        button.Font = New Font("Century Gothic", 15, FontStyle.Bold)
 
         Dim rad As New Drawing2D.GraphicsPath
         rad.StartFigure()

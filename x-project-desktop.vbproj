@@ -205,6 +205,12 @@
     <Compile Include="Forms Modules\frmsClientes\frmClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmCrearTickets.Designer.vb">
+      <DependentUpon>frmCrearTickets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmCrearTickets.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms Modules\frmsTickets\frmDetalleTicket.Designer.vb">
       <DependentUpon>frmDetalleTicket.vb</DependentUpon>
     </Compile>
@@ -274,6 +280,7 @@
     </Compile>
     <Compile Include="Standard Modules\ButtonModule.vb" />
     <Compile Include="Standard Modules\DB_Conecction.vb" />
+    <Compile Include="Standard Modules\FileModule.vb" />
     <Compile Include="Standard Modules\PanelModule.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -309,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsClientes\frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsTickets\frmCrearTickets.resx">
+      <DependentUpon>frmCrearTickets.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsTickets\frmDetalleTicket.resx">
       <DependentUpon>frmDetalleTicket.vb</DependentUpon>
