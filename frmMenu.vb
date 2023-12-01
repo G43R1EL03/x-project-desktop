@@ -49,7 +49,7 @@ Public Class frmMenu
     Private Sub btnTickets_Click(sender As Object, e As EventArgs) Handles btnTickets.Click
 
         ActivateButton(sender, RGBColors.ShadePink, "Tickets", leftBorderBtn, IconCurrentForm, lblFormTitle)
-        SetPanel(New frmTickets(), PanelContent)
+        SetPanel(New frmHomeTicket(), PanelContent)
 
     End Sub
 
