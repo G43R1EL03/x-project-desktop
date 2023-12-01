@@ -87,6 +87,7 @@
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
@@ -156,6 +157,42 @@
     <Compile Include="Forms Modules\frmsAyuda\frmAyuda.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaDevolucion.Designer.vb">
+      <DependentUpon>frmAyudaDevolucion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaDevolucion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaEntrega.Designer.vb">
+      <DependentUpon>frmAyudaEntrega.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaEntrega.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaPedidos.Designer.vb">
+      <DependentUpon>frmAyudaPedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaPedidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaPagoPromociones.Designer.vb">
+      <DependentUpon>frmAyudaPagoPromociones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaPagoPromociones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaPoliticas.Designer.vb">
+      <DependentUpon>frmAyudaPoliticas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaPoliticas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaUsuario.Designer.vb">
+      <DependentUpon>frmAyudaUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms Modules\frmsBlogSugerencias\frmBlogSugerencias.Designer.vb">
       <DependentUpon>frmBlogSugerencias.vb</DependentUpon>
     </Compile>
@@ -166,6 +203,12 @@
       <DependentUpon>frmClientes.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms Modules\frmsClientes\frmClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmCrearTickets.Designer.vb">
+      <DependentUpon>frmCrearTickets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmCrearTickets.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms Modules\frmsTickets\frmDetalleTicket.Designer.vb">
@@ -237,6 +280,7 @@
     </Compile>
     <Compile Include="Standard Modules\ButtonModule.vb" />
     <Compile Include="Standard Modules\DB_Conecction.vb" />
+    <Compile Include="Standard Modules\FileModule.vb" />
     <Compile Include="Standard Modules\PanelModule.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -249,11 +293,32 @@
     <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyuda.resx">
       <DependentUpon>frmAyuda.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyudaDevolucion.resx">
+      <DependentUpon>frmAyudaDevolucion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyudaEntrega.resx">
+      <DependentUpon>frmAyudaEntrega.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyudaPedidos.resx">
+      <DependentUpon>frmAyudaPedidos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyudaPagoPromociones.resx">
+      <DependentUpon>frmAyudaPagoPromociones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyudaPoliticas.resx">
+      <DependentUpon>frmAyudaPoliticas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyudaUsuario.resx">
+      <DependentUpon>frmAyudaUsuario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsBlogSugerencias\frmBlogSugerencias.resx">
       <DependentUpon>frmBlogSugerencias.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsClientes\frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsTickets\frmCrearTickets.resx">
+      <DependentUpon>frmCrearTickets.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsTickets\frmDetalleTicket.resx">
       <DependentUpon>frmDetalleTicket.vb</DependentUpon>

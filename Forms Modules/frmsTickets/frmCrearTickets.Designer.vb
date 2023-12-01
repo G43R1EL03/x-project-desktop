@@ -1,0 +1,208 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class frmCrearTickets
+    Inherits System.Windows.Forms.Form
+
+    'Form reemplaza a Dispose para limpiar la lista de componentes.
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Requerido por el Diseñador de Windows Forms
+    Private components As System.ComponentModel.IContainer
+
+    'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
+    'Se puede modificar usando el Diseñador de Windows Forms.  
+    'No lo modifique con el editor de código.
+    <System.Diagnostics.DebuggerStepThrough()>
+    Private Sub InitializeComponent()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblEvidencia = New System.Windows.Forms.Label()
+        Me.btnSeleccionar = New FontAwesome.Sharp.IconButton()
+        Me.cboCategoria = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
+        Me.GroupBox1.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.lblEvidencia)
+        Me.GroupBox1.Controls.Add(Me.btnSeleccionar)
+        Me.GroupBox1.Controls.Add(Me.cboCategoria)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.txtDescripcion)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Location = New System.Drawing.Point(107, 2)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(575, 354)
+        Me.GroupBox1.TabIndex = 0
+        Me.GroupBox1.TabStop = False
+        '
+        'lblEvidencia
+        '
+        Me.lblEvidencia.AutoSize = True
+        Me.lblEvidencia.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEvidencia.Location = New System.Drawing.Point(175, 316)
+        Me.lblEvidencia.Name = "lblEvidencia"
+        Me.lblEvidencia.Size = New System.Drawing.Size(21, 17)
+        Me.lblEvidencia.TabIndex = 25
+        Me.lblEvidencia.Text = "://"
+        '
+        'btnSeleccionar
+        '
+        Me.btnSeleccionar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSeleccionar.IconChar = FontAwesome.Sharp.IconChar.FileImage
+        Me.btnSeleccionar.IconColor = System.Drawing.Color.Black
+        Me.btnSeleccionar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnSeleccionar.IconSize = 30
+        Me.btnSeleccionar.Location = New System.Drawing.Point(224, 261)
+        Me.btnSeleccionar.Name = "btnSeleccionar"
+        Me.btnSeleccionar.Size = New System.Drawing.Size(173, 43)
+        Me.btnSeleccionar.TabIndex = 24
+        Me.btnSeleccionar.Text = "Seleccionar Archivo"
+        Me.btnSeleccionar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnSeleccionar.UseVisualStyleBackColor = True
+        '
+        'cboCategoria
+        '
+        Me.cboCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboCategoria.FormattingEnabled = True
+        Me.cboCategoria.Location = New System.Drawing.Point(224, 70)
+        Me.cboCategoria.Name = "cboCategoria"
+        Me.cboCategoria.Size = New System.Drawing.Size(207, 26)
+        Me.cboCategoria.TabIndex = 23
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(193, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(85, 272)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(92, 19)
+        Me.Label7.TabIndex = 16
+        Me.Label7.Text = "Evidencia:"
+        '
+        'txtDescripcion
+        '
+        Me.txtDescripcion.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescripcion.Location = New System.Drawing.Point(224, 115)
+        Me.txtDescripcion.Multiline = True
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(207, 124)
+        Me.txtDescripcion.TabIndex = 11
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label4.Location = New System.Drawing.Point(38, 235)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(0, 19)
+        Me.Label4.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(193, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(72, 118)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(108, 19)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Descripcion:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(193, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(85, 70)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(95, 19)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Categoria:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(269, 16)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(110, 19)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Crear Ticket"
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(121, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuardar.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.ForeColor = System.Drawing.Color.White
+        Me.btnGuardar.Location = New System.Drawing.Point(295, 362)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(231, 38)
+        Me.btnGuardar.TabIndex = 1
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = False
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'OpenFileDialog2
+        '
+        Me.OpenFileDialog2.FileName = "OpenFileDialog2"
+        '
+        'frmCrearTickets
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnGuardar)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.MaximizeBox = False
+        Me.Name = "frmCrearTickets"
+        Me.Text = "frmCrearTickets"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.ResumeLayout(False)
+
+    End Sub
+
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents btnGuardar As Button
+    Friend WithEvents txtDescripcion As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents cboCategoria As ComboBox
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents OpenFileDialog2 As OpenFileDialog
+    Friend WithEvents btnSeleccionar As FontAwesome.Sharp.IconButton
+    Friend WithEvents lblEvidencia As Label
+End Class

@@ -68,10 +68,8 @@ Public Class frmMenu
     End Sub
 
     Private Sub btnHelp_Click(sender As Object, e As EventArgs) Handles btnHelp.Click
-
         ActivateButton(sender, RGBColors.RedAlert, "Ayuda", leftBorderBtn, IconCurrentForm, lblFormTitle)
         SetPanel(New frmAyuda(), PanelContent)
-
     End Sub
 
 End Class
