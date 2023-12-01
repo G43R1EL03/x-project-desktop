@@ -25,6 +25,7 @@ Public Class ticketsDAO
     End Function
 
     Public Function InsertarTicket() As Integer Implements ticketsInterfaces.InsertarTicket
+        Dim resultado As Integer = 0
         Try
             'Dim result As Integer
             'Using glCommand As New MySqlCommand("SP_InsertarTicket", myConecctionDB)
@@ -40,6 +41,7 @@ Public Class ticketsDAO
             '    glCommand.Parameters("@p_resultado").Direction = ParameterDirection.Output
             '    Return result = glCommand.ExecuteNonQuery()
             'End Using
+            Return resultado
         Catch ex As Exception
             Throw New Exception("Error al procesar la operación", ex)
         Finally

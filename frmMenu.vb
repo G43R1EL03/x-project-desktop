@@ -53,13 +53,6 @@ Public Class frmMenu
 
     End Sub
 
-    Private Sub btnBlog_Click(sender As Object, e As EventArgs) Handles btnBlog.Click
-
-        ActivateButton(sender, RGBColors.SugarCaneGreen, "Blog", leftBorderBtn, IconCurrentForm, lblFormTitle)
-        SetPanel(New frmBlogSugerencias(), PanelContent)
-
-    End Sub
-
     Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
 
         ActivateButton(sender, RGBColors.Ambar, "Usuarios", leftBorderBtn, IconCurrentForm, lblFormTitle)
