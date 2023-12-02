@@ -34,6 +34,18 @@
         End Select
     End Function
 
+    Function DefinicionesPrioridad(ByVal prioridad As Integer) As String
+        Select Case prioridad
+            Case 1
+                DefinicionesPrioridad = "Espera"
+            Case 2
+                DefinicionesPrioridad = "Revisado"
+            Case 3
+                DefinicionesPrioridad = "Resuelto"
+            Case Else
+                DefinicionesPrioridad = "Ninguna"
+        End Select
+    End Function
 
 
 End Module
