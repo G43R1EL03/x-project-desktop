@@ -139,24 +139,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class Modules\analitica\analitycDAO.vb" />
     <Compile Include="Class Modules\blog %28sugerencias%29\Class2.vb" />
     <Compile Include="Class Modules\clientes\Class3.vb" />
     <Compile Include="Class Modules\inventario\Class4.vb" />
     <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
     <Compile Include="Class Modules\ventas\Class6.vb" />
-    <Compile Include="Forms Modules\frmsAnaliticas\frmAnalitica.Designer.vb">
-      <DependentUpon>frmAnalitica.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms Modules\frmsAnaliticas\frmAnalitica.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms Modules\frmsAnaliticas\frmAnaliticaVentas.Designer.vb">
-      <DependentUpon>frmAnaliticaVentas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms Modules\frmsAnaliticas\frmAnaliticaVentas.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms Modules\frmsAyuda\frmAyuda.Designer.vb">
       <DependentUpon>frmAyuda.vb</DependentUpon>
     </Compile>
@@ -197,12 +184,6 @@
       <DependentUpon>frmAyudaUsuario.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms Modules\frmsAyuda\frmAyudaUsuario.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms Modules\frmsBlogSugerencias\frmBlogSugerencias.Designer.vb">
-      <DependentUpon>frmBlogSugerencias.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms Modules\frmsBlogSugerencias\frmBlogSugerencias.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms Modules\frmsClientes\frmClientes.Designer.vb">
@@ -291,12 +272,6 @@
     <Compile Include="Standard Modules\PanelModule.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms Modules\frmsAnaliticas\frmAnalitica.resx">
-      <DependentUpon>frmAnalitica.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms Modules\frmsAnaliticas\frmAnaliticaVentas.resx">
-      <DependentUpon>frmAnaliticaVentas.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyuda.resx">
       <DependentUpon>frmAyuda.vb</DependentUpon>
     </EmbeddedResource>
@@ -317,9 +292,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyudaUsuario.resx">
       <DependentUpon>frmAyudaUsuario.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms Modules\frmsBlogSugerencias\frmBlogSugerencias.resx">
-      <DependentUpon>frmBlogSugerencias.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsClientes\frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>

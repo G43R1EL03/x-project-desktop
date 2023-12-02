@@ -30,45 +30,45 @@ Public Class frmCrearTickets
         CategoriaCbo()
     End Sub
 
-    Private Sub CategoriaCbo()
-        Dim dtCategorias As DataTable = ticketsDAO.ObtenerCategorias
-        If dtCategorias.Rows.Count <> 0 Then
-            For Each row In dtCategorias.Rows
-                row("categoria") = DefinicionesCategorias(row("categoria"))
-            Next
-            With cboCategoria
-                .DataSource = dtCategorias
-                .ValueMember = "id_tickets_categoria"
-                .DisplayMember = "categoria"
-                .SelectedIndex = 0
-            End With
-        Else
-            cboCategoria.DataSource = Nothing
-            cboCategoria.Items.Clear()
-            cboCategoria.Items.Add("No existen categorias..")
-            cboCategoria.SelectedIndex = 0
-        End If
-    End Sub
+    'Private Sub CategoriaCbo()
+    '    Dim dtCategorias As DataTable = ticketsDAO.ObtenerCategorias
+    '    If dtCategorias.Rows.Count <> 0 Then
+    '        For Each row In dtCategorias.Rows
+    '            row("categoria") = DefinicionesCategorias(row("categoria"))
+    '        Next
+    '        With cboCategoria
+    '            .DataSource = dtCategorias
+    '            .ValueMember = "id_tickets_categoria"
+    '            .DisplayMember = "categoria"
+    '            .SelectedIndex = 0
+    '        End With
+    '    Else
+    '        cboCategoria.DataSource = Nothing
+    '        cboCategoria.Items.Clear()
+    '        cboCategoria.Items.Add("No existen categorias..")
+    '        cboCategoria.SelectedIndex = 0
+    '    End If
+    'End Sub
 
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        Dim categoriaId As Integer = Convert.ToInt32(cboCategoria.SelectedValue)
-        If txtDescripcion.Text.Trim() <> "" And Not IsNumeric(txtDescripcion.Text) And Not String.IsNullOrEmpty(imagePath) Then
-            Dim rutaImagen As String = ManejoDeArchivos(imagePath)
-            Try
-                Dim result As Integer = ticketsDAO.InsertarTicket(categoriaId, txtDescripcion.Text, DefinicionesCategoriaPrioridad(categoriaId), rutaImagen)
-                If result <> 0 Then
-                    MsgBox("Ticket Registrado Exitosamente")
-                    txtDescripcion.Clear()
-                Else
-                    MsgBox("Error al registrar su ticket... Verifique los datos")
-                End If
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
-        Else
-            MsgBox("Favor Verifique sus datos.. ")
-        End If
+    'Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+    '    Dim categoriaId As Integer = Convert.ToInt32(cboCategoria.SelectedValue)
+    '    If txtDescripcion.Text.Trim() <> "" And Not IsNumeric(txtDescripcion.Text) And Not String.IsNullOrEmpty(imagePath) Then
+    '        Dim rutaImagen As String = ManejoDeArchivos(imagePath)
+    '        Try
+    '            Dim result As Integer = ticketsDAO.InsertarTicket(categoriaId, txtDescripcion.Text, DefinicionesCategoriaPrioridad(categoriaId), rutaImagen)
+    '            If result <> 0 Then
+    '                MsgBox("Ticket Registrado Exitosamente")
+    '                txtDescripcion.Clear()
+    '            Else
+    '                MsgBox("Error al registrar su ticket... Verifique los datos")
+    '            End If
+    '        Catch ex As Exception
+    '            MsgBox(ex.Message)
+    '        End Try
+    '    Else
+    '        MsgBox("Favor Verifique sus datos.. ")
+    '    End If
 
-    End Sub
+    'End Sub
 
 End Class

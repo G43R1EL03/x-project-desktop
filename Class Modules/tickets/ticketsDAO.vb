@@ -1,5 +1,4 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports MySqlConnector
 Imports Mysqlx.XDevAPI.Common
 Public Class ticketsDAO
     Implements ticketsInterfaces
