@@ -280,6 +280,7 @@
     </Compile>
     <Compile Include="Standard Modules\ButtonModule.vb" />
     <Compile Include="Standard Modules\DB_Conecction.vb" />
+    <Compile Include="Standard Modules\Definiciones.vb" />
     <Compile Include="Standard Modules\FileModule.vb" />
     <Compile Include="Standard Modules\PanelModule.vb" />
   </ItemGroup>
@@ -365,19 +366,20 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database Scripts\Database Script\Script DB_DS8.sql" />
     <Content Include="Resources\dataConfig.xml" />
+    <Content Include="Store Procedures\tickets\SP_InsertarTicket.sql" />
+    <Content Include="Store Procedures\tickets\SP_ObtenerCategoria.sql" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Database Scripts\Store Procedures\analitica\" />
-    <Folder Include="Database Scripts\Store Procedures\ayuda\" />
-    <Folder Include="Database Scripts\Store Procedures\clientes\" />
-    <Folder Include="Database Scripts\Store Procedures\inventario\" />
-    <Folder Include="Database Scripts\Store Procedures\tickets-blog\" />
-    <Folder Include="Database Scripts\Store Procedures\ventas\" />
+    <Folder Include="Store Procedures\analitica\" />
+    <Folder Include="Store Procedures\ayuda\" />
+    <Folder Include="Store Procedures\clientes\" />
+    <Folder Include="Store Procedures\ventas\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database Scripts\Database Script\Script DB_DS8.sql" />
+    <Content Include="Database Scripts\Database Script\Script 1.1 DB_DS8.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
