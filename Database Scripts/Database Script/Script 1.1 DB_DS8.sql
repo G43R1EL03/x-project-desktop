@@ -256,22 +256,3 @@ CREATE TABLE Mensaje (
     FOREIGN KEY (cliente_id) REFERENCES Cliente(id_cliente),
     remitente VARCHAR(255)
 );
-
-
--- Para Datos de Ejemplo
-INSERT INTO tickets_categoria(categoria) VALUES
-('PA'),
-('PF'),
-('PR'),
-('PRA'),
-('O');
-
-INSERT INTO tickets_prioridad(categoria) VALUES
-('1'),
-('2'),
-('3');
-
-INSERT INTO tickets_prioridad(categoria) VALUES
-('Espera'),
-('Revisado'),
-('Resuelto');

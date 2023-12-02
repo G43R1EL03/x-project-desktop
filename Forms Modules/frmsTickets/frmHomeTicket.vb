@@ -19,5 +19,4 @@
         SetPanel(New frmCrearTickets(New ticketsDAO(myConnectionDB)), panelHomeTicket)
     End Sub
 
-
 End Class
