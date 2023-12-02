@@ -23,17 +23,17 @@ Partial Class frmAgregarMarca
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.btncancelar = New FontAwesome.Sharp.IconButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnagregarimg = New FontAwesome.Sharp.IconButton()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnsubirimg = New FontAwesome.Sharp.IconButton()
         Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
+        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -48,22 +48,6 @@ Partial Class frmAgregarMarca
         Me.Label4.Size = New System.Drawing.Size(284, 22)
         Me.Label4.TabIndex = 33
         Me.Label4.Text = "Información General de la Marca"
-        '
-        'btncancelar
-        '
-        Me.btncancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.btncancelar.IconChar = FontAwesome.Sharp.IconChar.X
-        Me.btncancelar.IconColor = System.Drawing.Color.Black
-        Me.btncancelar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btncancelar.IconSize = 30
-        Me.btncancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btncancelar.Location = New System.Drawing.Point(125, 333)
-        Me.btncancelar.Name = "btncancelar"
-        Me.btncancelar.Size = New System.Drawing.Size(83, 39)
-        Me.btncancelar.TabIndex = 32
-        Me.btncancelar.Text = "Cancel"
-        Me.btncancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btncancelar.UseVisualStyleBackColor = False
         '
         'Panel1
         '
@@ -130,23 +114,6 @@ Partial Class frmAgregarMarca
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Nombre"
         '
-        'btnagregarimg
-        '
-        Me.btnagregarimg.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.btnagregarimg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnagregarimg.IconChar = FontAwesome.Sharp.IconChar.PlusSquare
-        Me.btnagregarimg.IconColor = System.Drawing.Color.Black
-        Me.btnagregarimg.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnagregarimg.IconSize = 30
-        Me.btnagregarimg.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnagregarimg.Location = New System.Drawing.Point(77, 274)
-        Me.btnagregarimg.Name = "btnagregarimg"
-        Me.btnagregarimg.Size = New System.Drawing.Size(89, 43)
-        Me.btnagregarimg.TabIndex = 31
-        Me.btnagregarimg.Text = "Choose"
-        Me.btnagregarimg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnagregarimg.UseVisualStyleBackColor = False
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -158,22 +125,6 @@ Partial Class frmAgregarMarca
         Me.Label1.TabIndex = 27
         Me.Label1.Text = "Agregar Marca"
         '
-        'btnsubirimg
-        '
-        Me.btnsubirimg.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.btnsubirimg.IconChar = FontAwesome.Sharp.IconChar.Upload
-        Me.btnsubirimg.IconColor = System.Drawing.Color.Black
-        Me.btnsubirimg.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnsubirimg.IconSize = 30
-        Me.btnsubirimg.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnsubirimg.Location = New System.Drawing.Point(174, 274)
-        Me.btnsubirimg.Name = "btnsubirimg"
-        Me.btnsubirimg.Size = New System.Drawing.Size(80, 43)
-        Me.btnsubirimg.TabIndex = 30
-        Me.btnsubirimg.Text = "Upload"
-        Me.btnsubirimg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnsubirimg.UseVisualStyleBackColor = False
-        '
         'IconPictureBox1
         '
         Me.IconPictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder
@@ -182,12 +133,66 @@ Partial Class frmAgregarMarca
         Me.IconPictureBox1.IconColor = System.Drawing.SystemColors.Control
         Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconPictureBox1.IconSize = 162
-        Me.IconPictureBox1.Location = New System.Drawing.Point(77, 98)
+        Me.IconPictureBox1.Location = New System.Drawing.Point(66, 98)
         Me.IconPictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.IconPictureBox1.Name = "IconPictureBox1"
-        Me.IconPictureBox1.Size = New System.Drawing.Size(177, 162)
+        Me.IconPictureBox1.Size = New System.Drawing.Size(188, 162)
         Me.IconPictureBox1.TabIndex = 34
         Me.IconPictureBox1.TabStop = False
+        '
+        'IconButton2
+        '
+        Me.IconButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.IconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.PlusSquare
+        Me.IconButton2.IconColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton2.IconSize = 35
+        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton2.Location = New System.Drawing.Point(66, 280)
+        Me.IconButton2.Name = "IconButton2"
+        Me.IconButton2.Size = New System.Drawing.Size(91, 44)
+        Me.IconButton2.TabIndex = 38
+        Me.IconButton2.Text = "       Choose"
+        Me.IconButton2.UseVisualStyleBackColor = False
+        '
+        'IconButton3
+        '
+        Me.IconButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.IconButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.IconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.IconButton3.IconColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton3.IconSize = 35
+        Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton3.Location = New System.Drawing.Point(110, 330)
+        Me.IconButton3.Name = "IconButton3"
+        Me.IconButton3.Size = New System.Drawing.Size(91, 44)
+        Me.IconButton3.TabIndex = 39
+        Me.IconButton3.Text = "       Cancel"
+        Me.IconButton3.UseVisualStyleBackColor = False
+        '
+        'IconButton4
+        '
+        Me.IconButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.IconButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.IconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.Upload
+        Me.IconButton4.IconColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton4.IconSize = 35
+        Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton4.Location = New System.Drawing.Point(163, 280)
+        Me.IconButton4.Name = "IconButton4"
+        Me.IconButton4.Size = New System.Drawing.Size(91, 44)
+        Me.IconButton4.TabIndex = 40
+        Me.IconButton4.Text = "      Upload"
+        Me.IconButton4.UseVisualStyleBackColor = False
         '
         'frmAgregarMarca
         '
@@ -195,13 +200,13 @@ Partial Class frmAgregarMarca
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(919, 455)
+        Me.Controls.Add(Me.IconButton4)
+        Me.Controls.Add(Me.IconButton3)
+        Me.Controls.Add(Me.IconButton2)
         Me.Controls.Add(Me.IconPictureBox1)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.btncancelar)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.btnagregarimg)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnsubirimg)
         Me.Name = "frmAgregarMarca"
         Me.Text = "frmAgregarMarca"
         Me.Panel1.ResumeLayout(False)
@@ -213,15 +218,15 @@ Partial Class frmAgregarMarca
     End Sub
 
     Friend WithEvents Label4 As Label
-    Friend WithEvents btncancelar As FontAwesome.Sharp.IconButton
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button1 As Button
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents btnagregarimg As FontAwesome.Sharp.IconButton
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnsubirimg As FontAwesome.Sharp.IconButton
     Friend WithEvents IconPictureBox1 As FontAwesome.Sharp.IconPictureBox
+    Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
 End Class
