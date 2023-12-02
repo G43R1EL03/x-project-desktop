@@ -34,6 +34,7 @@ Partial Class frmMenu
         Me.btnUsers = New FontAwesome.Sharp.IconButton()
         Me.btnHelp = New FontAwesome.Sharp.IconButton()
         Me.PanelMenu = New System.Windows.Forms.Panel()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.PanelLogo = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelContent = New System.Windows.Forms.Panel()
@@ -54,7 +55,7 @@ Partial Class frmMenu
         Me.PanelTitleBar.Controls.Add(Me.IconCurrentForm)
         Me.PanelTitleBar.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelTitleBar.Location = New System.Drawing.Point(165, 0)
-        Me.PanelTitleBar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelTitleBar.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelTitleBar.Name = "PanelTitleBar"
         Me.PanelTitleBar.Size = New System.Drawing.Size(715, 61)
         Me.PanelTitleBar.TabIndex = 1
@@ -68,7 +69,7 @@ Partial Class frmMenu
         Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconPictureBox1.IconSize = 24
         Me.IconPictureBox1.Location = New System.Drawing.Point(674, 22)
-        Me.IconPictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.IconPictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.IconPictureBox1.Name = "IconPictureBox1"
         Me.IconPictureBox1.Size = New System.Drawing.Size(24, 26)
         Me.IconPictureBox1.TabIndex = 2
@@ -94,7 +95,7 @@ Partial Class frmMenu
         Me.IconCurrentForm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconCurrentForm.IconSize = 24
         Me.IconCurrentForm.Location = New System.Drawing.Point(14, 22)
-        Me.IconCurrentForm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.IconCurrentForm.Margin = New System.Windows.Forms.Padding(2)
         Me.IconCurrentForm.Name = "IconCurrentForm"
         Me.IconCurrentForm.Size = New System.Drawing.Size(24, 26)
         Me.IconCurrentForm.TabIndex = 0
@@ -113,7 +114,7 @@ Partial Class frmMenu
         Me.btnInventory.IconSize = 32
         Me.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnInventory.Location = New System.Drawing.Point(0, 114)
-        Me.btnInventory.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnInventory.Margin = New System.Windows.Forms.Padding(2)
         Me.btnInventory.Name = "btnInventory"
         Me.btnInventory.Padding = New System.Windows.Forms.Padding(8, 0, 15, 0)
         Me.btnInventory.Size = New System.Drawing.Size(165, 49)
@@ -135,7 +136,7 @@ Partial Class frmMenu
         Me.btnSales.IconSize = 32
         Me.btnSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSales.Location = New System.Drawing.Point(0, 163)
-        Me.btnSales.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSales.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSales.Name = "btnSales"
         Me.btnSales.Padding = New System.Windows.Forms.Padding(8, 0, 15, 0)
         Me.btnSales.Size = New System.Drawing.Size(165, 49)
@@ -157,7 +158,7 @@ Partial Class frmMenu
         Me.btnCustomers.IconSize = 32
         Me.btnCustomers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCustomers.Location = New System.Drawing.Point(0, 212)
-        Me.btnCustomers.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCustomers.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCustomers.Name = "btnCustomers"
         Me.btnCustomers.Padding = New System.Windows.Forms.Padding(8, 0, 15, 0)
         Me.btnCustomers.Size = New System.Drawing.Size(165, 49)
@@ -179,7 +180,7 @@ Partial Class frmMenu
         Me.btnTickets.IconSize = 32
         Me.btnTickets.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnTickets.Location = New System.Drawing.Point(0, 261)
-        Me.btnTickets.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnTickets.Margin = New System.Windows.Forms.Padding(2)
         Me.btnTickets.Name = "btnTickets"
         Me.btnTickets.Padding = New System.Windows.Forms.Padding(8, 0, 15, 0)
         Me.btnTickets.Size = New System.Drawing.Size(165, 49)
@@ -201,7 +202,7 @@ Partial Class frmMenu
         Me.btnUsers.IconSize = 32
         Me.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnUsers.Location = New System.Drawing.Point(0, 310)
-        Me.btnUsers.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnUsers.Margin = New System.Windows.Forms.Padding(2)
         Me.btnUsers.Name = "btnUsers"
         Me.btnUsers.Padding = New System.Windows.Forms.Padding(8, 0, 15, 0)
         Me.btnUsers.Size = New System.Drawing.Size(165, 49)
@@ -223,7 +224,7 @@ Partial Class frmMenu
         Me.btnHelp.IconSize = 32
         Me.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHelp.Location = New System.Drawing.Point(0, 522)
-        Me.btnHelp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnHelp.Margin = New System.Windows.Forms.Padding(2)
         Me.btnHelp.Name = "btnHelp"
         Me.btnHelp.Padding = New System.Windows.Forms.Padding(8, 0, 15, 0)
         Me.btnHelp.Size = New System.Drawing.Size(165, 49)
@@ -236,6 +237,7 @@ Partial Class frmMenu
         'PanelMenu
         '
         Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.PanelMenu.Controls.Add(Me.IconButton1)
         Me.PanelMenu.Controls.Add(Me.btnHelp)
         Me.PanelMenu.Controls.Add(Me.btnUsers)
         Me.PanelMenu.Controls.Add(Me.btnTickets)
@@ -245,17 +247,39 @@ Partial Class frmMenu
         Me.PanelMenu.Controls.Add(Me.PanelLogo)
         Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelMenu.Location = New System.Drawing.Point(0, 0)
-        Me.PanelMenu.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelMenu.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelMenu.Name = "PanelMenu"
         Me.PanelMenu.Size = New System.Drawing.Size(165, 571)
         Me.PanelMenu.TabIndex = 0
+        '
+        'IconButton1
+        '
+        Me.IconButton1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IconButton1.FlatAppearance.BorderSize = 0
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton1.ForeColor = System.Drawing.Color.Gainsboro
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.LineChart
+        Me.IconButton1.IconColor = System.Drawing.Color.Gainsboro
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.IconSize = 32
+        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton1.Location = New System.Drawing.Point(0, 359)
+        Me.IconButton1.Margin = New System.Windows.Forms.Padding(2)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Padding = New System.Windows.Forms.Padding(8, 0, 15, 0)
+        Me.IconButton1.Size = New System.Drawing.Size(165, 49)
+        Me.IconButton1.TabIndex = 10
+        Me.IconButton1.Text = "Analíticas y Reportes"
+        Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IconButton1.UseVisualStyleBackColor = True
         '
         'PanelLogo
         '
         Me.PanelLogo.Controls.Add(Me.PictureBox1)
         Me.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelLogo.Location = New System.Drawing.Point(0, 0)
-        Me.PanelLogo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelLogo.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelLogo.Name = "PanelLogo"
         Me.PanelLogo.Size = New System.Drawing.Size(165, 114)
         Me.PanelLogo.TabIndex = 0
@@ -275,7 +299,7 @@ Partial Class frmMenu
         Me.PanelContent.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.PanelContent.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelContent.Location = New System.Drawing.Point(165, 61)
-        Me.PanelContent.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelContent.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelContent.Name = "PanelContent"
         Me.PanelContent.Size = New System.Drawing.Size(715, 510)
         Me.PanelContent.TabIndex = 3
@@ -297,7 +321,7 @@ Partial Class frmMenu
         Me.Controls.Add(Me.PanelContent)
         Me.Controls.Add(Me.PanelTitleBar)
         Me.Controls.Add(Me.PanelMenu)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmMenu"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -340,4 +364,6 @@ Partial Class frmMenu
         ' Mostrar el menú desplegable cuando se hace clic en el IconPictureBox
         Me.contextMenuStrip1.Show(Me.IconPictureBox1, New Point(0, Me.IconPictureBox1.Height))
     End Sub
+
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
 End Class

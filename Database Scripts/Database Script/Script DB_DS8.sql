@@ -49,25 +49,6 @@ CREATE TABLE Direccion (
     detalles VARCHAR(255)
 );
 
--- Creación de tabla Reclamo_categoria
-CREATE TABLE Reclamo_categoria (
-    id_reclamo_categoria INT AUTO_INCREMENT PRIMARY KEY,
-    categoria VARCHAR(255) UNIQUE
-);
-
--- Creación de tabla Reclamo_prioridad
-CREATE TABLE Reclamo_prioridad (
-    id_reclamo_prioridad INT AUTO_INCREMENT PRIMARY KEY,
-    prioridad VARCHAR(255) UNIQUE
-);
-
--- Creación de tabla Reclamo_estado
-CREATE TABLE Reclamo_estado (
-    id_reclamo_estado INT AUTO_INCREMENT PRIMARY KEY,
-    estado ENUM("Resuleto", "Pendiente", "Archivado", "Urgente")
-);
-
-
 -- Creación de tabla Permisos
 CREATE TABLE Permisos (
     id_permisos INT AUTO_INCREMENT PRIMARY KEY,
@@ -108,8 +89,6 @@ CREATE TABLE Admin (
 -- Creación de tabla Empresa
 CREATE TABLE Empresa (
     id_empresa INT AUTO_INCREMENT PRIMARY KEY,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES Usuario(id_usuario),
     ruc VARCHAR(255) UNIQUE,
     razon_social VARCHAR(255) UNIQUE,
     documento VARCHAR(255),
@@ -130,14 +109,13 @@ CREATE TABLE Compra (
 -- Creación de tabla Cliente
 CREATE TABLE Cliente (
     id_cliente INT AUTO_INCREMENT PRIMARY KEY,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES Usuario(id_usuario),
     apellido VARCHAR(255),
     cedula VARCHAR(255) UNIQUE,
     empresa_id INT,
     FOREIGN KEY (empresa_id) REFERENCES Empresa(id_empresa),
     genero VARCHAR(255),
-    estado VARCHAR(255)
+    estado VARCHAR(255),
+    tipo enum("minorisra", "distribuidor")
 );
 
 -- Creación de tabla Sugerencia
@@ -224,39 +202,4 @@ CREATE TABLE Cliente_direcciones (
     direccion_id INT,
     FOREIGN KEY (direccion_id) REFERENCES Direccion(id_direccion),
     PRIMARY KEY (cliente_id, direccion_id)
-);
-
--- Creación de tabla Reclamo
-CREATE TABLE Reclamo (
-    id_reclamo INT AUTO_INCREMENT PRIMARY KEY,
-    cliente_id INT,
-    FOREIGN KEY (cliente_id) REFERENCES Cliente(id_cliente),
-    admin_id INT,
-    FOREIGN KEY (admin_id) REFERENCES Admin(id_admin),
-    pedido_id INT,
-    FOREIGN KEY (pedido_id) REFERENCES Pedido(id_pedido),
-    categoria_id INT,
-    FOREIGN KEY (categoria_id) REFERENCES Reclamo_categoria(id_reclamo_categoria),
-    prioridad_id INT,
-    FOREIGN KEY (prioridad_id) REFERENCES Reclamo_prioridad(id_reclamo_prioridad),
-    estado_id INT,
-    FOREIGN KEY (estado_id) REFERENCES Reclamo_estado(id_reclamo_estado),
-    descripcion VARCHAR(255),
-    evidencia VARCHAR(255),
-    fecha DATETIME,
-    fecha_cambio_estado DATETIME
-);
-
--- Creación de tabla Mensaje
-CREATE TABLE Mensaje (
-    id_estado INT AUTO_INCREMENT PRIMARY KEY,
-    reclamo_id INT,
-    FOREIGN KEY (reclamo_id) REFERENCES Reclamo(id_reclamo),
-    mensaje VARCHAR(255),
-    fecha_envio DATETIME,
-    admin_id INT,
-    FOREIGN KEY (admin_id) REFERENCES Admin(id_admin),
-    cliente_id INT,
-    FOREIGN KEY (cliente_id) REFERENCES Cliente(id_cliente),
-    remitente VARCHAR(255)
 );

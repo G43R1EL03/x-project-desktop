@@ -61,8 +61,12 @@ Public Class frmMenu
     End Sub
 
     Private Sub btnHelp_Click(sender As Object, e As EventArgs) Handles btnHelp.Click
-        ActivateButton(sender, RGBColors.RedAlert, "Ayuda", leftBorderBtn, IconCurrentForm, lblFormTitle)
+        ActivateButton(sender, RGBColors.LimeGreen, "Ayuda", leftBorderBtn, IconCurrentForm, lblFormTitle)
         SetPanel(New frmAyuda(), PanelContent)
     End Sub
 
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+        ActivateButton(sender, RGBColors.RedAlert, "Analiticas y Reportes", leftBorderBtn, IconCurrentForm, lblFormTitle)
+        SetPanel(New frmAnalitica(), PanelContent)
+    End Sub
 End Class
