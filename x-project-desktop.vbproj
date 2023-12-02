@@ -169,13 +169,7 @@
     <Compile Include="Forms Modules\frmsClientes\frmClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Modules\frmsInventario\frmAgregarCategoria.Designer.vb">
-      <DependentUpon>frmAgregarCategoria.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms Modules\frmsInventario\frmAgregarCategoria.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms Modules\frmsInventario\frmAgregarMarca.designer.vb">
+    <Compile Include="Forms Modules\frmsInventario\frmAgregarMarca.Designer.vb">
       <DependentUpon>frmAgregarMarca.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms Modules\frmsInventario\frmAgregarMarca.vb">
@@ -274,9 +268,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsClientes\frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms Modules\frmsInventario\frmAgregarCategoria.resx">
-      <DependentUpon>frmAgregarCategoria.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsInventario\frmAgregarMarca.resx">
       <DependentUpon>frmAgregarMarca.vb</DependentUpon>
