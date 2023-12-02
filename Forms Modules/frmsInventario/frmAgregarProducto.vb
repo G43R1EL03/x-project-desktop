@@ -1,4 +1,5 @@
-﻿Public Class frmAgregarProducto
+﻿Imports FontAwesome.Sharp
+Public Class frmAgregarProducto
     Private Sub frmAgregarProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If BoxCategoria.Items.Count = 0 Then
             BoxCategoria.Items.Add("Electrónica")
