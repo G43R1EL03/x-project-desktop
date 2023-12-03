@@ -34,7 +34,7 @@ Partial Class frmAnalitica
         Me.panelModulo5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelModulo5.Location = New System.Drawing.Point(0, 40)
         Me.panelModulo5.Name = "panelModulo5"
-        Me.panelModulo5.Size = New System.Drawing.Size(1319, 667)
+        Me.panelModulo5.Size = New System.Drawing.Size(1210, 570)
         Me.panelModulo5.TabIndex = 1
         '
         'MenuStrip1
@@ -42,7 +42,7 @@ Partial Class frmAnalitica
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesToolStripMenuItem1, Me.DashboardAnaliticasToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1319, 40)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1210, 40)
         Me.MenuStrip1.TabIndex = 2
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -64,7 +64,7 @@ Partial Class frmAnalitica
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1319, 707)
+        Me.ClientSize = New System.Drawing.Size(1210, 610)
         Me.Controls.Add(Me.panelModulo5)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
