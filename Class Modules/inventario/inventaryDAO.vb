@@ -21,9 +21,8 @@ Public Class inventaryDAO
                 End Using
             End Using
         Catch ex As Exception
-            Throw New Exception("Error al procesar la operacion", ex)
-        Finally
-            If myConnectionDB.State <> ConnectionState.Closed Then myConnectionDB.Close()
+            Throw New Exception("Error al procesar la operacion:", ex)
         End Try
     End Function
+
 End Class

@@ -49,25 +49,6 @@ CREATE TABLE Direccion (
     detalles VARCHAR(255)
 );
 
--- Creación de tabla Reclamo_categoria
-CREATE TABLE Reclamo_categoria (
-    id_reclamo_categoria INT AUTO_INCREMENT PRIMARY KEY,
-    categoria VARCHAR(255) UNIQUE
-);
-
--- Creación de tabla Reclamo_prioridad
-CREATE TABLE Reclamo_prioridad (
-    id_reclamo_prioridad INT AUTO_INCREMENT PRIMARY KEY,
-    prioridad VARCHAR(255) UNIQUE
-);
-
--- Creación de tabla Reclamo_estado
-CREATE TABLE Reclamo_estado (
-    id_reclamo_estado INT AUTO_INCREMENT PRIMARY KEY,
-    estado ENUM("Resuleto", "Pendiente", "Archivado", "Urgente")
-);
-
-
 -- Creación de tabla Permisos
 CREATE TABLE Permisos (
     id_permisos INT AUTO_INCREMENT PRIMARY KEY,
@@ -85,13 +66,11 @@ CREATE TABLE Usuario (
     nombre VARCHAR(255),
     correo VARCHAR(255) UNIQUE,
     pass VARCHAR(255),
-    rol enum("Admin", "Cliente", "Proveedor"),
+    rol enum("SAdmin", "Admin", "Colaborador"),
     foto VARCHAR(255),
     telefono VARCHAR(255),
     detalles VARCHAR(255)
 );
-
-
 
 -- Creación de tabla Admin
 CREATE TABLE Admin (
@@ -108,8 +87,6 @@ CREATE TABLE Admin (
 -- Creación de tabla Empresa
 CREATE TABLE Empresa (
     id_empresa INT AUTO_INCREMENT PRIMARY KEY,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES Usuario(id_usuario),
     ruc VARCHAR(255) UNIQUE,
     razon_social VARCHAR(255) UNIQUE,
     documento VARCHAR(255),
@@ -130,24 +107,13 @@ CREATE TABLE Compra (
 -- Creación de tabla Cliente
 CREATE TABLE Cliente (
     id_cliente INT AUTO_INCREMENT PRIMARY KEY,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES Usuario(id_usuario),
     apellido VARCHAR(255),
     cedula VARCHAR(255) UNIQUE,
     empresa_id INT,
     FOREIGN KEY (empresa_id) REFERENCES Empresa(id_empresa),
     genero VARCHAR(255),
-    estado VARCHAR(255)
-);
-
--- Creación de tabla Sugerencia
-CREATE TABLE Sugerencia (
-    id_sugerencia INT AUTO_INCREMENT PRIMARY KEY,
-    contenido VARCHAR(255),
-    fecha DATETIME,
-    valoracion INT,
-    cliente_id INT,
-    FOREIGN KEY (cliente_id) REFERENCES Cliente(id_cliente)
+    estado VARCHAR(255),
+    tipo enum("minorisra", "distribuidor")
 );
 
 -- Creación de tabla Notificacion
@@ -226,21 +192,35 @@ CREATE TABLE Cliente_direcciones (
     PRIMARY KEY (cliente_id, direccion_id)
 );
 
--- Creación de tabla Reclamo
-CREATE TABLE Reclamo (
-    id_reclamo INT AUTO_INCREMENT PRIMARY KEY,
-    cliente_id INT,
-    FOREIGN KEY (cliente_id) REFERENCES Cliente(id_cliente),
+-- Creación de tabla Tickets_categoria
+CREATE TABLE Tickets_categoria (
+    id_tickets_categoria INT AUTO_INCREMENT PRIMARY KEY,
+    categoria ENUM("PA", "PF", "PR", "PRA", "O")
+);
+
+-- Creación de tabla Tickets_prioridad
+CREATE TABLE Tickets_prioridad (
+    id_tickets_prioridad INT AUTO_INCREMENT PRIMARY KEY,
+    prioridad ENUM("1", "2", "3")
+);
+
+-- Creación de tabla Tickets_estado
+CREATE TABLE Tickets_estado (
+    id_tickets_estado INT AUTO_INCREMENT PRIMARY KEY,
+    estado ENUM("Espera", "Revisado", "Resuelto")
+);
+
+-- Creación de tabla Tickets
+CREATE TABLE Tickets (
+    id_tickets INT AUTO_INCREMENT PRIMARY KEY,
     admin_id INT,
     FOREIGN KEY (admin_id) REFERENCES Admin(id_admin),
-    pedido_id INT,
-    FOREIGN KEY (pedido_id) REFERENCES Pedido(id_pedido),
     categoria_id INT,
-    FOREIGN KEY (categoria_id) REFERENCES Reclamo_categoria(id_reclamo_categoria),
+    FOREIGN KEY (categoria_id) REFERENCES Tickets_categoria(id_tickets_categoria),
     prioridad_id INT,
-    FOREIGN KEY (prioridad_id) REFERENCES Reclamo_prioridad(id_reclamo_prioridad),
+    FOREIGN KEY (prioridad_id) REFERENCES Tickets_prioridad(id_tickets_prioridad),
     estado_id INT,
-    FOREIGN KEY (estado_id) REFERENCES Reclamo_estado(id_reclamo_estado),
+    FOREIGN KEY (estado_id) REFERENCES Tickets_estado(id_tickets_estado),
     descripcion VARCHAR(255),
     evidencia VARCHAR(255),
     fecha DATETIME,
@@ -250,8 +230,8 @@ CREATE TABLE Reclamo (
 -- Creación de tabla Mensaje
 CREATE TABLE Mensaje (
     id_estado INT AUTO_INCREMENT PRIMARY KEY,
-    reclamo_id INT,
-    FOREIGN KEY (reclamo_id) REFERENCES Reclamo(id_reclamo),
+    tickets_id INT,
+    FOREIGN KEY (tickets_id) REFERENCES Tickets(id_tickets),
     mensaje VARCHAR(255),
     fecha_envio DATETIME,
     admin_id INT,

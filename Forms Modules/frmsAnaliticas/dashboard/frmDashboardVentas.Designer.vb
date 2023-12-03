@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmAnaliticaVentas
+Partial Class frmDashboardVentas
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,30 +22,9 @@ Partial Class frmAnaliticaVentas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.dgvVentasPorID = New System.Windows.Forms.DataGridView()
-        CType(Me.dgvVentasPorID, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'dgvVentasPorID
-        '
-        Me.dgvVentasPorID.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvVentasPorID.Location = New System.Drawing.Point(89, 79)
-        Me.dgvVentasPorID.Name = "dgvVentasPorID"
-        Me.dgvVentasPorID.Size = New System.Drawing.Size(622, 292)
-        Me.dgvVentasPorID.TabIndex = 1
-        '
-        'frmAnaliticaVentas
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        components = New System.ComponentModel.Container
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.dgvVentasPorID)
-        Me.Name = "frmAnaliticaVentas"
-        Me.Text = "frmAnaliticaVentas"
-        CType(Me.dgvVentasPorID, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-
+        Me.Text = "frmDashboardVentas"
     End Sub
-
-    Friend WithEvents dgvVentasPorID As DataGridView
 End Class
