@@ -69,8 +69,14 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=7.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.7.0.1\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.2.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
+      <HintPath>packages\MySqlConnector.2.3.1\lib\net471\MySqlConnector.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -279,6 +285,7 @@
     </Compile>
     <Compile Include="Standard Modules\ButtonModule.vb" />
     <Compile Include="Standard Modules\DB_Conecction.vb" />
+    <Compile Include="Standard Modules\Definiciones.vb" />
     <Compile Include="Standard Modules\FileModule.vb" />
     <Compile Include="Standard Modules\PanelModule.vb" />
   </ItemGroup>
@@ -364,21 +371,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database Scripts\Database Script\Script DB_DS8.sql" />
     <Content Include="Database Scripts\dataset\ScriptDataSet.sql" />
     <Content Include="Resources\dataConfig.xml" />
+    <Content Include="Store Procedures\tickets\SP_InsertarTicket.sql" />
+    <Content Include="Store Procedures\tickets\SP_ObtenerCategoria.sql" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Class Modules\analitica\" />
-    <Folder Include="Database Scripts\Store Procedures\analitica\" />
-    <Folder Include="Database Scripts\Store Procedures\ayuda\" />
-    <Folder Include="Database Scripts\Store Procedures\clientes\" />
-    <Folder Include="Database Scripts\Store Procedures\inventario\" />
-    <Folder Include="Database Scripts\Store Procedures\tickets-blog\" />
-    <Folder Include="Database Scripts\Store Procedures\ventas\" />
+    <Folder Include="Store Procedures\analitica\" />
+    <Folder Include="Store Procedures\ayuda\" />
+    <Folder Include="Store Procedures\clientes\" />
+    <Folder Include="Store Procedures\ventas\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database Scripts\Database Script\Script DB_DS8.sql" />
+    <Content Include="Database Scripts\Database Script\Script 1.1 DB_DS8.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
