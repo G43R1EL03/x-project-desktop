@@ -12,7 +12,7 @@
     End Sub
 
     Private Sub ReportesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportesToolStripMenuItem.Click
-        SetPanel(frmReportes, panelModulo5)
+        SetPanel(frmMenuReportes, panelModulo5)
     End Sub
 
 End Class

@@ -144,16 +144,58 @@
     <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardClientes.Designer.vb">
+      <DependentUpon>frmDashboardClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardCompras.Designer.vb">
+      <DependentUpon>frmDashboardCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardInventario.Designer.vb">
+      <DependentUpon>frmDashboardInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardInventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardPedidos.Designer.vb">
+      <DependentUpon>frmDashboardPedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardPedidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardVentas.Designer.vb">
+      <DependentUpon>frmDashboardVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms Modules\frmsAnaliticas\frmAnalitica.Designer.vb">
       <DependentUpon>frmAnalitica.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms Modules\frmsAnaliticas\frmAnalitica.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Modules\frmsAnaliticas\reportes\frmReportes.Designer.vb">
-      <DependentUpon>frmReportes.vb</DependentUpon>
+    <Compile Include="Forms Modules\frmsAnaliticas\reportes\frmReporteClientes.Designer.vb">
+      <DependentUpon>frmReporteClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms Modules\frmsAnaliticas\reportes\frmReportes.vb">
+    <Compile Include="Forms Modules\frmsAnaliticas\reportes\frmReporteClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\reportes\frmReporteInventario.Designer.vb">
+      <DependentUpon>frmReporteInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\reportes\frmReporteInventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\reportes\frmMenuReportes.Designer.vb">
+      <DependentUpon>frmMenuReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\reportes\frmMenuReportes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms Modules\frmsAyuda\frmAyuda.Designer.vb">
@@ -289,8 +331,14 @@
     <EmbeddedResource Include="Forms Modules\frmsAnaliticas\frmAnalitica.resx">
       <DependentUpon>frmAnalitica.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms Modules\frmsAnaliticas\reportes\frmReportes.resx">
-      <DependentUpon>frmReportes.vb</DependentUpon>
+    <EmbeddedResource Include="Forms Modules\frmsAnaliticas\reportes\frmMenuReportes.resx">
+      <DependentUpon>frmMenuReportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAnaliticas\reportes\frmReporteClientes.resx">
+      <DependentUpon>frmReporteClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAnaliticas\reportes\frmReporteInventario.resx">
+      <DependentUpon>frmReporteInventario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyuda.resx">
       <DependentUpon>frmAyuda.vb</DependentUpon>

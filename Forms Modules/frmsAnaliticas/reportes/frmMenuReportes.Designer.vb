@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmReportes
+Partial Class frmMenuReportes
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -24,16 +24,18 @@ Partial Class frmReportes
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.InventarioGlobalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportesDeCatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDeClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDeVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.panelTablaReportes = New System.Windows.Forms.Panel()
+        Me.dgvInventario = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1.SuspendLayout()
+        Me.panelTablaReportes.SuspendLayout()
+        CType(Me.dgvInventario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InventarioGlobalToolStripMenuItem, Me.ReportesDeCatToolStripMenuItem, Me.ReporteDeClientesToolStripMenuItem, Me.ReporteDeVentasToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InventarioGlobalToolStripMenuItem, Me.ReporteDeClientesToolStripMenuItem, Me.ReporteDeVentasToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -45,12 +47,6 @@ Partial Class frmReportes
         Me.InventarioGlobalToolStripMenuItem.Name = "InventarioGlobalToolStripMenuItem"
         Me.InventarioGlobalToolStripMenuItem.Size = New System.Drawing.Size(169, 20)
         Me.InventarioGlobalToolStripMenuItem.Text = "Reporte de Inventario Global"
-        '
-        'ReportesDeCatToolStripMenuItem
-        '
-        Me.ReportesDeCatToolStripMenuItem.Name = "ReportesDeCatToolStripMenuItem"
-        Me.ReportesDeCatToolStripMenuItem.Size = New System.Drawing.Size(130, 20)
-        Me.ReportesDeCatToolStripMenuItem.Text = "Reporte de Categoría"
         '
         'ReporteDeClientesToolStripMenuItem
         '
@@ -64,25 +60,37 @@ Partial Class frmReportes
         Me.ReporteDeVentasToolStripMenuItem.Size = New System.Drawing.Size(113, 20)
         Me.ReporteDeVentasToolStripMenuItem.Text = "Reporte de Ventas"
         '
-        'Panel1
+        'panelTablaReportes
         '
-        Me.Panel1.Location = New System.Drawing.Point(0, 27)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(800, 422)
-        Me.Panel1.TabIndex = 2
+        Me.panelTablaReportes.Controls.Add(Me.dgvInventario)
+        Me.panelTablaReportes.Location = New System.Drawing.Point(0, 44)
+        Me.panelTablaReportes.Name = "panelTablaReportes"
+        Me.panelTablaReportes.Size = New System.Drawing.Size(800, 405)
+        Me.panelTablaReportes.TabIndex = 2
         '
-        'frmReportes
+        'dgvInventario
+        '
+        Me.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvInventario.Location = New System.Drawing.Point(12, 11)
+        Me.dgvInventario.Name = "dgvInventario"
+        Me.dgvInventario.Size = New System.Drawing.Size(776, 383)
+        Me.dgvInventario.TabIndex = 0
+        '
+        'frmMenuReportes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.panelTablaReportes)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "frmReportes"
+        Me.Name = "frmMenuReportes"
         Me.Text = "frmReportes"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.panelTablaReportes.ResumeLayout(False)
+        CType(Me.dgvInventario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -90,8 +98,8 @@ Partial Class frmReportes
 
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents InventarioGlobalToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReportesDeCatToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteDeClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteDeVentasToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents panelTablaReportes As Panel
+    Friend WithEvents dgvInventario As DataGridView
 End Class
