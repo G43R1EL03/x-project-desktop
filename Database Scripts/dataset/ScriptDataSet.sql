@@ -106,5 +106,23 @@ INSERT INTO Empresa (usuario_id, ruc, razon_social, documento, estado) VALUES
 (8, '56789012345', 'Aguas Minerales del Bosque, S.A.', 'VWX-234', 'Activa'),
 (9, '67890123456', 'Tés Naturales, Ltda.', 'YZA-567', 'Inactiva')
 
-
+-- Insert para la tabla tickets_categoria
+INSERT INTO tickets_categoria(categoria) VALUES
+('PA'),
+('PF'),
+('PR'),
+('PRA'),
+('O');
+ 
+ -- Insert para la tabla tickets_prioridad
+INSERT INTO tickets_prioridad(prioridad) VALUES
+('1'),
+('2'),
+('3');
+ 
+  -- Insert para la tabla tickets_estado
+INSERT INTO tickets_estado(estado) VALUES
+('Espera'),
+('Revisado'),
+('Resuelto');
 
