@@ -45,6 +45,8 @@ Partial Class frmAgregarProducto
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BoxPicture = New FontAwesome.Sharp.IconPictureBox()
         Me.BtnUpload = New FontAwesome.Sharp.IconButton()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtCantPCajas = New System.Windows.Forms.TextBox()
         Me.panelFrmAgregarProducto.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.BoxPicture, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -139,6 +141,8 @@ Partial Class frmAgregarProducto
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.txtCantPCajas)
+        Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.BtnAgregar)
         Me.Panel1.Controls.Add(Me.txtReorden)
         Me.Panel1.Controls.Add(Me.Label8)
@@ -154,7 +158,7 @@ Partial Class frmAgregarProducto
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Location = New System.Drawing.Point(483, 106)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(580, 692)
+        Me.Panel1.Size = New System.Drawing.Size(580, 712)
         Me.Panel1.TabIndex = 5
         '
         'BtnAgregar
@@ -164,7 +168,7 @@ Partial Class frmAgregarProducto
         Me.BtnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAgregar.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgregar.Location = New System.Drawing.Point(209, 613)
+        Me.BtnAgregar.Location = New System.Drawing.Point(210, 646)
         Me.BtnAgregar.Name = "BtnAgregar"
         Me.BtnAgregar.Size = New System.Drawing.Size(158, 54)
         Me.BtnAgregar.TabIndex = 19
@@ -176,7 +180,7 @@ Partial Class frmAgregarProducto
         Me.txtReorden.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
         Me.txtReorden.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtReorden.ForeColor = System.Drawing.Color.White
-        Me.txtReorden.Location = New System.Drawing.Point(19, 543)
+        Me.txtReorden.Location = New System.Drawing.Point(19, 596)
         Me.txtReorden.Name = "txtReorden"
         Me.txtReorden.Size = New System.Drawing.Size(373, 44)
         Me.txtReorden.TabIndex = 18
@@ -186,7 +190,7 @@ Partial Class frmAgregarProducto
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(15, 513)
+        Me.Label8.Location = New System.Drawing.Point(14, 552)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(124, 27)
         Me.Label8.TabIndex = 17
@@ -198,7 +202,7 @@ Partial Class frmAgregarProducto
         Me.BoxMarca.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BoxMarca.ForeColor = System.Drawing.Color.White
         Me.BoxMarca.FormattingEnabled = True
-        Me.BoxMarca.Location = New System.Drawing.Point(20, 433)
+        Me.BoxMarca.Location = New System.Drawing.Point(19, 489)
         Me.BoxMarca.Name = "BoxMarca"
         Me.BoxMarca.Size = New System.Drawing.Size(234, 44)
         Me.BoxMarca.TabIndex = 16
@@ -208,7 +212,7 @@ Partial Class frmAgregarProducto
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(14, 403)
+        Me.Label7.Location = New System.Drawing.Point(14, 459)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(77, 27)
         Me.Label7.TabIndex = 15
@@ -220,7 +224,7 @@ Partial Class frmAgregarProducto
         Me.BoxCategoria.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BoxCategoria.ForeColor = System.Drawing.Color.White
         Me.BoxCategoria.FormattingEnabled = True
-        Me.BoxCategoria.Location = New System.Drawing.Point(19, 330)
+        Me.BoxCategoria.Location = New System.Drawing.Point(19, 397)
         Me.BoxCategoria.Name = "BoxCategoria"
         Me.BoxCategoria.Size = New System.Drawing.Size(234, 44)
         Me.BoxCategoria.TabIndex = 14
@@ -230,7 +234,7 @@ Partial Class frmAgregarProducto
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(14, 300)
+        Me.Label6.Location = New System.Drawing.Point(14, 367)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(116, 27)
         Me.Label6.TabIndex = 13
@@ -241,7 +245,7 @@ Partial Class frmAgregarProducto
         Me.txtCantidad.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
         Me.txtCantidad.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCantidad.ForeColor = System.Drawing.Color.White
-        Me.txtCantidad.Location = New System.Drawing.Point(19, 239)
+        Me.txtCantidad.Location = New System.Drawing.Point(19, 220)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(373, 44)
         Me.txtCantidad.TabIndex = 12
@@ -251,7 +255,7 @@ Partial Class frmAgregarProducto
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(15, 209)
+        Me.Label5.Location = New System.Drawing.Point(15, 190)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(211, 27)
         Me.Label5.TabIndex = 11
@@ -262,7 +266,7 @@ Partial Class frmAgregarProducto
         Me.txtPrecioU.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
         Me.txtPrecioU.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrecioU.ForeColor = System.Drawing.Color.White
-        Me.txtPrecioU.Location = New System.Drawing.Point(20, 141)
+        Me.txtPrecioU.Location = New System.Drawing.Point(19, 127)
         Me.txtPrecioU.Name = "txtPrecioU"
         Me.txtPrecioU.Size = New System.Drawing.Size(373, 44)
         Me.txtPrecioU.TabIndex = 10
@@ -272,7 +276,7 @@ Partial Class frmAgregarProducto
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(14, 111)
+        Me.Label4.Location = New System.Drawing.Point(14, 97)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(168, 27)
         Me.Label4.TabIndex = 9
@@ -283,7 +287,7 @@ Partial Class frmAgregarProducto
         Me.txtNomProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
         Me.txtNomProducto.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNomProducto.ForeColor = System.Drawing.Color.White
-        Me.txtNomProducto.Location = New System.Drawing.Point(20, 52)
+        Me.txtNomProducto.Location = New System.Drawing.Point(20, 40)
         Me.txtNomProducto.Name = "txtNomProducto"
         Me.txtNomProducto.Size = New System.Drawing.Size(373, 44)
         Me.txtNomProducto.TabIndex = 8
@@ -293,7 +297,7 @@ Partial Class frmAgregarProducto
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(14, 23)
+        Me.Label3.Location = New System.Drawing.Point(14, 10)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(97, 27)
         Me.Label3.TabIndex = 7
@@ -352,6 +356,27 @@ Partial Class frmAgregarProducto
         Me.BtnUpload.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnUpload.UseVisualStyleBackColor = False
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(15, 280)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(219, 27)
+        Me.Label9.TabIndex = 20
+        Me.Label9.Text = "Cantidad por Cajas"
+        '
+        'txtCantPCajas
+        '
+        Me.txtCantPCajas.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
+        Me.txtCantPCajas.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCantPCajas.ForeColor = System.Drawing.Color.White
+        Me.txtCantPCajas.Location = New System.Drawing.Point(20, 310)
+        Me.txtCantPCajas.Name = "txtCantPCajas"
+        Me.txtCantPCajas.Size = New System.Drawing.Size(373, 44)
+        Me.txtCantPCajas.TabIndex = 21
+        '
         'frmAgregarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -391,4 +416,6 @@ Partial Class frmAgregarProducto
     Friend WithEvents Label1 As Label
     Friend WithEvents BoxPicture As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents BtnUpload As FontAwesome.Sharp.IconButton
+    Friend WithEvents txtCantPCajas As TextBox
+    Friend WithEvents Label9 As Label
 End Class

@@ -442,6 +442,7 @@
     <Content Include="Database Scripts\Database Script\Script DB_DS8.sql" />
     <Content Include="Database Scripts\dataset\ScriptDataSet.sql" />
     <Content Include="Resources\dataConfig.xml" />
+    <Content Include="Store Procedures\inventario\sp_InsertarProducto.sql" />
     <Content Include="Store Procedures\inventario\SP_LlenarDGVInventario.sql" />
     <Content Include="Store Procedures\tickets\SP_InsertarTicket.sql" />
     <Content Include="Store Procedures\tickets\SP_ObtenerCategoria.sql" />
