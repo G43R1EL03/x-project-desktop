@@ -1,23 +1,29 @@
 ﻿Imports System.IO
 Imports FontAwesome.Sharp
 Imports MySql.Data.MySqlClient
+
 Public Class frmAgregarProducto
     Dim myConnectionDB As MySqlConnection
+    Dim productoDao As New inventaryDAO(myConnectionDB)
 
     Public Sub New()
-        InitializeComponent()
-
+        ' Inicializar la conexión a la base de datos
         DB_Conecction.conexionDB()
 
+        ' Obtener la conexión
         myConnectionDB = DB_Conecction.myConnectionDB
 
+        InitializeComponent()
+
+        ' Poblar ComboBox de Marca
         ComboBoxMarca()
 
+        ' Poblar ComboBox de Categoría
         ComboBoxCategoria()
     End Sub
 
 
-    'Esto no se si este del todo correcto, pero es para traer los datos a los combobox
+
     Private Sub ComboBoxMarca()
         Dim marcaQuery As String = "SELECT id_marca, nombre FROM Marca"
         Dim marcaDataAdapter As New MySqlDataAdapter(marcaQuery, myConnectionDB)
@@ -50,43 +56,27 @@ Public Class frmAgregarProducto
         End If
 
         Try
-            myConnectionDB.Open()
+            Dim selectedImage As Image = BoxPicture.Image
 
-            Using glCommand As New MySqlCommand("sp_InsertarProducto", myConnectionDB)
-                glCommand.CommandType = CommandType.StoredProcedure
-
-                glCommand.Parameters.AddWithValue("@p_nombre", txtNomProducto.Text)
-                glCommand.Parameters.AddWithValue("@p_precio_unit", Decimal.Parse(txtPrecioU.Text))
-                glCommand.Parameters.AddWithValue("@p_cantidad_por_cajas", If(String.IsNullOrEmpty(txtCantPCajas.Text), DBNull.Value, CInt(txtCantidad.Text)))
-
-                Dim selectedImage As Image = BoxPicture.Image
-
-                Dim photoBytes As Byte() = Nothing
-                If selectedImage IsNot Nothing Then
-                    Using ms As New MemoryStream()
-                        selectedImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
-                        photoBytes = ms.ToArray()
-                    End Using
-                End If
-
-
-                glCommand.Parameters.AddWithValue("@p_punto_reorden", If(String.IsNullOrEmpty(txtReorden.Text), DBNull.Value, CInt(txtReorden.Text)))
-                glCommand.Parameters.AddWithValue("@p_cantidad_cajas", If(String.IsNullOrEmpty(txtCantidad.Text), DBNull.Value, CInt(txtCantidad.Text)))
-                glCommand.Parameters.AddWithValue("@p_marca_id", BoxMarca.SelectedValue)
-                glCommand.Parameters.AddWithValue("@p_categoria_id", BoxCategoria.SelectedValue)
-                glCommand.ExecuteNonQuery()
-
+            ' Llamar a la función de la clase productoDao
+            If productoDao.InsertarProducto(
+                txtNomProducto.Text,
+                Decimal.Parse(txtPrecioU.Text),
+                If(String.IsNullOrEmpty(txtCantPCajas.Text), Nothing, CInt(txtCantPCajas.Text)),
+                If(String.IsNullOrEmpty(txtReorden.Text), Nothing, CInt(txtReorden.Text)),
+                If(String.IsNullOrEmpty(txtCantidad.Text), Nothing, CInt(txtCantidad.Text)),
+                CInt(BoxMarca.SelectedValue),
+                CInt(BoxCategoria.SelectedValue),
+                selectedImage
+            ) Then
                 MessageBox.Show("Producto agregado correctamente.")
-            End Using
+            End If
         Catch ex As Exception
             MessageBox.Show("Error al agregar el producto: " & ex.Message)
         Finally
-            ' Cerrar la conexión a la base de datos
-            myConnectionDB.Close()
         End Try
     End Sub
 
-    'Aqui solo funciona para mostrar la imagen que se carga, no envia nada a la base de datos
     Private Sub BtnChoose_Click(sender As Object, e As EventArgs) Handles BtnChoose.Click
         ' Configurar el cuadro de diálogo para seleccionar archivos de imagen
         Dim openFileDialog As New OpenFileDialog()
@@ -122,6 +112,5 @@ Public Class frmAgregarProducto
 
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         BoxPicture.Image = Nothing
-
     End Sub
 End Class
