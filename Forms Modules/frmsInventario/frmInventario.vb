@@ -8,19 +8,14 @@ Public Class frmInventario
         Try
             conexionDB()
             myConnectionDB.Open()
-            If myConnectionDB.State = ConnectionState.Open Then
-                Dim InventarioDataTable As DataTable = invenatyDao.LlenarDGVInventario
-                dgvInv.DataSource = InventarioDataTable
-            Else
-                MsgBox("La conexión a la base de datos no está abierta.")
-            End If
+            Dim InventarioDataTable As DataTable = invenatyDao.LlenarDGVInventario
+            dgvInv.DataSource = InventarioDataTable
         Catch ex As Exception
             MsgBox("Error al realizar la conexión" & vbCrLf & "Error: " & ex.Message, MsgBoxStyle.Critical, "Error")
         Finally
             If myConnectionDB.State <> ConnectionState.Closed Then myConnectionDB.Close()
         End Try
     End Sub
-
 
     Private Sub tsMarcaInv_Click(sender As Object, e As EventArgs)
         SetPanel(frmAgregarMarca, panelFrmInventario)
