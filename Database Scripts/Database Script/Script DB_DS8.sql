@@ -66,13 +66,11 @@ CREATE TABLE Usuario (
     nombre VARCHAR(255),
     correo VARCHAR(255) UNIQUE,
     pass VARCHAR(255),
-    rol enum("Admin", "Cliente", "Proveedor"),
+    rol enum("SAdmin", "Admin", "Colaborador"),
     foto VARCHAR(255),
     telefono VARCHAR(255),
     detalles VARCHAR(255)
 );
-
-
 
 -- Creación de tabla Admin
 CREATE TABLE Admin (
@@ -116,16 +114,6 @@ CREATE TABLE Cliente (
     genero VARCHAR(255),
     estado VARCHAR(255),
     tipo enum("minorisra", "distribuidor")
-);
-
--- Creación de tabla Sugerencia
-CREATE TABLE Sugerencia (
-    id_sugerencia INT AUTO_INCREMENT PRIMARY KEY,
-    contenido VARCHAR(255),
-    fecha DATETIME,
-    valoracion INT,
-    cliente_id INT,
-    FOREIGN KEY (cliente_id) REFERENCES Cliente(id_cliente)
 );
 
 -- Creación de tabla Notificacion
@@ -202,4 +190,53 @@ CREATE TABLE Cliente_direcciones (
     direccion_id INT,
     FOREIGN KEY (direccion_id) REFERENCES Direccion(id_direccion),
     PRIMARY KEY (cliente_id, direccion_id)
+);
+
+-- Creación de tabla Tickets_categoria
+CREATE TABLE Tickets_categoria (
+    id_tickets_categoria INT AUTO_INCREMENT PRIMARY KEY,
+    categoria ENUM("PA", "PF", "PR", "PRA", "O")
+);
+
+-- Creación de tabla Tickets_prioridad
+CREATE TABLE Tickets_prioridad (
+    id_tickets_prioridad INT AUTO_INCREMENT PRIMARY KEY,
+    prioridad ENUM("1", "2", "3")
+);
+
+-- Creación de tabla Tickets_estado
+CREATE TABLE Tickets_estado (
+    id_tickets_estado INT AUTO_INCREMENT PRIMARY KEY,
+    estado ENUM("Espera", "Revisado", "Resuelto")
+);
+
+-- Creación de tabla Tickets
+CREATE TABLE Tickets (
+    id_tickets INT AUTO_INCREMENT PRIMARY KEY,
+    admin_id INT,
+    FOREIGN KEY (admin_id) REFERENCES Admin(id_admin),
+    categoria_id INT,
+    FOREIGN KEY (categoria_id) REFERENCES Tickets_categoria(id_tickets_categoria),
+    prioridad_id INT,
+    FOREIGN KEY (prioridad_id) REFERENCES Tickets_prioridad(id_tickets_prioridad),
+    estado_id INT,
+    FOREIGN KEY (estado_id) REFERENCES Tickets_estado(id_tickets_estado),
+    descripcion VARCHAR(255),
+    evidencia VARCHAR(255),
+    fecha DATETIME,
+    fecha_cambio_estado DATETIME
+);
+
+-- Creación de tabla Mensaje
+CREATE TABLE Mensaje (
+    id_estado INT AUTO_INCREMENT PRIMARY KEY,
+    tickets_id INT,
+    FOREIGN KEY (tickets_id) REFERENCES Tickets(id_tickets),
+    mensaje VARCHAR(255),
+    fecha_envio DATETIME,
+    admin_id INT,
+    FOREIGN KEY (admin_id) REFERENCES Admin(id_admin),
+    cliente_id INT,
+    FOREIGN KEY (cliente_id) REFERENCES Cliente(id_cliente),
+    remitente VARCHAR(255)
 );

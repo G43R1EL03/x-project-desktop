@@ -432,8 +432,5 @@
     <Folder Include="Store Procedures\clientes\" />
     <Folder Include="Store Procedures\ventas\" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Database Scripts\Database Script\Script 1.1 DB_DS8.sql" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
