@@ -142,6 +142,7 @@
     <Compile Include="Class Modules\blog %28sugerencias%29\Class2.vb" />
     <Compile Include="Class Modules\clientes\Class3.vb" />
     <Compile Include="Class Modules\inventario\inventaryDAO.vb" />
+    <Compile Include="Class Modules\inventario\MarcaDAO.vb" />
     <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
     <Compile Include="Class Modules\ventas\Class6.vb" />
     <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.Designer.vb">
@@ -302,6 +303,7 @@
     </Compile>
     <Compile Include="Interfaces Modules\analitica\analitycInterfaces.vb" />
     <Compile Include="Interfaces Modules\inventario\inventaryInterfaces.vb" />
+    <Compile Include="Interfaces Modules\inventario\marcaInterface.vb" />
     <Compile Include="Interfaces Modules\tickets\ticketsInterfaces.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

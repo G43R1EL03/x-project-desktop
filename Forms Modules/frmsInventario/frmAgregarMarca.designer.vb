@@ -24,6 +24,8 @@ Partial Class frmAgregarMarca
     Private Sub InitializeComponent()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lsvVerMarcas = New System.Windows.Forms.ListView()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -51,6 +53,8 @@ Partial Class frmAgregarMarca
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.lsvVerMarcas)
+        Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.TextBox1)
@@ -61,15 +65,36 @@ Partial Class frmAgregarMarca
         Me.Panel1.Size = New System.Drawing.Size(401, 226)
         Me.Panel1.TabIndex = 28
         '
+        'lsvVerMarcas
+        '
+        Me.lsvVerMarcas.HideSelection = False
+        Me.lsvVerMarcas.Location = New System.Drawing.Point(15, 93)
+        Me.lsvVerMarcas.Name = "lsvVerMarcas"
+        Me.lsvVerMarcas.Size = New System.Drawing.Size(135, 89)
+        Me.lsvVerMarcas.TabIndex = 41
+        Me.lsvVerMarcas.UseCompatibleStateImageBehavior = False
+        Me.lsvVerMarcas.Visible = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(165, 179)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(135, 40)
+        Me.Button2.TabIndex = 5
+        Me.Button2.Text = "Agregar Marca"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(15, 179)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(178, 40)
+        Me.Button1.Size = New System.Drawing.Size(135, 40)
         Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Agregar Marca"
+        Me.Button1.Text = "Ver Marcas"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'TextBox2
@@ -229,4 +254,6 @@ Partial Class frmAgregarMarca
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
+    Friend WithEvents Button2 As Button
+    Friend WithEvents lsvVerMarcas As ListView
 End Class
