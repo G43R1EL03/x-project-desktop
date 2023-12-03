@@ -48,15 +48,71 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.5\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=7.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.7.0.1\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.2.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
+      <HintPath>packages\MySqlConnector.2.3.1\lib\net471\MySqlConnector.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.4.4.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
@@ -65,6 +121,9 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
     <Reference Include="WindowsBase" />
+    <Reference Include="ZstdSharp, Version=0.7.1.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.7.1\lib\net461\ZstdSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -80,16 +139,69 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class Modules\analitica\Class1.vb" />
     <Compile Include="Class Modules\blog %28sugerencias%29\Class2.vb" />
     <Compile Include="Class Modules\clientes\Class3.vb" />
-    <Compile Include="Class Modules\inventario\Class4.vb" />
-    <Compile Include="Class Modules\tickets\Class5.vb" />
+    <Compile Include="Class Modules\inventario\inventaryDAO.vb" />
+    <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
     <Compile Include="Class Modules\ventas\Class6.vb" />
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.Designer.vb">
+      <DependentUpon>frmDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardClientes.Designer.vb">
+      <DependentUpon>frmDashboardClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardCompras.Designer.vb">
+      <DependentUpon>frmDashboardCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardInventario.Designer.vb">
+      <DependentUpon>frmDashboardInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardInventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardPedidos.Designer.vb">
+      <DependentUpon>frmDashboardPedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardPedidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardVentas.Designer.vb">
+      <DependentUpon>frmDashboardVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms Modules\frmsAnaliticas\frmAnalitica.Designer.vb">
       <DependentUpon>frmAnalitica.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms Modules\frmsAnaliticas\frmAnalitica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\reportes\frmReporteClientes.Designer.vb">
+      <DependentUpon>frmReporteClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\reportes\frmReporteClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\reportes\frmReporteInventario.Designer.vb">
+      <DependentUpon>frmReporteInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\reportes\frmReporteInventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\reportes\frmMenuReportes.Designer.vb">
+      <DependentUpon>frmMenuReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAnaliticas\reportes\frmMenuReportes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms Modules\frmsAyuda\frmAyuda.Designer.vb">
@@ -98,10 +210,40 @@
     <Compile Include="Forms Modules\frmsAyuda\frmAyuda.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Modules\frmsBlogSugerencias\frmBlogSugerencias.Designer.vb">
-      <DependentUpon>frmBlogSugerencias.vb</DependentUpon>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaDevolucion.Designer.vb">
+      <DependentUpon>frmAyudaDevolucion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms Modules\frmsBlogSugerencias\frmBlogSugerencias.vb">
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaDevolucion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaEntrega.Designer.vb">
+      <DependentUpon>frmAyudaEntrega.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaEntrega.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaPedidos.Designer.vb">
+      <DependentUpon>frmAyudaPedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaPedidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaPagoPromociones.Designer.vb">
+      <DependentUpon>frmAyudaPagoPromociones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaPagoPromociones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaPoliticas.Designer.vb">
+      <DependentUpon>frmAyudaPoliticas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaPoliticas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaUsuario.Designer.vb">
+      <DependentUpon>frmAyudaUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsAyuda\frmAyudaUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms Modules\frmsClientes\frmClientes.Designer.vb">
@@ -110,10 +252,36 @@
     <Compile Include="Forms Modules\frmsClientes\frmClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Modules\frmsInventario\FrmEditarProducto.Designer.vb">
-      <DependentUpon>FrmEditarProducto.vb</DependentUpon>
+    <Compile Include="Forms Modules\frmsInventario\frmAgregarMarca.Designer.vb">
+      <DependentUpon>frmAgregarMarca.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms Modules\frmsInventario\FrmEditarProducto.vb">
+    <Compile Include="Forms Modules\frmsInventario\frmAgregarMarca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsInventario\frmAgregarProducto.Designer.vb">
+      <DependentUpon>frmAgregarProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsInventario\frmAgregarProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+
+    <Compile Include="Forms Modules\frmsTickets\frmCrearTickets.Designer.vb">
+      <DependentUpon>frmCrearTickets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmCrearTickets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+
+    <Compile Include="Forms Modules\frmsTickets\frmDetalleTicket.Designer.vb">
+      <DependentUpon>frmDetalleTicket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmDetalleTicket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmHomeTicket.Designer.vb">
+      <DependentUpon>frmHomeTicket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsTickets\frmHomeTicket.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBienvenidaLogin.Designer.vb">
@@ -134,6 +302,9 @@
     <Compile Include="Forms Modules\frmsInventario\frmInventario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Interfaces Modules\analitica\analitycInterfaces.vb" />
+    <Compile Include="Interfaces Modules\inventario\inventaryInterfaces.vb" />
+    <Compile Include="Interfaces Modules\tickets\ticketsInterfaces.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -170,20 +341,67 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Standard Modules\ButtonModule.vb" />
+    <Compile Include="Standard Modules\DB_Conecction.vb" />
+    <Compile Include="Standard Modules\Definiciones.vb" />
+    <Compile Include="Standard Modules\FileModule.vb" />
     <Compile Include="Standard Modules\PanelModule.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.resx">
+      <DependentUpon>frmDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAnaliticas\frmAnalitica.resx">
+      <DependentUpon>frmAnalitica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAnaliticas\reportes\frmMenuReportes.resx">
+      <DependentUpon>frmMenuReportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAnaliticas\reportes\frmReporteClientes.resx">
+      <DependentUpon>frmReporteClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAnaliticas\reportes\frmReporteInventario.resx">
+      <DependentUpon>frmReporteInventario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyuda.resx">
       <DependentUpon>frmAyuda.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms Modules\frmsBlogSugerencias\frmBlogSugerencias.resx">
-      <DependentUpon>frmBlogSugerencias.vb</DependentUpon>
+    <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyudaDevolucion.resx">
+      <DependentUpon>frmAyudaDevolucion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyudaEntrega.resx">
+      <DependentUpon>frmAyudaEntrega.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyudaPedidos.resx">
+      <DependentUpon>frmAyudaPedidos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyudaPagoPromociones.resx">
+      <DependentUpon>frmAyudaPagoPromociones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyudaPoliticas.resx">
+      <DependentUpon>frmAyudaPoliticas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyudaUsuario.resx">
+      <DependentUpon>frmAyudaUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsClientes\frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms Modules\frmsInventario\FrmEditarProducto.resx">
-      <DependentUpon>FrmEditarProducto.vb</DependentUpon>
+    <EmbeddedResource Include="Forms Modules\frmsInventario\frmAgregarMarca.resx">
+      <DependentUpon>frmAgregarMarca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsInventario\frmAgregarProducto.resx">
+      <DependentUpon>frmAgregarProducto.vb</DependentUpon>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="Forms Modules\frmsTickets\frmCrearTickets.resx">
+      <DependentUpon>frmCrearTickets.vb</DependentUpon>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="Forms Modules\frmsTickets\frmDetalleTicket.resx">
+      <DependentUpon>frmDetalleTicket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsTickets\frmHomeTicket.resx">
+      <DependentUpon>frmHomeTicket.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBienvenidaLogin.resx">
       <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>
@@ -224,19 +442,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database Scripts\Database Script\Script DB_DS8.sql" />
+    <Content Include="Database Scripts\dataset\ScriptDataSet.sql" />
+    <Content Include="Resources\dataConfig.xml" />
+    <Content Include="Store Procedures\tickets\SP_InsertarTicket.sql" />
+    <Content Include="Store Procedures\tickets\SP_ObtenerCategoria.sql" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Database Scripts\Database Script\" />
-    <Folder Include="Database Scripts\Store Procedures\analitica\" />
-    <Folder Include="Database Scripts\Store Procedures\ayuda\" />
-    <Folder Include="Database Scripts\Store Procedures\clientes\" />
-    <Folder Include="Database Scripts\Store Procedures\inventario\" />
-    <Folder Include="Database Scripts\Store Procedures\tickets-blog\" />
-    <Folder Include="Database Scripts\Store Procedures\ventas\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Televisor.png" />
+    <Folder Include="Store Procedures\analitica\" />
+    <Folder Include="Store Procedures\ayuda\" />
+    <Folder Include="Store Procedures\clientes\" />
+    <Folder Include="Store Procedures\ventas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
