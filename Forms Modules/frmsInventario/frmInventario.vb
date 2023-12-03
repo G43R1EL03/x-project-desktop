@@ -2,33 +2,27 @@
 
 Public Class frmInventario
 
-    'Private invenatyDao As inventaryDAO
+    Dim invenatyDao As New inventaryDAO(myConnectionDB)
 
-    'Public Sub New(inventaryDAO As inventaryDAO)
-    ' Esta llamada es exigida por el diseñador.
-    'InitializeComponent()
-    ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-    'Me.invenatyDao = inventaryDAO
-    'End Sub
-
-    Private Sub frmAnalitica_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub frmInventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            Dim id_venta
-            'Dim ventasDataTable As DataTable = invenatyDao.LlenarDGVInventario
-            'dgvInv.DataSource = ventasDataTable
-
+            conexionDB()
+            myConnectionDB.Open()
+            If myConnectionDB.State = ConnectionState.Open Then
+                Dim InventarioDataTable As DataTable = invenatyDao.LlenarDGVInventario
+                dgvInv.DataSource = InventarioDataTable
+            Else
+                MsgBox("La conexión a la base de datos no está abierta.")
+            End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MsgBox("Error al realizar la conexión" & vbCrLf & "Error: " & ex.Message, MsgBoxStyle.Critical, "Error")
+        Finally
+            If myConnectionDB.State <> ConnectionState.Closed Then myConnectionDB.Close()
         End Try
     End Sub
 
-    Private Sub frmInventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub tsMarcaInv_Click(sender As Object, e As EventArgs)
-        'Debes llamar al metodo y pasarle 2 argumentos
-        'El primer argumento es el formulario que quieres abrir y el segundo el panel que contendra el formulario
         SetPanel(frmAgregarMarca, panelFrmInventario)
     End Sub
 
