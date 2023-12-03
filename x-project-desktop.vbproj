@@ -110,6 +110,12 @@
     <Compile Include="Forms Modules\frmsClientes\frmClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms Modules\frmsInventario\FrmEditarProducto.Designer.vb">
+      <DependentUpon>FrmEditarProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsInventario\FrmEditarProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBienvenidaLogin.Designer.vb">
       <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>
     </Compile>
@@ -176,6 +182,9 @@
     <EmbeddedResource Include="Forms Modules\frmsClientes\frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsInventario\FrmEditarProducto.resx">
+      <DependentUpon>FrmEditarProducto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBienvenidaLogin.resx">
       <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +234,9 @@
     <Folder Include="Database Scripts\Store Procedures\inventario\" />
     <Folder Include="Database Scripts\Store Procedures\tickets-blog\" />
     <Folder Include="Database Scripts\Store Procedures\ventas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Televisor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
