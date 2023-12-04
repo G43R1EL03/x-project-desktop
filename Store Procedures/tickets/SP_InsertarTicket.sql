@@ -2,7 +2,7 @@
 DELIMITER $$
 
 CREATE PROCEDURE SP_InsertarTicket (
-        IN p_admin_id INT,
+        IN p_usuario_id INT,
         IN p_categoria_id INT, 
         IN p_prioridad_id INT,
         IN p_estado_id INT,
@@ -22,8 +22,8 @@ BEGIN
 
         START TRANSACTION;
         
-        INSERT INTO tickets (admin_id, categoria_id, prioridad_id, estado_id, descripcion, evidencia, fecha, fecha_cambio_estado) 
-        VALUES (p_admin_id, p_categoria_id, p_prioridad_id, p_estado_id, p_descripcion, p_evidencia, p_fecha, p_fecha_cambio_estado);
+        INSERT INTO tickets (usuario_id, categoria_id, prioridad_id, estado_id, descripcion, evidencia, fecha, fecha_cambio_estado) 
+        VALUES (p_usuario_id, p_categoria_id, p_prioridad_id, p_estado_id, p_descripcion, p_evidencia, p_fecha, p_fecha_cambio_estado);
         
         SELECT ROW_COUNT() INTO p_resultado;
     	COMMIT;

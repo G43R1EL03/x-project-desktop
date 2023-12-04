@@ -439,6 +439,7 @@
     <Content Include="Store Procedures\Analitica-Reportes\StoredProceduresReportes.sql" />
     <Content Include="Store Procedures\tickets\SP_InsertarTicket.sql" />
     <Content Include="Store Procedures\tickets\SP_ObtenerCategoria.sql" />
+    <Content Include="Store Procedures\tickets\SP_ObtenerTickets.sql" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>

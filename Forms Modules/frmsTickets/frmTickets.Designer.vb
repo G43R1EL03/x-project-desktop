@@ -50,7 +50,7 @@ Partial Class frmTickets
         Me.dgvTickets.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_ticket, Me.Asunto, Me.Prioridad, Me.Estatus, Me.Fecha, Me.Accion})
         Me.dgvTickets.Location = New System.Drawing.Point(25, 93)
         Me.dgvTickets.Name = "dgvTickets"
-        Me.dgvTickets.Size = New System.Drawing.Size(860, 304)
+        Me.dgvTickets.Size = New System.Drawing.Size(816, 304)
         Me.dgvTickets.TabIndex = 1
         '
         'ID_ticket
@@ -96,7 +96,7 @@ Partial Class frmTickets
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(924, 450)
+        Me.ClientSize = New System.Drawing.Size(879, 450)
         Me.Controls.Add(Me.dgvTickets)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmTickets"

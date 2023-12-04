@@ -220,8 +220,8 @@ CREATE TABLE Tickets_estado (
 -- Creación de tabla Tickets
 CREATE TABLE Tickets (
     id_tickets INT AUTO_INCREMENT PRIMARY KEY,
-    admin_id INT,
-    FOREIGN KEY (admin_id) REFERENCES Admin(id_admin),
+    usuario_id INT,
+    FOREIGN KEY (usuario_id) REFERENCES usuario(id_usuario),
     categoria_id INT,
     FOREIGN KEY (categoria_id) REFERENCES Tickets_categoria(id_tickets_categoria),
     prioridad_id INT,
