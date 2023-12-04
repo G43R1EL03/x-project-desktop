@@ -4,4 +4,8 @@
 
     Function MostarMarcas() As DataTable
 
+    Function mostrarMarcas() As DataTable
+    Function insertarMarcas() As DataTable
+    Function actualizarMarcas() As DataTable
+
 End Interface
