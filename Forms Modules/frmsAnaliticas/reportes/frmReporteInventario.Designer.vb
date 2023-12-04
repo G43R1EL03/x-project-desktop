@@ -34,7 +34,6 @@ Partial Class frmReporteInventario
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnExportarExcel = New System.Windows.Forms.Button()
         Me.dgvInventarioReporte = New System.Windows.Forms.DataGridView()
-        Me.btnExportarPDF = New System.Windows.Forms.Button()
         Me.AnaliticaReporteInventarioDAOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -98,12 +97,6 @@ Partial Class frmReporteInventario
         Me.dgvInventarioReporte.ReadOnly = True
         Me.dgvInventarioReporte.TabStop = False
         '
-        'btnExportarPDF
-        '
-        resources.ApplyResources(Me.btnExportarPDF, "btnExportarPDF")
-        Me.btnExportarPDF.Name = "btnExportarPDF"
-        Me.btnExportarPDF.UseVisualStyleBackColor = True
-        '
         'AnaliticaReporteInventarioDAOBindingSource
         '
         Me.AnaliticaReporteInventarioDAOBindingSource.DataSource = GetType(x_project_desktop.analiticaReporteInventarioDAO)
@@ -147,7 +140,6 @@ Partial Class frmReporteInventario
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.btnExportarPDF)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnExportarExcel)
         Me.Controls.Add(Me.lblCantCategorias)
@@ -178,7 +170,6 @@ Partial Class frmReporteInventario
     Friend WithEvents btnExportarExcel As Button
     Friend WithEvents AnaliticaReporteInventarioDAOBindingSource As BindingSource
     Friend WithEvents dgvInventarioReporte As DataGridView
-    Friend WithEvents btnExportarPDF As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents lblCantCategorias As Label

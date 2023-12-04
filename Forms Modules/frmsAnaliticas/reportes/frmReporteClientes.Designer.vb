@@ -35,7 +35,7 @@ Partial Class frmReporteClientes
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(535, 33)
+        Me.Button2.Location = New System.Drawing.Point(530, 108)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(157, 28)
         Me.Button2.TabIndex = 13
@@ -45,7 +45,7 @@ Partial Class frmReporteClientes
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(426, 34)
+        Me.Button1.Location = New System.Drawing.Point(421, 109)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(93, 27)
         Me.Button1.TabIndex = 12
@@ -54,9 +54,10 @@ Partial Class frmReporteClientes
         '
         'ComboBox2
         '
+        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(220, 34)
+        Me.ComboBox2.Location = New System.Drawing.Point(215, 109)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(185, 28)
         Me.ComboBox2.TabIndex = 11
@@ -65,7 +66,7 @@ Partial Class frmReporteClientes
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(267, 11)
+        Me.Label2.Location = New System.Drawing.Point(262, 86)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(73, 20)
         Me.Label2.TabIndex = 10
@@ -73,9 +74,10 @@ Partial Class frmReporteClientes
         '
         'ComboBox1
         '
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(16, 34)
+        Me.ComboBox1.Location = New System.Drawing.Point(11, 109)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(185, 28)
         Me.ComboBox1.TabIndex = 9
@@ -84,7 +86,7 @@ Partial Class frmReporteClientes
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(75, 11)
+        Me.Label1.Location = New System.Drawing.Point(70, 86)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 20)
         Me.Label1.TabIndex = 8
@@ -92,17 +94,21 @@ Partial Class frmReporteClientes
         '
         'dgvReporteClientes
         '
+        Me.dgvReporteClientes.AllowUserToAddRows = False
+        Me.dgvReporteClientes.AllowUserToDeleteRows = False
+        Me.dgvReporteClientes.BackgroundColor = System.Drawing.SystemColors.ButtonFace
         Me.dgvReporteClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvReporteClientes.Location = New System.Drawing.Point(13, 74)
+        Me.dgvReporteClientes.Location = New System.Drawing.Point(12, 156)
         Me.dgvReporteClientes.Name = "dgvReporteClientes"
-        Me.dgvReporteClientes.Size = New System.Drawing.Size(775, 366)
+        Me.dgvReporteClientes.ReadOnly = True
+        Me.dgvReporteClientes.Size = New System.Drawing.Size(1299, 543)
         Me.dgvReporteClientes.TabIndex = 7
         '
         'frmReporteClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1323, 711)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ComboBox2)
