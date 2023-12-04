@@ -60,16 +60,18 @@ CREATE TABLE Permisos (
     gestiona_permisos VARCHAR(255)
 );
 
--- Creación de tabla Usuario
 CREATE TABLE Usuario (
     id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    cedula VARCHAR(255) UNIQUE,
     correo VARCHAR(255) UNIQUE,
     pass VARCHAR(255),
-    rol enum("SAdmin", "Admin", "Colaborador"),
+    rol ENUM("SAdmin", "Admin", "Colaborador"),
     foto VARCHAR(255),
     telefono VARCHAR(255),
-    detalles VARCHAR(255)
+    detalles VARCHAR(255),
+    genero VARCHAR(255)
 );
 
 -- Creación de tabla Admin
@@ -77,9 +79,6 @@ CREATE TABLE Admin (
     id_admin INT AUTO_INCREMENT PRIMARY KEY,
     usuario_id INT,
     FOREIGN KEY (usuario_id) REFERENCES Usuario(id_usuario),
-    apellido VARCHAR(255),
-    genero VARCHAR(255),
-    cedula VARCHAR(255) UNIQUE,
     permisos_id INT,
     FOREIGN KEY (permisos_id) REFERENCES Permisos(id_permisos)
 );
@@ -90,7 +89,12 @@ CREATE TABLE Empresa (
     ruc VARCHAR(255) UNIQUE,
     razon_social VARCHAR(255) UNIQUE,
     documento VARCHAR(255),
-    estado VARCHAR(255)
+    nombre INT(255),
+    correo INT(255),
+    UNIQUE (`correo`),
+    foto VARCHAR(255),
+    telefono VARCHAR(255),
+    detalles VARCHAR(255)
 );
 
 -- Creación de tabla Compra
@@ -107,13 +111,16 @@ CREATE TABLE Compra (
 -- Creación de tabla Cliente
 CREATE TABLE Cliente (
     id_cliente INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
     apellido VARCHAR(255),
     cedula VARCHAR(255) UNIQUE,
     empresa_id INT,
     FOREIGN KEY (empresa_id) REFERENCES Empresa(id_empresa),
     genero VARCHAR(255),
-    estado VARCHAR(255),
-    tipo enum("minorisra", "distribuidor")
+    tipo ENUM("minorisra", "distribuidor"),
+    foto VARCHAR(255),
+    telefono VARCHAR(255),
+    detalles VARCHAR(255)
 );
 
 -- Creación de tabla Notificacion
