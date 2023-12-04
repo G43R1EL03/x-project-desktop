@@ -27,45 +27,52 @@ Partial Class frmMenuReportes
         Me.ReporteDeClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDeVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.panelTablaReportes = New System.Windows.Forms.Panel()
+        Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.AutoSize = False
         Me.MenuStrip1.BackColor = System.Drawing.Color.Transparent
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InventarioGlobalToolStripMenuItem, Me.ReporteDeClientesToolStripMenuItem, Me.ReporteDeVentasToolStripMenuItem})
+        Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InventarioGlobalToolStripMenuItem, Me.ReporteDeClientesToolStripMenuItem, Me.ReporteDeVentasToolStripMenuItem, Me.VentasToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(1299, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1299, 29)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'InventarioGlobalToolStripMenuItem
         '
         Me.InventarioGlobalToolStripMenuItem.Name = "InventarioGlobalToolStripMenuItem"
-        Me.InventarioGlobalToolStripMenuItem.Size = New System.Drawing.Size(169, 20)
-        Me.InventarioGlobalToolStripMenuItem.Text = "Reporte de Inventario Global"
+        Me.InventarioGlobalToolStripMenuItem.Size = New System.Drawing.Size(101, 25)
+        Me.InventarioGlobalToolStripMenuItem.Text = "Inventario"
         '
         'ReporteDeClientesToolStripMenuItem
         '
         Me.ReporteDeClientesToolStripMenuItem.Name = "ReporteDeClientesToolStripMenuItem"
-        Me.ReporteDeClientesToolStripMenuItem.Size = New System.Drawing.Size(121, 20)
-        Me.ReporteDeClientesToolStripMenuItem.Text = "Reporte de Clientes"
+        Me.ReporteDeClientesToolStripMenuItem.Size = New System.Drawing.Size(83, 25)
+        Me.ReporteDeClientesToolStripMenuItem.Text = "Clientes"
         '
         'ReporteDeVentasToolStripMenuItem
         '
         Me.ReporteDeVentasToolStripMenuItem.Name = "ReporteDeVentasToolStripMenuItem"
-        Me.ReporteDeVentasToolStripMenuItem.Size = New System.Drawing.Size(113, 20)
-        Me.ReporteDeVentasToolStripMenuItem.Text = "Reporte de Ventas"
+        Me.ReporteDeVentasToolStripMenuItem.Size = New System.Drawing.Size(88, 25)
+        Me.ReporteDeVentasToolStripMenuItem.Text = "Finanzas"
         '
         'panelTablaReportes
         '
-        Me.panelTablaReportes.Location = New System.Drawing.Point(0, 27)
+        Me.panelTablaReportes.Location = New System.Drawing.Point(0, 32)
         Me.panelTablaReportes.Name = "panelTablaReportes"
-        Me.panelTablaReportes.Size = New System.Drawing.Size(1299, 595)
+        Me.panelTablaReportes.Size = New System.Drawing.Size(1299, 590)
         Me.panelTablaReportes.TabIndex = 2
+        '
+        'VentasToolStripMenuItem
+        '
+        Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(73, 25)
+        Me.VentasToolStripMenuItem.Text = "Ventas"
         '
         'frmMenuReportes
         '
@@ -81,6 +88,7 @@ Partial Class frmMenuReportes
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -89,4 +97,5 @@ Partial Class frmMenuReportes
     Friend WithEvents ReporteDeClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteDeVentasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents panelTablaReportes As Panel
+    Friend WithEvents VentasToolStripMenuItem As ToolStripMenuItem
 End Class

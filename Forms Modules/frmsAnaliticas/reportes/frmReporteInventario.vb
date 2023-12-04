@@ -2,11 +2,11 @@
 Imports MySql.Data.MySqlClient
 
 Public Class frmReporteInventario
-    Private analiticaReporteInventarioDao As analitycInterfaces
+    Private analiticaReporteInventarioDao As analitycReporteInterfaces
     Dim id_marca As Integer
     Dim id_categoria As Integer
 
-    Public Sub New(analiticaReporteInventarioDAO As analitycInterfaces)
+    Public Sub New(analiticaReporteInventarioDAO As analitycReporteInterfaces)
         InitializeComponent()
         Me.analiticaReporteInventarioDao = analiticaReporteInventarioDAO
     End Sub

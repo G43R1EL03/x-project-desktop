@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class analiticaReporteInventarioDAO
-    Implements analitycInterfaces
+    Implements analitycReporteInterfaces
 
     Private myConnection As MySqlConnection
 
@@ -9,7 +9,7 @@ Public Class analiticaReporteInventarioDAO
         Me.myConnection = myConnection
     End Sub
 
-    Public Function ObtenerInventarioSegmentado(id_marca As Integer, id_categoria As Integer) As DataTable Implements analitycInterfaces.ObtenerInventarioSegmentado
+    Public Function ObtenerInventarioSegmentado(id_marca As Integer, id_categoria As Integer) As DataTable Implements analitycReporteInterfaces.ObtenerInventarioSegmentado
         Try
             Dim marcaParam As Object = If(id_marca = 0, DBNull.Value, id_marca)
             Dim categoriaParam As Object = If(id_categoria = 0, DBNull.Value, id_categoria)
@@ -31,7 +31,7 @@ Public Class analiticaReporteInventarioDAO
         End Try
     End Function
 
-    Public Function ObtenerMarcas() As DataTable Implements analitycInterfaces.ObtenerMarcas
+    Public Function ObtenerMarcas() As DataTable Implements analitycReporteInterfaces.ObtenerMarcas
         Try
             Using glCommand As New MySqlCommand("SP_ObtenerMarcas", myConnectionDB)
                 glCommand.CommandTimeout = 0
@@ -49,7 +49,7 @@ Public Class analiticaReporteInventarioDAO
 
     End Function
 
-    Public Function ObtenerCategorias() As DataTable Implements analitycInterfaces.ObtenerCategorias
+    Public Function ObtenerCategorias() As DataTable Implements analitycReporteInterfaces.ObtenerCategorias
         Try
             Using glCommand As New MySqlCommand("SP_ObtenerCategorias", myConnectionDB)
                 glCommand.CommandTimeout = 0
@@ -68,7 +68,7 @@ Public Class analiticaReporteInventarioDAO
 
 
 
-    Public Function ExportarExcel(dgv As DataGridView) As Integer Implements analitycInterfaces.ExportarExcel
+    Public Function ExportarExcel(dgv As DataGridView) As Integer Implements analitycReporteInterfaces.ExportarExcel
         Try
             Dim resultado = 0
             ExportarArchivos.ExportarAExcel(dgv)

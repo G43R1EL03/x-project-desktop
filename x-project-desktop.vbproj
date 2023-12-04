@@ -298,7 +298,8 @@
     <Compile Include="Forms Modules\frmsInventario\frmInventario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interfaces Modules\analitica\analitycInterfaces.vb" />
+    <Compile Include="Interfaces Modules\analitica\analitycClienteInterfaces.vb" />
+    <Compile Include="Interfaces Modules\analitica\analitycReporteInterfaces.vb" />
     <Compile Include="Interfaces Modules\tickets\ticketsInterfaces.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -432,8 +433,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database Scripts\Database Script\Script DB_DS8.sql" />
-    <Content Include="Database Scripts\dataset\DATA SET TABLAS MODULO 3.sql" />
-    <Content Include="Database Scripts\Database Script\Script ActualizarModulo3.sql" />
     <Content Include="Database Scripts\dataset\ScriptDataSet.sql" />
     <Content Include="Resources\dataConfig.xml" />
     <Content Include="Store Procedures\Analitica-Reportes\StoredProceduresReportes.sql" />

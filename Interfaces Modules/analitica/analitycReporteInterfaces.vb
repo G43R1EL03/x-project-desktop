@@ -1,4 +1,4 @@
-﻿Public Interface analitycInterfaces
+﻿Public Interface analitycReporteInterfaces
     Function ObtenerInventarioSegmentado(id_marca As Integer, id_categoria As Integer) As DataTable
     Function ObtenerMarcas() As DataTable
     Function ObtenerCategorias() As DataTable
