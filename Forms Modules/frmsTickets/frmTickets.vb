@@ -9,14 +9,14 @@
     End Sub
     Private Sub frmTickets_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            Dim dtReclamos As DataTable = ticketsDAO.ObtenerReclamos()
-            dgvReclamos.DataSource = dtReclamos
+            Dim dtReclamos As DataTable = ticketsDAO.ObtenerTickets()
+            dgvTickets.DataSource = dtReclamos
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
 
-    Private Sub dgvReclamos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvReclamos.CellContentClick
+    Private Sub dgvTickets_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTickets.CellContentClick
         SetPanel(New frmDetalleTicket, frmHomeTicket.panelHomeTicket)
     End Sub
 
