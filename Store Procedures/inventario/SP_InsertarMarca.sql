@@ -1,4 +1,4 @@
---Creacion del SP para insertar una marca nueva
+-- Creacion del SP para insertar una marca nueva
 DELIMITER $$
 CREATE PROCEDURE SP_InsertarMarca()
 

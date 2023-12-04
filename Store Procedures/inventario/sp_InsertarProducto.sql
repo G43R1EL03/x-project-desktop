@@ -1,6 +1,6 @@
 ﻿DELIMITER //
 
-CREATE PROCEDURE sp_InsertarProducto(
+CREATE PROCEDURE SP_InsertarProducto(
     IN p_nombre VARCHAR(255),
     IN p_precio_unit DECIMAL(10, 2),
     IN p_cantidad_por_cajas INT,
