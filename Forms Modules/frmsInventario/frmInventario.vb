@@ -10,6 +10,13 @@ Public Class frmInventario
             myConnectionDB.Open()
             Dim InventarioDataTable As DataTable = invenatyDao.LlenarDGVInventario
             dgvInv.DataSource = InventarioDataTable
+
+            ' Agregar una columna de botón a dgvInv
+            Dim eliminarColumn As New DataGridViewButtonColumn()
+            eliminarColumn.HeaderText = "Acción"
+            eliminarColumn.Text = "Eliminar"
+            eliminarColumn.UseColumnTextForButtonValue = True
+            dgvInv.Columns.Add(eliminarColumn)
         Catch ex As Exception
             MsgBox("Error al realizar la conexión" & vbCrLf & "Error: " & ex.Message, MsgBoxStyle.Critical, "Error")
         Finally
