@@ -8,7 +8,7 @@ Public Class frmInventario
         Try
             conexionDB()
             myConnectionDB.Open()
-            Dim InventarioDataTable As DataTable = invenatyDao.VerProductos
+            Dim InventarioDataTable As DataTable = invenatyDao.VerInventario
             dgvInv.DataSource = InventarioDataTable
 
         Catch ex As Exception
