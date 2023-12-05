@@ -20,4 +20,23 @@
         SetPanel(New frmDetalleTicket, frmHomeTicket.panelHomeTicket)
     End Sub
 
+    Private Sub dgvTickets_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvTickets.CellFormatting
+        If e.ColumnIndex = dgvTickets.Columns("Prioridad").Index Then
+            If e.Value IsNot Nothing Then
+                Dim valor As Integer = Convert.ToInt32(e.Value)
+                If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
+                    If valor = 1 Then
+                        dgvTickets.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.ForeColor = Color.Green
+                        dgvTickets.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.BackColor = Color.Green
+                    ElseIf valor = 2 Then
+                        dgvTickets.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.ForeColor = Color.Yellow
+                        dgvTickets.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.BackColor = Color.Yellow
+                    ElseIf valor = 3 Then
+                        dgvTickets.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.ForeColor = Color.Red
+                        dgvTickets.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.BackColor = Color.Red
+                    End If
+                End If
+            End If
+        End If
+    End Sub
 End Class

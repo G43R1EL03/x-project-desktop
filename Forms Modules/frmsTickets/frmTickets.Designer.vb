@@ -27,7 +27,7 @@ Partial Class frmTickets
         Me.ID_ticket = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Asunto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Prioridad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Estatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Accion = New System.Windows.Forms.DataGridViewButtonColumn()
         CType(Me.dgvTickets, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,7 +47,7 @@ Partial Class frmTickets
         '
         Me.dgvTickets.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.dgvTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvTickets.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_ticket, Me.Asunto, Me.Prioridad, Me.Estatus, Me.Fecha, Me.Accion})
+        Me.dgvTickets.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_ticket, Me.Asunto, Me.Prioridad, Me.Estado, Me.Fecha, Me.Accion})
         Me.dgvTickets.Location = New System.Drawing.Point(25, 93)
         Me.dgvTickets.Name = "dgvTickets"
         Me.dgvTickets.Size = New System.Drawing.Size(816, 304)
@@ -73,11 +73,11 @@ Partial Class frmTickets
         Me.Prioridad.HeaderText = "Prioridad"
         Me.Prioridad.Name = "Prioridad"
         '
-        'Estatus
+        'Estado
         '
-        Me.Estatus.DataPropertyName = "estado"
-        Me.Estatus.HeaderText = "Estatus"
-        Me.Estatus.Name = "Estatus"
+        Me.Estado.DataPropertyName = "estado"
+        Me.Estado.HeaderText = "Estado"
+        Me.Estado.Name = "Estado"
         '
         'Fecha
         '
@@ -112,7 +112,7 @@ Partial Class frmTickets
     Friend WithEvents ID_ticket As DataGridViewTextBoxColumn
     Friend WithEvents Asunto As DataGridViewTextBoxColumn
     Friend WithEvents Prioridad As DataGridViewTextBoxColumn
-    Friend WithEvents Estatus As DataGridViewTextBoxColumn
+    Friend WithEvents Estado As DataGridViewTextBoxColumn
     Friend WithEvents Fecha As DataGridViewTextBoxColumn
     Friend WithEvents Accion As DataGridViewButtonColumn
 End Class

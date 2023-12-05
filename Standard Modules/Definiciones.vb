@@ -34,16 +34,16 @@
         End Select
     End Function
 
-    Function DefinicionesPrioridad(ByVal prioridad As Integer) As String
-        Select Case prioridad
+    Function DefinicionesEstado(ByVal estado As Integer) As String
+        Select Case estado
             Case 1
-                DefinicionesPrioridad = "Espera"
+                DefinicionesEstado = "Espera"
             Case 2
-                DefinicionesPrioridad = "Revisado"
+                DefinicionesEstado = "Revisado"
             Case 3
-                DefinicionesPrioridad = "Resuelto"
+                DefinicionesEstado = "Resuelto"
             Case Else
-                DefinicionesPrioridad = "Ninguna"
+                DefinicionesEstado = "Ninguna"
         End Select
     End Function
 
