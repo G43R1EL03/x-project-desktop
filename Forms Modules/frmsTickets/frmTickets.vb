@@ -16,7 +16,7 @@ Public Class frmTickets
         End Try
     End Sub
 
-    Private Sub dgvReclamos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvReclamos.CellContentClick
+    Private Sub dgvTickets_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTickets.CellContentClick
         'SetPanel(frmDetalleTicket, frmHomeTicket.panelHomeTicket)
         SetPanel(New frmDetalleTicket(New ticketsDAO(myConnectionDB)), frmMenu.PanelContent)
 
