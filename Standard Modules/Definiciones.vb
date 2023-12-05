@@ -13,7 +13,7 @@
             Case "O"
                 DefinicionesCategorias = "Otros"
             Case Else
-                DefinicionesCategorias = "Ninguno"
+                DefinicionesCategorias = "Otros"
         End Select
     End Function
 
@@ -30,7 +30,7 @@
             Case 5
                 DefinicionesCategoriaPrioridad = 1
             Case Else
-                DefinicionesCategoriaPrioridad = 0
+                DefinicionesCategoriaPrioridad = 1
         End Select
     End Function
 
@@ -43,9 +43,8 @@
             Case 3
                 DefinicionesPrioridad = "Resuelto"
             Case Else
-                DefinicionesPrioridad = "Ninguna"
+                DefinicionesPrioridad = "Espera"
         End Select
     End Function
-
 
 End Module

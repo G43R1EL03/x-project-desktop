@@ -30,14 +30,12 @@ Public Class ticketsDAO
             Using glCommand As New MySqlCommand("SP_InsertarTicket", myConecctionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
-                glCommand.Parameters.AddWithValue("@p_admin_id", 4) 'de ejemplo, primero crear un cuenta usuario, luego una de admin.
+                glCommand.Parameters.AddWithValue("@p_usuario_id", 1) 'de ejemplo, primero crear un cuenta usuario, luego una de admin.
                 glCommand.Parameters.AddWithValue("@p_categoria_id", categoriaId)
                 glCommand.Parameters.AddWithValue("@p_prioridad_id", prioridadId)
                 glCommand.Parameters.AddWithValue("@p_estado_id", 1) 'Por defecto el estado de Espera
                 glCommand.Parameters.AddWithValue("@p_descripcion", descripcion)
                 glCommand.Parameters.AddWithValue("@p_evidencia", rutaImagen)
-                glCommand.Parameters.AddWithValue("@p_fecha", DateTime.Now)
-                glCommand.Parameters.AddWithValue("@p_fecha_cambio_estado", DateTime.Now)
                 glCommand.Parameters.AddWithValue("@p_resultado", MySqlDbType.Int32)
                 glCommand.Parameters("@p_resultado").Direction = ParameterDirection.Output
                 myConecctionDB.Open()
@@ -53,7 +51,7 @@ Public Class ticketsDAO
 
     Public Function ObtenerCategorias() As DataTable Implements ticketsInterfaces.ObtenerCategorias
         Try
-            Using glCommand As New MySqlCommand("SP_ObtenerCategorias", myConecctionDB)
+            Using glCommand As New MySqlCommand("SP_ObtenerCategoriasTickets", myConecctionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
                 Using adapter As New MySqlDataAdapter(glCommand)

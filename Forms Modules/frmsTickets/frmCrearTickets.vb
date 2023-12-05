@@ -22,6 +22,8 @@ Public Class frmCrearTickets
         If openFileDialog.ShowDialog() = DialogResult.OK Then
             imagePath = openFileDialog.FileName
             lblEvidencia.Text = imagePath
+            pbPreview.ImageLocation = lblEvidencia.Text
+
         End If
     End Sub
 
@@ -52,22 +54,28 @@ Public Class frmCrearTickets
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim categoriaId As Integer = Convert.ToInt32(cboCategoria.SelectedValue)
-        If txtDescripcion.Text.Trim() <> "" And Not IsNumeric(txtDescripcion.Text) And Not String.IsNullOrEmpty(imagePath) Then
-            Dim rutaImagen As String = ManejoDeArchivos(imagePath)
-            Try
-                Dim result As Integer = ticketsDAO.InsertarTicket(categoriaId, txtDescripcion.Text, DefinicionesCategoriaPrioridad(categoriaId), rutaImagen)
-                If result <> 0 Then
-                    MsgBox("Ticket Registrado Exitosamente")
-                    txtDescripcion.Clear()
-                Else
-                    MsgBox("Error al registrar su ticket... Verifique los datos")
-                End If
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
-        Else
-            MsgBox("Favor Verifique sus datos.. ")
-        End If
+        Dim sting As String = CodificarImagen(pbPreview.Image)
+        MsgBox("verificar: " & sting)
+        txtDescripcion.Text = sting
+
+        pbPreview.Image = Nothing
+        'If txtDescripcion.Text.Trim() <> "" And Not IsNumeric(txtDescripcion.Text) And Not String.IsNullOrEmpty(imagePath) Then
+        '    Dim rutaImagen As String = ManejoDeArchivos(imagePath)
+
+        '    Try
+        '        Dim result As Integer = ticketsDAO.InsertarTicket(categoriaId, txtDescripcion.Text, DefinicionesCategoriaPrioridad(categoriaId), rutaImagen)
+        '        If result <> 0 Then
+        '            MsgBox("Ticket Registrado Exitosamente")
+        '            txtDescripcion.Clear()
+        '        Else
+        '            MsgBox("Error al registrar su ticket... Verifique los datos")
+        '        End If
+        '    Catch ex As Exception
+        '        MsgBox(ex.Message)
+        '    End Try
+        'Else
+        '    MsgBox("Favor Verifique sus datos.. ")
+        'End If
 
     End Sub
 
