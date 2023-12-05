@@ -1,4 +1,6 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Windows.Documents
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports MySql.Data.MySqlClient
 Public Class frmDetalleTicket
     Private _idTicket As Integer
     Private ticketsDAO As ticketsInterfaces
@@ -33,7 +35,7 @@ Public Class frmDetalleTicket
         Try
             Dim dao As New ticketsDAO(ObtenerConexion())
             Dim evidencia As String = dao.ObtenerEvidenciaPorId(_idTicket)
-            pbEvidencia.Image = DecodificarImagen(evidencia)
+            pbEvidencia.Image = If(evidencia.Trim <> "", DecodificarImagen(evidencia), ImagenPredeterminada())
         Catch ex As Exception
             MessageBox.Show("Error al cargar la evidencia del ticket: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -42,6 +44,7 @@ Public Class frmDetalleTicket
     Private Sub frmDetalleTicket_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarDetalleTicket()
         CargarEvidenciaTicket()
+
         pbEvidencia.SizeMode = PictureBoxSizeMode.StretchImage
         lblNumeroTicket.Text = _idTicket
     End Sub

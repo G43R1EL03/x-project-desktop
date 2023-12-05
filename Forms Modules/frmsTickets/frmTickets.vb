@@ -42,5 +42,14 @@ Public Class frmTickets
                 End If
             End If
         End If
+
+        If e.ColumnIndex = dgvTickets.Columns("Asunto").Index Then
+            If e.Value IsNot Nothing Then
+                If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
+                    e.Value = DefinicionesCategorias(e.Value)
+                End If
+            End If
+        End If
     End Sub
+
 End Class

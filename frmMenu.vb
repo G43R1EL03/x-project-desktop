@@ -50,7 +50,7 @@ Public Class frmMenu
 
         ActivateButton(sender, RGBColors.ShadePink, "Tickets", leftBorderBtn, IconCurrentForm, lblFormTitle)
         SetPanel(New frmHomeTicket(), PanelContent)
-
+        'SetPanel(New frmCrearTickets(New ticketsDAO(myConnectionDB)), frmHomeTicket.panelHomeTicket)
     End Sub
 
     Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click

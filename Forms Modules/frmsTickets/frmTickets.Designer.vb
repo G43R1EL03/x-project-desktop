@@ -56,17 +56,21 @@ Partial Class frmTickets
         '
         'ID_ticket
         '
+        Me.ID_ticket.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.ID_ticket.DataPropertyName = "id_tickets"
         Me.ID_ticket.HeaderText = "ID"
         Me.ID_ticket.Name = "ID_ticket"
         Me.ID_ticket.ReadOnly = True
+        Me.ID_ticket.Width = 43
         '
         'Asunto
         '
+        Me.Asunto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.Asunto.DataPropertyName = "categoria"
         Me.Asunto.HeaderText = "Asunto"
         Me.Asunto.Name = "Asunto"
         Me.Asunto.ReadOnly = True
+        Me.Asunto.Width = 65
         '
         'Prioridad
         '
@@ -76,15 +80,19 @@ Partial Class frmTickets
         '
         'Estado
         '
+        Me.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.Estado.DataPropertyName = "estado"
         Me.Estado.HeaderText = "Estado"
         Me.Estado.Name = "Estado"
+        Me.Estado.Width = 65
         '
         'Fecha
         '
+        Me.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.Fecha.DataPropertyName = "fecha"
         Me.Fecha.HeaderText = "Fecha"
         Me.Fecha.Name = "Fecha"
+        Me.Fecha.Width = 62
         '
         'Accion
         '
