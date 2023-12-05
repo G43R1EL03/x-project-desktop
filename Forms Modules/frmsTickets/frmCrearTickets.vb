@@ -22,6 +22,8 @@ Public Class frmCrearTickets
         If openFileDialog.ShowDialog() = DialogResult.OK Then
             imagePath = openFileDialog.FileName
             lblEvidencia.Text = imagePath
+            pbPreview.ImageLocation = lblEvidencia.Text
+
         End If
     End Sub
 
@@ -52,6 +54,9 @@ Public Class frmCrearTickets
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim categoriaId As Integer = Convert.ToInt32(cboCategoria.SelectedValue)
+        'Dim sting As String = CodificarImagen(pbPreview.Image)
+        'txtDescripcion.Text = sting
+        'pbPreview.Image = Nothing
         If txtDescripcion.Text.Trim() <> "" And Not IsNumeric(txtDescripcion.Text) And Not String.IsNullOrEmpty(imagePath) Then
             Dim rutaImagen As String = ManejoDeArchivos(imagePath)
             Try

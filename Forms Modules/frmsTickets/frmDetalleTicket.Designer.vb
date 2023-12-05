@@ -31,6 +31,7 @@ Partial Class frmDetalleTicket
         Me.lblDetalle = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblOrdenCompra = New System.Windows.Forms.Label()
+        Me.btnVolver = New FontAwesome.Sharp.IconButton()
         Me.pnlDetalle.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -39,7 +40,7 @@ Partial Class frmDetalleTicket
         '
         Me.lblTicket.AutoSize = True
         Me.lblTicket.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTicket.Location = New System.Drawing.Point(52, 32)
+        Me.lblTicket.Location = New System.Drawing.Point(109, 106)
         Me.lblTicket.Name = "lblTicket"
         Me.lblTicket.Size = New System.Drawing.Size(0, 20)
         Me.lblTicket.TabIndex = 0
@@ -47,7 +48,7 @@ Partial Class frmDetalleTicket
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(53, 106)
+        Me.Label1.Location = New System.Drawing.Point(236, 162)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(45, 13)
@@ -57,7 +58,7 @@ Partial Class frmDetalleTicket
         'pnlOrdenCompra
         '
         Me.pnlOrdenCompra.AutoSize = True
-        Me.pnlOrdenCompra.Location = New System.Drawing.Point(326, 112)
+        Me.pnlOrdenCompra.Location = New System.Drawing.Point(547, 162)
         Me.pnlOrdenCompra.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.pnlOrdenCompra.Name = "pnlOrdenCompra"
         Me.pnlOrdenCompra.Size = New System.Drawing.Size(90, 13)
@@ -67,7 +68,7 @@ Partial Class frmDetalleTicket
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(53, 32)
+        Me.Label3.Location = New System.Drawing.Point(110, 106)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(37, 13)
@@ -77,7 +78,7 @@ Partial Class frmDetalleTicket
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(53, 58)
+        Me.Label4.Location = New System.Drawing.Point(110, 132)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(44, 13)
@@ -87,8 +88,8 @@ Partial Class frmDetalleTicket
         'pnlDetalle
         '
         Me.pnlDetalle.Controls.Add(Me.lblDetalle)
-        Me.pnlDetalle.Location = New System.Drawing.Point(56, 142)
-        Me.pnlDetalle.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlDetalle.Location = New System.Drawing.Point(239, 192)
+        Me.pnlDetalle.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.pnlDetalle.Name = "pnlDetalle"
         Me.pnlDetalle.Size = New System.Drawing.Size(150, 81)
         Me.pnlDetalle.TabIndex = 5
@@ -106,8 +107,8 @@ Partial Class frmDetalleTicket
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.lblOrdenCompra)
-        Me.Panel2.Location = New System.Drawing.Point(328, 142)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel2.Location = New System.Drawing.Point(549, 192)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(150, 81)
         Me.Panel2.TabIndex = 6
@@ -122,11 +123,28 @@ Partial Class frmDetalleTicket
         Me.lblOrdenCompra.Text = "Lorfmepoeforwfmporfroperogerpogerpogerpogeporgpoergpergkregpoerkgpoerkgpkerogerkg" &
     "frfrfrefefefefefefefefeefef"
         '
+        'btnVolver
+        '
+        Me.btnVolver.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVolver.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft
+        Me.btnVolver.IconColor = System.Drawing.Color.Black
+        Me.btnVolver.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnVolver.IconSize = 30
+        Me.btnVolver.Location = New System.Drawing.Point(19, 12)
+        Me.btnVolver.Name = "btnVolver"
+        Me.btnVolver.Size = New System.Drawing.Size(135, 48)
+        Me.btnVolver.TabIndex = 7
+        Me.btnVolver.Text = "Volver"
+        Me.btnVolver.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnVolver.UseVisualStyleBackColor = True
+        '
         'frmDetalleTicket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnVolver)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.pnlDetalle)
         Me.Controls.Add(Me.Label4)
@@ -152,4 +170,5 @@ Partial Class frmDetalleTicket
     Friend WithEvents Panel2 As Panel
     Friend WithEvents lblDetalle As Label
     Friend WithEvents lblOrdenCompra As Label
+    Friend WithEvents btnVolver As FontAwesome.Sharp.IconButton
 End Class

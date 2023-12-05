@@ -1,4 +1,4 @@
-﻿Public Class frmTickets
+Public Class frmTickets
     Private ticketsDAO As ticketsInterfaces
     Public Sub New(ticketsDAO As ticketsInterfaces)
         ' Esta llamada es exigida por el diseñador.
@@ -16,8 +16,10 @@
         End Try
     End Sub
 
-    Private Sub dgvTickets_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTickets.CellContentClick
-        SetPanel(New frmDetalleTicket, frmHomeTicket.panelHomeTicket)
+    Private Sub dgvReclamos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvReclamos.CellContentClick
+        'SetPanel(frmDetalleTicket, frmHomeTicket.panelHomeTicket)
+        SetPanel(New frmDetalleTicket(New ticketsDAO(myConnectionDB)), frmMenu.PanelContent)
+
     End Sub
 
     Private Sub dgvTickets_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvTickets.CellFormatting
