@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <conexion>
-	<!-- DEBEN AGREGAR SUS CREDENCIALES -->
-	<serverDb></serverDb>
-	<dbName></dbName>
-	<user></user>
+	<serverDb>bG9jYWxob3N0</serverDb>
+	<dbName>ZGJfZHM4</dbName>
+	<user>cm9vdA==</user>
 	<password></password>
 </conexion>
