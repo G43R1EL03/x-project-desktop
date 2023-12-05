@@ -9,9 +9,11 @@ Public Class inventaryDAO
         Me.myConecctionDB = myConecctionDB
     End Sub
 
-    Public Function LlenarDGVInventario() As DataTable Implements inventaryInterfaces.LlenarDGVInventario
+    'Select que despliega todos los productos del inventario
+
+    Public Function VerInventario() As DataTable Implements inventaryInterfaces.VerInventario
         Try
-            Using glCommand As New MySqlCommand("SP_LlenarDGVInventario", myConnectionDB)
+            Using glCommand As New MySqlCommand("SP_VerInventario", myConnectionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
 
@@ -26,108 +28,184 @@ Public Class inventaryDAO
         End Try
     End Function
 
-    Public Function InsertarProducto(nombre As String, precioUnitario As Decimal, cantidadPorCajas As Integer?, puntoReorden As Integer?, cantidadCajas As Integer?, marcaId As Integer, categoriaId As Integer, imagen As Image) As Boolean Implements inventaryInterfaces.InsertarProducto
+    'Select -> Productos
+
+    Public Function VerProductos() As DataTable Implements inventaryInterfaces.VerProductos
         Try
-            myConnectionDB.Open()
-
-            Using glCommand As New MySqlCommand("sp_InsertarProducto", myConnectionDB)
-                glCommand.CommandType = CommandType.StoredProcedure
-
-                glCommand.Parameters.AddWithValue("@p_nombre", nombre)
-                glCommand.Parameters.AddWithValue("@p_precio_unit", precioUnitario)
-                glCommand.Parameters.AddWithValue("@p_cantidad_por_cajas", If(cantidadPorCajas.HasValue, cantidadPorCajas.Value, DBNull.Value))
-                glCommand.Parameters.AddWithValue("@p_punto_reorden", If(puntoReorden.HasValue, puntoReorden.Value, DBNull.Value))
-                glCommand.Parameters.AddWithValue("@p_cantidad_cajas", If(cantidadCajas.HasValue, cantidadCajas.Value, DBNull.Value))
-                glCommand.Parameters.AddWithValue("@p_marca_id", marcaId)
-                glCommand.Parameters.AddWithValue("@p_categoria_id", categoriaId)
-
-                ' Convertir la imagen a un arreglo de bytes
-                Dim photoBytes As Byte() = Nothing
-                If imagen IsNot Nothing Then
-                    Using ms As New MemoryStream()
-                        imagen.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
-                        photoBytes = ms.ToArray()
-                    End Using
-                End If
-
-                ' Agregar el parámetro para la imagen
-                glCommand.Parameters.AddWithValue("@p_imagen", If(photoBytes IsNot Nothing, photoBytes, DBNull.Value))
-
-                ' Ejecutar el procedimiento almacenado
-                glCommand.ExecuteNonQuery()
-
-                Return True
-            End Using
-        Catch ex As Exception
-            MessageBox.Show("Error al agregar el producto: " & ex.Message)
-            Return False
-        Finally
-            ' Cerrar la conexión a la base de datos
-            myConnectionDB.Close()
-        End Try
-    End Function
-
-
-    Public Function MostarMarcas() As DataTable Implements inventaryInterfaces.MostarMarcas
-        Try
-            Using glCommand As New MySqlCommand("SP_MostrarMarcas", myConnectionDB)
+            Using glCommand As New MySqlCommand("SP_VerProductos", myConnectionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
 
-                Using adapter As New MySqlDataAdapter(glCommand)
-                    Dim datatable As New DataTable()
-                    adapter.Fill(datatable)
-                    Return datatable
-                End Using
+
             End Using
         Catch ex As Exception
             Throw New Exception("Error al procesar la operacion:", ex)
         End Try
     End Function
 
-    Public Function actualizarMarcas() As DataTable Implements inventaryInterfaces.actualizarMarcas
+    'Insert -> Productos
+
+    Public Function InsertarProducto() As Integer Implements inventaryInterfaces.InsertarProducto
         Try
-            Using glCommand As New MySqlCommand("SP_ActualizarMarcas", myConnectionDB)
+            Using glCommand As New MySqlCommand("SP_InsertarProducto", myConnectionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
-                Using adapter As New MySqlDataAdapter(glCommand)
-                    Dim datatable As New DataTable()
-                    adapter.Fill(datatable)
-                    Return datatable
-                End Using
+
+
             End Using
         Catch ex As Exception
             Throw New Exception("Error al procesar la operacion:", ex)
         End Try
     End Function
-    Public Function insertarMarcas() As DataTable Implements inventaryInterfaces.insertarMarcas
+
+    'Update -> Productos
+
+    Public Function ActualizarProducto() As Integer Implements inventaryInterfaces.ActualizarProducto
         Try
-            Using glCommand As New MySqlCommand("SP_InsertarMarcas", myConnectionDB)
+            Using glCommand As New MySqlCommand("SP_ActualizarProducto", myConnectionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
-                Using adapter As New MySqlDataAdapter(glCommand)
-                    Dim datatable As New DataTable()
-                    adapter.Fill(datatable)
-                    Return datatable
-                End Using
+
+
             End Using
         Catch ex As Exception
             Throw New Exception("Error al procesar la operacion:", ex)
         End Try
     End Function
-    Public Function mostrarMarcas() As DataTable Implements inventaryInterfaces.mostrarMarcas
+
+    'Delete -> Productos
+
+    Public Function EliminarProducto() As Integer Implements inventaryInterfaces.EliminarProducto
         Try
-            Using glCommand As New MySqlCommand("SP_MostrarMarcas", myConnectionDB)
+            Using glCommand As New MySqlCommand("SP_EliminarProducto", myConnectionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
-                Using adapter As New MySqlDataAdapter(glCommand)
-                    Dim datatable As New DataTable()
-                    adapter.Fill(datatable)
-                    Return datatable
-                End Using
+
+
             End Using
         Catch ex As Exception
             Throw New Exception("Error al procesar la operacion:", ex)
         End Try
     End Function
+
+    'Select -> Marcas
+
+    Public Function VerMarcas() As DataTable Implements inventaryInterfaces.VerMarcas
+        Try
+            Using glCommand As New MySqlCommand("SP_VerMarcas", myConnectionDB)
+                glCommand.CommandTimeout = 0
+                glCommand.CommandType = CommandType.StoredProcedure
+
+
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al procesar la operacion:", ex)
+        End Try
+    End Function
+
+    'Insert -> Marcas
+
+    Public Function InsertarMarca() As Integer Implements inventaryInterfaces.InsertarMarca
+        Try
+            Using glCommand As New MySqlCommand("SP_InsertarMarca", myConnectionDB)
+                glCommand.CommandTimeout = 0
+                glCommand.CommandType = CommandType.StoredProcedure
+
+
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al procesar la operacion:", ex)
+        End Try
+    End Function
+
+    'Update -> Marcas
+
+    Public Function ActualizarMarca() As Integer Implements inventaryInterfaces.ActualizarMarca
+        Try
+            Using glCommand As New MySqlCommand("SP_ActualizarMarca", myConnectionDB)
+                glCommand.CommandTimeout = 0
+                glCommand.CommandType = CommandType.StoredProcedure
+
+
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al procesar la operacion:", ex)
+        End Try
+    End Function
+
+    'Delete -> Marcas
+
+    Public Function EliminarMarca() As Integer Implements inventaryInterfaces.EliminarMarca
+        Try
+            Using glCommand As New MySqlCommand("SP_EliminarMarca", myConnectionDB)
+                glCommand.CommandTimeout = 0
+                glCommand.CommandType = CommandType.StoredProcedure
+
+
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al procesar la operacion:", ex)
+        End Try
+    End Function
+
+    'Select -> Categorias
+
+    Public Function VerCategorias() As DataTable Implements inventaryInterfaces.VerCategorias
+        Try
+            Using glCommand As New MySqlCommand("SP_VerCategorias", myConnectionDB)
+                glCommand.CommandTimeout = 0
+                glCommand.CommandType = CommandType.StoredProcedure
+
+
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al procesar la operacion:", ex)
+        End Try
+    End Function
+
+    'Insert -> Categorias
+
+    Public Function InsertaCategorias() As Integer Implements inventaryInterfaces.InsertaCategorias
+        Try
+            Using glCommand As New MySqlCommand("SP_InsertaCategorias", myConnectionDB)
+                glCommand.CommandTimeout = 0
+                glCommand.CommandType = CommandType.StoredProcedure
+
+
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al procesar la operacion:", ex)
+        End Try
+    End Function
+
+    'Update -> Categorias
+
+    Public Function ActualizarCategorias() As Integer Implements inventaryInterfaces.ActualizarCategorias
+        Try
+            Using glCommand As New MySqlCommand("SP_ActualizarCategorias", myConnectionDB)
+                glCommand.CommandTimeout = 0
+                glCommand.CommandType = CommandType.StoredProcedure
+
+
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al procesar la operacion:", ex)
+        End Try
+    End Function
+
+    'Delete -> Categorias
+
+    Public Function EliminarCategorias() As Integer Implements inventaryInterfaces.EliminarCategorias
+        Try
+            Using glCommand As New MySqlCommand("SP_EliminarCategorias", myConnectionDB)
+                glCommand.CommandTimeout = 0
+                glCommand.CommandType = CommandType.StoredProcedure
+
+
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al procesar la operacion:", ex)
+        End Try
+    End Function
+
 End Class

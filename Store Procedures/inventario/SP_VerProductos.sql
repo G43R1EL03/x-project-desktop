@@ -1,6 +1,6 @@
 ﻿-- Creación del procedimiento para
 DELIMITER $$
-CREATE PROCEDURE SP_InsertarProductos()
+CREATE PROCEDURE SP_VerProductos()
 
 END $$
 DELIMITER ;

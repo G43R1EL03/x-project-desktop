@@ -8,15 +8,9 @@ Public Class frmInventario
         Try
             conexionDB()
             myConnectionDB.Open()
-            Dim InventarioDataTable As DataTable = invenatyDao.LlenarDGVInventario
+            Dim InventarioDataTable As DataTable = invenatyDao.VerInventario
             dgvInv.DataSource = InventarioDataTable
 
-            ' Agregar una columna de botón a dgvInv
-            Dim eliminarColumn As New DataGridViewButtonColumn()
-            eliminarColumn.HeaderText = "Acción"
-            eliminarColumn.Text = "Eliminar"
-            eliminarColumn.UseColumnTextForButtonValue = True
-            dgvInv.Columns.Add(eliminarColumn)
         Catch ex As Exception
             MsgBox("Error al realizar la conexión" & vbCrLf & "Error: " & ex.Message, MsgBoxStyle.Critical, "Error")
         Finally
@@ -33,32 +27,7 @@ Public Class frmInventario
     End Sub
 
     Private Sub tsCategoriaInv_Click(sender As Object, e As EventArgs) Handles tsCategoriaInv.Click
-        Dim userInput As String
-        userInput = InputBox("Introduzca el nombre de la categoria que desee agregar:", "Agregar Categoria")
-    End Sub
-
-    Private Sub tsRealizarCompraInv_Click(sender As Object, e As EventArgs) Handles tsRealizarCompraInv.Click
-
-    End Sub
-
-    Private Sub tsMarcaEnt_Click(sender As Object, e As EventArgs)
         SetPanel(frmAgregarMarca, panelFrmInventario)
     End Sub
 
-    Private Sub tsProductoEnt_Click(sender As Object, e As EventArgs) Handles tsProductoEnt.Click
-        SetPanel(frmAgregarProducto, panelFrmInventario)
-    End Sub
-
-    Private Sub tsCategoriaEnt_Click(sender As Object, e As EventArgs) Handles tsCategoriaEnt.Click
-        Dim userInput As String
-        userInput = InputBox("Introduzca el nombre de la categoria que desee agregar:", "Agregar Categoria")
-    End Sub
-
-    Private Sub tsRealizarCompraEnt_Click(sender As Object, e As EventArgs) Handles tsRealizarCompraEnt.Click
-
-    End Sub
-
-    Private Sub tsAgregarInv_Click(sender As Object, e As EventArgs)
-
-    End Sub
 End Class
