@@ -1,4 +1,6 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Windows.Documents
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports MySql.Data.MySqlClient
 Public Class frmDetalleTicket
     Private _idTicket As Integer
     Private ticketsDAO As ticketsInterfaces
@@ -6,32 +8,82 @@ Public Class frmDetalleTicket
     Public Sub New(ticketsDAO As ticketsInterfaces, idTicket As Integer)
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
+        _idTicket = idTicket
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         Me.ticketsDAO = ticketsDAO
-        _idTicket = idTicket
     End Sub
+
+    Public Function ObtenerConexion() As MySqlConnection
+        Return DB_Conecction.myConnectionDB
+    End Function
 
     Private Sub CargarDetalleTicket()
         Try
-            ' Llamar al método en ticketsDAO para obtener el detalle del ticket
-            Dim detalle As String = ticketsDAO.ObtenerDetalleTicket(_idTicket)
+            Dim dao As New ticketsDAO(ObtenerConexion())
 
-            ' Asignar el detalle al Label
-            lblDetalle.Text = detalle.ToString
+            Dim detalle As String = dao.ObtenerTicketPorId(_idTicket)
+
+            lblDetalle.Text = detalle
         Catch ex As Exception
-            ' Manejar cualquier excepción que pueda ocurrir
-            MessageBox.Show("Error al cargar el detalle del ticket: " & ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            MessageBox.Show("Error al cargar el detalle del ticket: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub CargarEvidenciaTicket()
+        Try
+            Dim dao As New ticketsDAO(ObtenerConexion())
+            Dim evidencia As String = dao.ObtenerEvidenciaPorId(_idTicket)
+            If (evidencia.Trim <> "") Then
+                pbEvidencia.Image = DecodificarImagen(evidencia)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error al cargar la evidencia del ticket: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub frmDetalleTicket_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         CargarDetalleTicket()
+        CargarEvidenciaTicket()
+        EstadoCbo()
+        pbEvidencia.SizeMode = PictureBoxSizeMode.StretchImage
+        lblNumeroTicket.Text = _idTicket
     End Sub
 
     Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
-
         SetPanel(New frmHomeTicket, frmMenu.PanelContent)
+    End Sub
+
+    Private Sub EstadoCbo()
+        Dim dtEstado As DataTable = ticketsDAO.ObtenerEstado
+        If dtEstado.Rows.Count <> 0 Then
+            With cboCambiarEstado
+                .DataSource = dtEstado
+                .ValueMember = "id_tickets_estado"
+                .DisplayMember = "estado"
+                .SelectedIndex = 1
+            End With
+        Else
+            cboCambiarEstado.DataSource = Nothing
+            cboCambiarEstado.Items.Clear()
+            cboCambiarEstado.Items.Add("No existen categorias..")
+            cboCambiarEstado.SelectedIndex = 1
+        End If
+    End Sub
+
+    Private Sub btnCambiarEstado_Click(sender As Object, e As EventArgs) Handles btnCambiarEstado.Click
+        Dim idEstado As Integer = CInt(cboCambiarEstado.SelectedValue)
+        Try
+            Dim result As Integer = ticketsDAO.ActualizarEstadoTicket(_idTicket, idEstado)
+            If result <> 0 Then
+                MsgBox("ESTADO CAMBIADO EXITOSAMENTE")
+                SetPanel(New frmHomeTicket(), frmMenu.PanelContent)
+            Else
+                MsgBox("Error al cambiar el estado del ticket... Intentelo nuevamente")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class

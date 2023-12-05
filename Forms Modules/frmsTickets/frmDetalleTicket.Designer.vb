@@ -22,135 +22,135 @@ Partial Class frmDetalleTicket
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDetalleTicket))
         Me.lblTicket = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.pnlOrdenCompra = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.pnlDetalle = New System.Windows.Forms.Panel()
+        Me.lblNumeroTicket = New System.Windows.Forms.Label()
         Me.lblDetalle = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.lblOrdenCompra = New System.Windows.Forms.Label()
         Me.btnVolver = New FontAwesome.Sharp.IconButton()
-        Me.pnlDetalle.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.pbEvidencia = New System.Windows.Forms.PictureBox()
+        Me.cboCambiarEstado = New System.Windows.Forms.ComboBox()
+        Me.btnCambiarEstado = New FontAwesome.Sharp.IconButton()
+        CType(Me.pbEvidencia, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTicket
         '
         Me.lblTicket.AutoSize = True
         Me.lblTicket.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTicket.Location = New System.Drawing.Point(145, 130)
-        Me.lblTicket.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTicket.Location = New System.Drawing.Point(649, 46)
         Me.lblTicket.Name = "lblTicket"
-        Me.lblTicket.Size = New System.Drawing.Size(0, 25)
+        Me.lblTicket.Size = New System.Drawing.Size(0, 20)
         Me.lblTicket.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(315, 199)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(24, 46)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(57, 16)
+        Me.Label1.Size = New System.Drawing.Size(185, 20)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Detalles"
-        '
-        'pnlOrdenCompra
-        '
-        Me.pnlOrdenCompra.AutoSize = True
-        Me.pnlOrdenCompra.Location = New System.Drawing.Point(729, 199)
-        Me.pnlOrdenCompra.Name = "pnlOrdenCompra"
-        Me.pnlOrdenCompra.Size = New System.Drawing.Size(114, 16)
-        Me.pnlOrdenCompra.TabIndex = 2
-        Me.pnlOrdenCompra.Text = "Orden de Compra"
+        Me.Label1.Text = "Descripción del Ticket"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(147, 130)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(549, 46)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(44, 16)
+        Me.Label3.Size = New System.Drawing.Size(72, 20)
         Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Ticket"
+        Me.Label3.Text = "Ticket #"
         '
-        'Label4
+        'lblNumeroTicket
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(147, 162)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(49, 16)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "#12345"
-        '
-        'pnlDetalle
-        '
-        Me.pnlDetalle.Controls.Add(Me.lblDetalle)
-        Me.pnlDetalle.Location = New System.Drawing.Point(319, 236)
-        Me.pnlDetalle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.pnlDetalle.Name = "pnlDetalle"
-        Me.pnlDetalle.Size = New System.Drawing.Size(200, 100)
-        Me.pnlDetalle.TabIndex = 5
+        Me.lblNumeroTicket.AutoSize = True
+        Me.lblNumeroTicket.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNumeroTicket.Location = New System.Drawing.Point(625, 46)
+        Me.lblNumeroTicket.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblNumeroTicket.Name = "lblNumeroTicket"
+        Me.lblNumeroTicket.Size = New System.Drawing.Size(101, 20)
+        Me.lblNumeroTicket.TabIndex = 4
+        Me.lblNumeroTicket.Text = "# Num Ticket"
         '
         'lblDetalle
         '
-        Me.lblDetalle.Location = New System.Drawing.Point(13, 12)
+        Me.lblDetalle.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.lblDetalle.Location = New System.Drawing.Point(25, 88)
+        Me.lblDetalle.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblDetalle.Name = "lblDetalle"
-        Me.lblDetalle.Size = New System.Drawing.Size(173, 79)
+        Me.lblDetalle.Size = New System.Drawing.Size(357, 307)
         Me.lblDetalle.TabIndex = 7
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.lblOrdenCompra)
-        Me.Panel2.Location = New System.Drawing.Point(732, 236)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 100)
-        Me.Panel2.TabIndex = 6
-        '
-        'lblOrdenCompra
-        '
-        Me.lblOrdenCompra.Location = New System.Drawing.Point(13, 10)
-        Me.lblOrdenCompra.Name = "lblOrdenCompra"
-        Me.lblOrdenCompra.Size = New System.Drawing.Size(173, 79)
-        Me.lblOrdenCompra.TabIndex = 8
-        Me.lblOrdenCompra.Text = "Lorfmepoeforwfmporfroperogerpogerpogerpogeporgpoergpergkregpoerkgpoerkgpkerogerkg" &
-    "frfrfrefefefefefefefefeefef"
+        Me.lblDetalle.Text = "Lorem Ipsum"
         '
         'btnVolver
         '
-        Me.btnVolver.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVolver.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVolver.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft
         Me.btnVolver.IconColor = System.Drawing.Color.Black
         Me.btnVolver.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnVolver.IconSize = 30
-        Me.btnVolver.Location = New System.Drawing.Point(25, 15)
-        Me.btnVolver.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnVolver.IconSize = 22
+        Me.btnVolver.Location = New System.Drawing.Point(19, 12)
         Me.btnVolver.Name = "btnVolver"
-        Me.btnVolver.Size = New System.Drawing.Size(180, 59)
+        Me.btnVolver.Size = New System.Drawing.Size(83, 31)
         Me.btnVolver.TabIndex = 7
         Me.btnVolver.Text = "Volver"
         Me.btnVolver.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnVolver.UseVisualStyleBackColor = True
         '
+        'pbEvidencia
+        '
+        Me.pbEvidencia.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.pbEvidencia.Image = CType(resources.GetObject("pbEvidencia.Image"), System.Drawing.Image)
+        Me.pbEvidencia.Location = New System.Drawing.Point(416, 88)
+        Me.pbEvidencia.Name = "pbEvidencia"
+        Me.pbEvidencia.Size = New System.Drawing.Size(310, 307)
+        Me.pbEvidencia.TabIndex = 8
+        Me.pbEvidencia.TabStop = False
+        '
+        'cboCambiarEstado
+        '
+        Me.cboCambiarEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCambiarEstado.FormattingEnabled = True
+        Me.cboCambiarEstado.Location = New System.Drawing.Point(118, 405)
+        Me.cboCambiarEstado.Name = "cboCambiarEstado"
+        Me.cboCambiarEstado.Size = New System.Drawing.Size(264, 21)
+        Me.cboCambiarEstado.TabIndex = 9
+        '
+        'btnCambiarEstado
+        '
+        Me.btnCambiarEstado.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.btnCambiarEstado.IconColor = System.Drawing.Color.Black
+        Me.btnCambiarEstado.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnCambiarEstado.Location = New System.Drawing.Point(416, 405)
+        Me.btnCambiarEstado.Name = "btnCambiarEstado"
+        Me.btnCambiarEstado.Size = New System.Drawing.Size(94, 23)
+        Me.btnCambiarEstado.TabIndex = 10
+        Me.btnCambiarEstado.Text = "Cambiar Estado"
+        Me.btnCambiarEstado.UseVisualStyleBackColor = True
+        '
         'frmDetalleTicket
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1067, 554)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnCambiarEstado)
+        Me.Controls.Add(Me.cboCambiarEstado)
+        Me.Controls.Add(Me.pbEvidencia)
+        Me.Controls.Add(Me.lblDetalle)
         Me.Controls.Add(Me.btnVolver)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.pnlDetalle)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.lblNumeroTicket)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.pnlOrdenCompra)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblTicket)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmDetalleTicket"
         Me.Text = "frmDetalleTicket"
-        Me.pnlDetalle.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
+        CType(Me.pbEvidencia, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -158,12 +158,11 @@ Partial Class frmDetalleTicket
 
     Friend WithEvents lblTicket As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents pnlOrdenCompra As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents pnlDetalle As Panel
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents lblNumeroTicket As Label
     Friend WithEvents lblDetalle As Label
-    Friend WithEvents lblOrdenCompra As Label
     Friend WithEvents btnVolver As FontAwesome.Sharp.IconButton
+    Friend WithEvents pbEvidencia As PictureBox
+    Friend WithEvents cboCambiarEstado As ComboBox
+    Friend WithEvents btnCambiarEstado As FontAwesome.Sharp.IconButton
 End Class
