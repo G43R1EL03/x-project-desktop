@@ -66,4 +66,32 @@ Public Class ticketsDAO
             If myConecctionDB.State <> ConnectionState.Closed Then myConecctionDB.Close()
         End Try
     End Function
+
+
+    Public Function ObtenerTicketPorUsuario(ByVal idUsuario As Integer, ByVal idTicket As Integer) As String Implements ticketsInterfaces.ObtenerTicketPorUsuario
+        Try
+            Using cmd As New MySqlCommand("SP_ObtenerDetalleTickets", myConecctionDB)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("@p_usuario_id", idUsuario)
+                cmd.Parameters.AddWithValue("@p_ticket_id", idTicket)
+
+                myConecctionDB.Open()
+
+
+                Dim descripcion As Object = cmd.ExecuteScalar()
+
+
+                If descripcion IsNot Nothing AndAlso Not Convert.IsDBNull(descripcion) Then
+                    Return descripcion.ToString()
+                Else
+                    Return String.Empty
+                End If
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al procesar la operación", ex)
+        Finally
+            If myConecctionDB.State <> ConnectionState.Closed Then myConecctionDB.Close()
+        End Try
+    End Function
+
 End Class
