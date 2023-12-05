@@ -8,4 +8,5 @@
     Function ObtenerTicketPorId(ByVal idTicket As Integer) As String
 
     Function ObtenerEvidenciaPorId(ByVal idTicket As Integer) As String
+    Function EliminarTicket(ByVal ticketID As Integer) As Integer
 End Interface
