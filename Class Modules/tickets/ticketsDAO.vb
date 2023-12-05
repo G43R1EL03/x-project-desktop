@@ -68,18 +68,15 @@ Public Class ticketsDAO
     End Function
 
 
-    Public Function ObtenerTicketPorUsuario(ByVal idUsuario As Integer, ByVal idTicket As Integer) As String Implements ticketsInterfaces.ObtenerTicketPorUsuario
+    Public Function ObtenerDetalleTicket(ByVal idTicket As Integer) As String Implements ticketsInterfaces.ObtenerDetalleTicket
         Try
-            Using cmd As New MySqlCommand("SP_ObtenerDetalleTickets", myConecctionDB)
+            Using cmd As New MySqlCommand("SP_ObtenerDetalleTicket", myConecctionDB)
                 cmd.CommandType = CommandType.StoredProcedure
-                cmd.Parameters.AddWithValue("@p_usuario_id", idUsuario)
-                cmd.Parameters.AddWithValue("@p_ticket_id", idTicket)
+                cmd.Parameters.AddWithValue("@p_ticket_id", 1)
 
                 myConecctionDB.Open()
 
-
                 Dim descripcion As Object = cmd.ExecuteScalar()
-
 
                 If descripcion IsNot Nothing AndAlso Not Convert.IsDBNull(descripcion) Then
                     Return descripcion.ToString()

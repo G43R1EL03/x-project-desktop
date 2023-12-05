@@ -40,85 +40,78 @@ Partial Class frmDetalleTicket
         '
         Me.lblTicket.AutoSize = True
         Me.lblTicket.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTicket.Location = New System.Drawing.Point(109, 106)
+        Me.lblTicket.Location = New System.Drawing.Point(145, 130)
+        Me.lblTicket.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTicket.Name = "lblTicket"
-        Me.lblTicket.Size = New System.Drawing.Size(0, 20)
+        Me.lblTicket.Size = New System.Drawing.Size(0, 25)
         Me.lblTicket.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(236, 162)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(315, 199)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(45, 13)
+        Me.Label1.Size = New System.Drawing.Size(57, 16)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Detalles"
         '
         'pnlOrdenCompra
         '
         Me.pnlOrdenCompra.AutoSize = True
-        Me.pnlOrdenCompra.Location = New System.Drawing.Point(547, 162)
-        Me.pnlOrdenCompra.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.pnlOrdenCompra.Location = New System.Drawing.Point(729, 199)
         Me.pnlOrdenCompra.Name = "pnlOrdenCompra"
-        Me.pnlOrdenCompra.Size = New System.Drawing.Size(90, 13)
+        Me.pnlOrdenCompra.Size = New System.Drawing.Size(114, 16)
         Me.pnlOrdenCompra.TabIndex = 2
         Me.pnlOrdenCompra.Text = "Orden de Compra"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(110, 106)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(147, 130)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(37, 13)
+        Me.Label3.Size = New System.Drawing.Size(44, 16)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Ticket"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(110, 132)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(147, 162)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(44, 13)
+        Me.Label4.Size = New System.Drawing.Size(49, 16)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "#12345"
         '
         'pnlDetalle
         '
         Me.pnlDetalle.Controls.Add(Me.lblDetalle)
-        Me.pnlDetalle.Location = New System.Drawing.Point(239, 192)
-        Me.pnlDetalle.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pnlDetalle.Location = New System.Drawing.Point(319, 236)
+        Me.pnlDetalle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pnlDetalle.Name = "pnlDetalle"
-        Me.pnlDetalle.Size = New System.Drawing.Size(150, 81)
+        Me.pnlDetalle.Size = New System.Drawing.Size(200, 100)
         Me.pnlDetalle.TabIndex = 5
         '
         'lblDetalle
         '
-        Me.lblDetalle.Location = New System.Drawing.Point(10, 10)
-        Me.lblDetalle.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblDetalle.Location = New System.Drawing.Point(13, 12)
         Me.lblDetalle.Name = "lblDetalle"
-        Me.lblDetalle.Size = New System.Drawing.Size(130, 64)
+        Me.lblDetalle.Size = New System.Drawing.Size(173, 79)
         Me.lblDetalle.TabIndex = 7
-        Me.lblDetalle.Text = "Lorfmepoeforwfmporfroperogerpogerpogerpogeporgpoergpergkregpoerkgpoerkgpkerogerkg" &
-    "frfrfrefefefefefefefefeefef"
         '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.lblOrdenCompra)
-        Me.Panel2.Location = New System.Drawing.Point(549, 192)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Location = New System.Drawing.Point(732, 236)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(150, 81)
+        Me.Panel2.Size = New System.Drawing.Size(200, 100)
         Me.Panel2.TabIndex = 6
         '
         'lblOrdenCompra
         '
-        Me.lblOrdenCompra.Location = New System.Drawing.Point(10, 8)
-        Me.lblOrdenCompra.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblOrdenCompra.Location = New System.Drawing.Point(13, 10)
         Me.lblOrdenCompra.Name = "lblOrdenCompra"
-        Me.lblOrdenCompra.Size = New System.Drawing.Size(130, 64)
+        Me.lblOrdenCompra.Size = New System.Drawing.Size(173, 79)
         Me.lblOrdenCompra.TabIndex = 8
         Me.lblOrdenCompra.Text = "Lorfmepoeforwfmporfroperogerpogerpogerpogeporgpoergpergkregpoerkgpoerkgpkerogerkg" &
     "frfrfrefefefefefefefefeefef"
@@ -130,9 +123,10 @@ Partial Class frmDetalleTicket
         Me.btnVolver.IconColor = System.Drawing.Color.Black
         Me.btnVolver.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnVolver.IconSize = 30
-        Me.btnVolver.Location = New System.Drawing.Point(19, 12)
+        Me.btnVolver.Location = New System.Drawing.Point(25, 15)
+        Me.btnVolver.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnVolver.Name = "btnVolver"
-        Me.btnVolver.Size = New System.Drawing.Size(135, 48)
+        Me.btnVolver.Size = New System.Drawing.Size(180, 59)
         Me.btnVolver.TabIndex = 7
         Me.btnVolver.Text = "Volver"
         Me.btnVolver.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -141,9 +135,9 @@ Partial Class frmDetalleTicket
         '
         'frmDetalleTicket
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1067, 554)
         Me.Controls.Add(Me.btnVolver)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.pnlDetalle)
@@ -152,6 +146,7 @@ Partial Class frmDetalleTicket
         Me.Controls.Add(Me.pnlOrdenCompra)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblTicket)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmDetalleTicket"
         Me.Text = "frmDetalleTicket"
         Me.pnlDetalle.ResumeLayout(False)

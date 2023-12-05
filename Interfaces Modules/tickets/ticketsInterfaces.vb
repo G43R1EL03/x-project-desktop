@@ -5,5 +5,5 @@
 
     Function ObtenerCategorias() As DataTable
 
-    Function ObtenerTicketPorUsuario(ByVal idUsuario As Integer, ByVal idTicket As Integer) As String
+    Function ObtenerDetalleTicket(ByVal idTicket As Integer) As String
 End Interface

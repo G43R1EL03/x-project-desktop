@@ -22,19 +22,27 @@ Partial Class frmAyudaPagoPromociones
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAyudaPagoPromociones))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnVolver = New FontAwesome.Sharp.IconButton()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(249, 45)
+        Me.Label1.Location = New System.Drawing.Point(192, 91)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(298, 25)
+        Me.Label1.Size = New System.Drawing.Size(662, 32)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "frmAyudaPagoPromociones"
+        Me.Label1.Text = "Preguntas Frecuentes sobre Pagos y Promociones"
         '
         'btnVolver
         '
@@ -43,23 +51,88 @@ Partial Class frmAyudaPagoPromociones
         Me.btnVolver.IconColor = System.Drawing.Color.Black
         Me.btnVolver.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnVolver.IconSize = 30
-        Me.btnVolver.Location = New System.Drawing.Point(12, 12)
+        Me.btnVolver.Location = New System.Drawing.Point(16, 15)
+        Me.btnVolver.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnVolver.Name = "btnVolver"
-        Me.btnVolver.Size = New System.Drawing.Size(135, 48)
+        Me.btnVolver.Size = New System.Drawing.Size(180, 59)
         Me.btnVolver.TabIndex = 4
         Me.btnVolver.Text = "Volver"
         Me.btnVolver.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnVolver.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.Location = New System.Drawing.Point(13, 172)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(303, 91)
+        Me.Label3.TabIndex = 10
+        Me.Label3.Text = "¿Puedo solicitar un reembolso si cambio de opinión después de realizar un pedido?" &
+    ""
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label2
+        '
+        Me.Label2.Location = New System.Drawing.Point(356, 172)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(303, 91)
+        Me.Label2.TabIndex = 11
+        Me.Label2.Text = "¿Cómo puedo aplicar un código de descuento a mi compra?"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label4
+        '
+        Me.Label4.Location = New System.Drawing.Point(705, 172)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(303, 91)
+        Me.Label4.TabIndex = 12
+        Me.Label4.Text = "¿Ofrecen programas de lealtad o puntos de recompensa para clientes frecuentes?"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label6
+        '
+        Me.Label6.Location = New System.Drawing.Point(13, 283)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(303, 138)
+        Me.Label6.TabIndex = 17
+        Me.Label6.Text = "Respuesta: Lamentablemente, no aceptamos reembolsos por cambios de opinión. Te re" &
+    "comendamos revisar cuidadosamente tu pedido antes de confirmarlo."
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label5
+        '
+        Me.Label5.Location = New System.Drawing.Point(356, 283)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(303, 138)
+        Me.Label5.TabIndex = 18
+        Me.Label5.Text = resources.GetString("Label5.Text")
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label7
+        '
+        Me.Label7.Location = New System.Drawing.Point(705, 263)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(303, 138)
+        Me.Label7.TabIndex = 19
+        Me.Label7.Text = "Respuesta: Sí, contamos con un programa de lealtad que recompensa a nuestros clie" &
+    "ntes frecuentes. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frmAyudaPagoPromociones
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(207, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1067, 554)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnVolver)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmAyudaPagoPromociones"
         Me.Text = "frmPagoPromociones"
         Me.ResumeLayout(False)
@@ -69,4 +142,10 @@ Partial Class frmAyudaPagoPromociones
 
     Friend WithEvents Label1 As Label
     Friend WithEvents btnVolver As FontAwesome.Sharp.IconButton
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label7 As Label
 End Class
