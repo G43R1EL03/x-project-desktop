@@ -28,6 +28,10 @@ Partial Class frmAgregarMarca
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.dgvVerMarcas = New System.Windows.Forms.DataGridView()
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.editar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -39,10 +43,6 @@ Partial Class frmAgregarMarca
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.editar = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvVerMarcas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,6 +103,49 @@ Partial Class frmAgregarMarca
         Me.dgvVerMarcas.Size = New System.Drawing.Size(174, 164)
         Me.dgvVerMarcas.TabIndex = 41
         Me.dgvVerMarcas.Visible = False
+        '
+        'id
+        '
+        Me.id.HeaderText = "id"
+        Me.id.Name = "id"
+        Me.id.ReadOnly = True
+        Me.id.Visible = False
+        '
+        'nombre
+        '
+        Me.nombre.HeaderText = "marca"
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 110
+        '
+        'editar
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+        Me.editar.DefaultCellStyle = DataGridViewCellStyle1
+        Me.editar.HeaderText = "editar"
+        Me.editar.Name = "editar"
+        Me.editar.ReadOnly = True
+        Me.editar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.editar.Text = "editar"
+        Me.editar.UseColumnTextForButtonValue = True
+        Me.editar.Width = 60
+        '
+        'eliminar
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        Me.eliminar.DefaultCellStyle = DataGridViewCellStyle2
+        Me.eliminar.HeaderText = "eliminar"
+        Me.eliminar.Name = "eliminar"
+        Me.eliminar.ReadOnly = True
+        Me.eliminar.Text = "eliminar"
+        Me.eliminar.UseColumnTextForButtonValue = True
+        Me.eliminar.Width = 70
         '
         'Button2
         '
@@ -247,49 +290,6 @@ Partial Class frmAgregarMarca
         Me.IconButton4.TabIndex = 40
         Me.IconButton4.Text = "      Upload"
         Me.IconButton4.UseVisualStyleBackColor = False
-        '
-        'id
-        '
-        Me.id.HeaderText = "id"
-        Me.id.Name = "id"
-        Me.id.ReadOnly = True
-        Me.id.Visible = False
-        '
-        'nombre
-        '
-        Me.nombre.HeaderText = "marca"
-        Me.nombre.Name = "nombre"
-        Me.nombre.ReadOnly = True
-        Me.nombre.Width = 110
-        '
-        'editar
-        '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
-        Me.editar.DefaultCellStyle = DataGridViewCellStyle1
-        Me.editar.HeaderText = "editar"
-        Me.editar.Name = "editar"
-        Me.editar.ReadOnly = True
-        Me.editar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.editar.Text = "editar"
-        Me.editar.UseColumnTextForButtonValue = True
-        Me.editar.Width = 60
-        '
-        'eliminar
-        '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        Me.eliminar.DefaultCellStyle = DataGridViewCellStyle2
-        Me.eliminar.HeaderText = "eliminar"
-        Me.eliminar.Name = "eliminar"
-        Me.eliminar.ReadOnly = True
-        Me.eliminar.Text = "eliminar"
-        Me.eliminar.UseColumnTextForButtonValue = True
-        Me.eliminar.Width = 70
         '
         'frmAgregarMarca
         '
