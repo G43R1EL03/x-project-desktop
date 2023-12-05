@@ -28,6 +28,8 @@ Partial Class frmAgregarProducto
         Me.BtnCancel = New FontAwesome.Sharp.IconButton()
         Me.BtnChoose = New FontAwesome.Sharp.IconButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtCantPCajas = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.txtReorden = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -44,9 +46,6 @@ Partial Class frmAgregarProducto
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BoxPicture = New FontAwesome.Sharp.IconPictureBox()
-        Me.BtnUpload = New FontAwesome.Sharp.IconButton()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtCantPCajas = New System.Windows.Forms.TextBox()
         Me.panelFrmAgregarProducto.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.BoxPicture, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -96,7 +95,6 @@ Partial Class frmAgregarProducto
         Me.panelFrmAgregarProducto.Controls.Add(Me.BoxPicture)
         Me.panelFrmAgregarProducto.Controls.Add(Me.ButtonCancel)
         Me.panelFrmAgregarProducto.Controls.Add(Me.ButtonChoose)
-        Me.panelFrmAgregarProducto.Controls.Add(Me.BtnUpload)
         Me.panelFrmAgregarProducto.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelFrmAgregarProducto.Location = New System.Drawing.Point(0, 0)
         Me.panelFrmAgregarProducto.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -114,7 +112,7 @@ Partial Class frmAgregarProducto
         Me.BtnCancel.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.BtnCancel.IconSize = 35
         Me.BtnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnCancel.Location = New System.Drawing.Point(282, 386)
+        Me.BtnCancel.Location = New System.Drawing.Point(347, 329)
         Me.BtnCancel.Name = "BtnCancel"
         Me.BtnCancel.Size = New System.Drawing.Size(130, 51)
         Me.BtnCancel.TabIndex = 8
@@ -160,6 +158,27 @@ Partial Class frmAgregarProducto
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(580, 712)
         Me.Panel1.TabIndex = 5
+        '
+        'txtCantPCajas
+        '
+        Me.txtCantPCajas.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
+        Me.txtCantPCajas.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCantPCajas.ForeColor = System.Drawing.Color.White
+        Me.txtCantPCajas.Location = New System.Drawing.Point(20, 310)
+        Me.txtCantPCajas.Name = "txtCantPCajas"
+        Me.txtCantPCajas.Size = New System.Drawing.Size(373, 44)
+        Me.txtCantPCajas.TabIndex = 21
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(15, 280)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(219, 27)
+        Me.Label9.TabIndex = 20
+        Me.Label9.Text = "Cantidad por Cajas"
         '
         'BtnAgregar
         '
@@ -339,44 +358,6 @@ Partial Class frmAgregarProducto
         Me.BoxPicture.TabIndex = 1
         Me.BoxPicture.TabStop = False
         '
-        'BtnUpload
-        '
-        Me.BtnUpload.BackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.BtnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnUpload.IconChar = FontAwesome.Sharp.IconChar.Upload
-        Me.BtnUpload.IconColor = System.Drawing.Color.Black
-        Me.BtnUpload.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BtnUpload.IconSize = 35
-        Me.BtnUpload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnUpload.Location = New System.Drawing.Point(348, 329)
-        Me.BtnUpload.Name = "BtnUpload"
-        Me.BtnUpload.Size = New System.Drawing.Size(130, 51)
-        Me.BtnUpload.TabIndex = 3
-        Me.BtnUpload.Text = "Upload"
-        Me.BtnUpload.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnUpload.UseVisualStyleBackColor = False
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(15, 280)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(219, 27)
-        Me.Label9.TabIndex = 20
-        Me.Label9.Text = "Cantidad por Cajas"
-        '
-        'txtCantPCajas
-        '
-        Me.txtCantPCajas.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
-        Me.txtCantPCajas.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCantPCajas.ForeColor = System.Drawing.Color.White
-        Me.txtCantPCajas.Location = New System.Drawing.Point(20, 310)
-        Me.txtCantPCajas.Name = "txtCantPCajas"
-        Me.txtCantPCajas.Size = New System.Drawing.Size(373, 44)
-        Me.txtCantPCajas.TabIndex = 21
-        '
         'frmAgregarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -415,7 +396,6 @@ Partial Class frmAgregarProducto
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents BoxPicture As FontAwesome.Sharp.IconPictureBox
-    Friend WithEvents BtnUpload As FontAwesome.Sharp.IconButton
     Friend WithEvents txtCantPCajas As TextBox
     Friend WithEvents Label9 As Label
 End Class
