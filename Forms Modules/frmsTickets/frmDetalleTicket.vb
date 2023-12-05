@@ -2,11 +2,20 @@
 Public Class frmDetalleTicket
     Private _idTicket As Integer
     Private _idUsuario As Integer
+    Private ticketsDAO As ticketsInterfaces
 
-    Public Sub New(idUsuario As Integer, idTicket As Integer)
+    'Public Sub New(idUsuario As Integer, idTicket As Integer)
+    '    InitializeComponent()
+    '    _idUsuario = idUsuario
+    '    _idTicket = idTicket
+    'End Sub
+
+    Public Sub New(ticketsDAO As ticketsInterfaces)
+        ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
-        _idUsuario = idUsuario
-        _idTicket = idTicket
+
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+        Me.ticketsDAO = ticketsDAO
     End Sub
 
     Public Function ObtenerConexion() As MySqlConnection
@@ -18,7 +27,6 @@ Public Class frmDetalleTicket
         Try
 
             Dim dao As New ticketsDAO(ObtenerConexion())
-
 
             Dim detalle As String = dao.ObtenerTicketPorUsuario(_idUsuario, _idTicket)
 
@@ -34,5 +42,9 @@ Public Class frmDetalleTicket
     Private Sub frmDetalleTicket_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         CargarDetalleTicket()
+    End Sub
+
+    Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
+        SetPanel(New frmHomeTicket, frmMenu.PanelContent)
     End Sub
 End Class
