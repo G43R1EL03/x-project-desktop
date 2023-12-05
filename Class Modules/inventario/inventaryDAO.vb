@@ -6,7 +6,7 @@ Public Class inventaryDAO
     Private myConecctionDB As MySqlConnection
 
     Public Sub New(myConnection As MySqlConnection)
-        Me.myConecctionDB = myConecctionDB
+        Me.myConecctionDB = myConnection
     End Sub
 
     'Select que despliega todos los productos del inventario
@@ -109,16 +109,26 @@ Public Class inventaryDAO
 
     'Insert -> Marcas
 
-    Public Function InsertarMarca() As Integer Implements inventaryInterfaces.InsertarMarca
+    Public Function InsertarMarca(ByVal nombre As String, ByVal descripcion As String, ByVal logo As String) As Integer Implements inventaryInterfaces.InsertarMarca
+        Dim resultado As Integer = 0
+
         Try
-            Using glCommand As New MySqlCommand("SP_InsertarMarca", myConnectionDB)
+            Using glCommand As New MySqlCommand("SP_InsertarMarcas", myConecctionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
+                glCommand.Parameters.AddWithValue("nombre", nombre)
+                glCommand.Parameters.AddWithValue("descripcion", descripcion)
+                glCommand.Parameters.AddWithValue("logo", logo)
+                'glCommand.Parameters.AddWithValue("resultado", MySqlDbType.Int32)
 
+                myConecctionDB.Open()
 
+                resultado = glCommand.ExecuteNonQuery()
             End Using
         Catch ex As Exception
-            Throw New Exception("Error al procesar la operacion:", ex)
+            Throw New Exception("Error al insertar la marca: " & ex.Message)
+        Finally
+            If myConecctionDB.State <> ConnectionState.Closed Then myConecctionDB.Close()
         End Try
     End Function
 
