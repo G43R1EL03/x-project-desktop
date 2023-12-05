@@ -26,7 +26,7 @@ Partial Class frmReporteInventario
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmReporteInventario))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboxMarcas = New System.Windows.Forms.ComboBox()
         Me.cboxCategorias = New System.Windows.Forms.ComboBox()
@@ -34,7 +34,6 @@ Partial Class frmReporteInventario
         Me.btnAplicarFiltros = New System.Windows.Forms.Button()
         Me.btnExportarExcel = New System.Windows.Forms.Button()
         Me.dgvInventarioReporte = New System.Windows.Forms.DataGridView()
-        Me.AnaliticaReporteInventarioDAOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblCantCategorias = New System.Windows.Forms.Label()
@@ -43,6 +42,7 @@ Partial Class frmReporteInventario
         Me.lblCantProductos = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnEliminarFiltros = New System.Windows.Forms.Button()
+        Me.AnaliticaReporteInventarioDAOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.dgvInventarioReporte, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AnaliticaReporteInventarioDAOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -87,8 +87,8 @@ Partial Class frmReporteInventario
         Me.dgvInventarioReporte.AllowUserToDeleteRows = False
         Me.dgvInventarioReporte.AllowUserToResizeColumns = False
         Me.dgvInventarioReporte.AllowUserToResizeRows = False
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvInventarioReporte.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvInventarioReporte.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvInventarioReporte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvInventarioReporte.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.dgvInventarioReporte.BackgroundColor = System.Drawing.SystemColors.ButtonFace
@@ -97,10 +97,6 @@ Partial Class frmReporteInventario
         Me.dgvInventarioReporte.Name = "dgvInventarioReporte"
         Me.dgvInventarioReporte.ReadOnly = True
         Me.dgvInventarioReporte.TabStop = False
-        '
-        'AnaliticaReporteInventarioDAOBindingSource
-        '
-        Me.AnaliticaReporteInventarioDAOBindingSource.DataSource = GetType(x_project_desktop.analiticaReporteInventarioDAO)
         '
         'Label8
         '
@@ -143,10 +139,14 @@ Partial Class frmReporteInventario
         Me.btnEliminarFiltros.Name = "btnEliminarFiltros"
         Me.btnEliminarFiltros.UseVisualStyleBackColor = True
         '
+        'AnaliticaReporteInventarioDAOBindingSource
+        '
+        Me.AnaliticaReporteInventarioDAOBindingSource.DataSource = GetType(x_project_desktop.analiticaReporteInventarioDAO)
+        '
         'frmReporteInventario
         '
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit
         resources.ApplyResources(Me, "$this")
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.btnEliminarFiltros)
         Me.Controls.Add(Me.btnAplicarFiltros)
         Me.Controls.Add(Me.btnExportarExcel)

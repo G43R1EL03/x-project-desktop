@@ -16,7 +16,6 @@ Public Class frmReporteInventario
         cargarInventario(id_marca, id_categoria)
         cboxMarcas.SelectedIndex = -1
         cboxCategorias.SelectedIndex = -1
-
     End Sub
 
     Private Sub cargarInventario(id_marca, id_categoria)
@@ -76,8 +75,6 @@ Public Class frmReporteInventario
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAplicarFiltros.Click
         cargarInventario(cboxMarcas.SelectedValue, cboxCategorias.SelectedValue)
-        cboxMarcas.SelectedIndex = -1
-        cboxCategorias.SelectedIndex = -1
     End Sub
 
     Private Sub btnExportarExcel_Click(sender As Object, e As EventArgs) Handles btnExportarExcel.Click
