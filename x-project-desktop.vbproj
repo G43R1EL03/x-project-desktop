@@ -476,7 +476,7 @@
     <Content Include="Store Procedures\inventario\SP_VerMarcas.sql" />
     <Content Include="Store Procedures\inventario\SP_VerProductos.sql" />
     <Content Include="Store Procedures\tickets\SP_InsertarTicket.sql" />
-    <Content Include="Store Procedures\tickets\SP_ObtenerCategoria.sql" />
+    <Content Include="Store Procedures\inventario\SP_ObtenerCategoria.sql" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
