@@ -7,7 +7,7 @@
     Function VerProductos() As DataTable
     Function InsertarProducto(nombre As String, precioUnitario As Decimal, cantidadPorCajas As Integer?, puntoReorden As Integer?, cantidadCajas As Integer?, marcaId As Integer, categoriaId As Integer, imagen As Image) As Boolean
     Function ActualizarProducto() As Integer
-    Function EliminarProducto() As Integer
+    Function EliminarProducto(idProducto As Integer) As Integer
 
     'Select - Insert - Update - Delete -> Marcas
     Function VerMarcas() As DataTable
@@ -19,6 +19,6 @@
     Function VerCategorias() As DataTable
     Function InsertaCategorias() As Integer
     Function ActualizarCategorias() As Integer
-    Function EliminarCategorias() As Integer
+    Function EliminarCategorias(idCategoria As Integer) As Integer
 
 End Interface

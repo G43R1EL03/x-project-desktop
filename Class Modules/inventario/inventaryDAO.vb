@@ -104,18 +104,18 @@ Public Class inventaryDAO
 
     'Delete -> Productos
 
-    Public Function EliminarProducto() As Integer Implements inventaryInterfaces.EliminarProducto
+    Public Function EliminarProducto(idProducto As Integer) As Integer Implements inventaryInterfaces.EliminarProducto
         Try
-            Using glCommand As New MySqlCommand("SP_EliminarProducto", myConnectionDB)
-                glCommand.CommandTimeout = 0
+            Using glCommand As New MySqlCommand("SP_EliminarProducto", myConecctionDB)
                 glCommand.CommandType = CommandType.StoredProcedure
-
-
+                glCommand.Parameters.AddWithValue("@id", idProducto)
+                Return glCommand.ExecuteNonQuery()
             End Using
         Catch ex As Exception
             Throw New Exception("Error al procesar la operacion:", ex)
         End Try
     End Function
+
 
     'Select -> Marcas
 
@@ -238,13 +238,12 @@ Public Class inventaryDAO
 
     'Delete -> Categorias
 
-    Public Function EliminarCategorias() As Integer Implements inventaryInterfaces.EliminarCategorias
+    Public Function EliminarCategorias(idCategoria As Integer) As Integer Implements inventaryInterfaces.EliminarCategorias
         Try
-            Using glCommand As New MySqlCommand("SP_EliminarCategorias", myConnectionDB)
-                glCommand.CommandTimeout = 0
+            Using glCommand As New MySqlCommand("SP_EliminarCategorias", myConecctionDB)
                 glCommand.CommandType = CommandType.StoredProcedure
-
-
+                glCommand.Parameters.AddWithValue("@id", idCategoria)
+                Return glCommand.ExecuteNonQuery()
             End Using
         Catch ex As Exception
             Throw New Exception("Error al procesar la operacion:", ex)
