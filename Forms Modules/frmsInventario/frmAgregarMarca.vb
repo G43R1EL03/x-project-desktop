@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports Mysqlx.XDevAPI.Common
 Public Class frmAgregarMarca
     Dim invenatyDao As New inventaryDAO(myConnectionDB)
     Public MouseDownPosition
@@ -29,14 +30,14 @@ Public Class frmAgregarMarca
         End If
     End Sub
 
-    Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles Me.MouseDown
+    Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
 
         ' Guarda la posición del mouse
         MouseDownPosition = e.Location
 
     End Sub
 
-    Private Sub Form1_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove
+    Private Sub Form1_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
 
         ' Si el datagridview está visible y el mouse no está sobre el botón y el
         ' mouse no está sobre la posición del click inicial, lo oculta
@@ -51,8 +52,26 @@ Public Class frmAgregarMarca
     Private Sub dgvVerMarcas_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVerMarcas.CellContentClick
         If dgvVerMarcas.Columns(e.ColumnIndex).Name = "editar" Then
             'aqui agregas lo el codigo para editar la marca
+            MsgBox("Edicicon de productos")
         Else
             'aquí agregas el codigo de eliminar marca
+            MsgBox("Elimina un producto")
         End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim result As Integer
+
+        Try
+            result = invenatyDao.InsertarMarca(txtNombre.Text, txtDescripcion.Text, "hola")
+
+            If result <> 0 Then
+                MsgBox("Error al insertar los datos")
+            Else
+                MsgBox("La marca ha sido insertada")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class
