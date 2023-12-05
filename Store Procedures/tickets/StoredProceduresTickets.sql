@@ -85,3 +85,24 @@ BEGIN
 END //
 
 DELIMITER ;
+
+-- Procedimiento almacenado para eliminar ticket
+delimiter $$
+CREATE PROCEDURE SP_EliminarTicket (
+        IN p_ticket_id INT,
+        OUT p_resultado INT
+)
+
+BEGIN
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION
+        BEGIN
+            ROLLBACK;
+            SET p_resultado = 0;
+        END;
+        START TRANSACTION;
+        Delete from tickets where id_tickets = p_ticket_id;
+        SELECT ROW_COUNT() INTO p_resultado;
+    	COMMIT;
+END $$
+ 
+DELIMITER ;
