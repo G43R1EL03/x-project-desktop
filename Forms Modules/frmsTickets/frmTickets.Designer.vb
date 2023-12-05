@@ -78,6 +78,7 @@ Partial Class frmTickets
         Me.Prioridad.DataPropertyName = "prioridad"
         Me.Prioridad.HeaderText = "Prioridad"
         Me.Prioridad.Name = "Prioridad"
+        Me.Prioridad.ReadOnly = True
         '
         'Estado
         '
@@ -85,21 +86,24 @@ Partial Class frmTickets
         Me.Estado.DataPropertyName = "estado"
         Me.Estado.HeaderText = "Estado"
         Me.Estado.Name = "Estado"
+        Me.Estado.ReadOnly = True
         Me.Estado.Width = 65
         '
         'Fecha
         '
         Me.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.Fecha.DataPropertyName = "fecha"
-        Me.Fecha.HeaderText = "Fecha"
+        Me.Fecha.DataPropertyName = "fecha_cambio_estado"
+        Me.Fecha.HeaderText = "Ultima Modificación"
         Me.Fecha.Name = "Fecha"
-        Me.Fecha.Width = 62
+        Me.Fecha.ReadOnly = True
+        Me.Fecha.Width = 114
         '
         'Accion
         '
         Me.Accion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.Accion.HeaderText = "Detalles"
         Me.Accion.Name = "Accion"
+        Me.Accion.ReadOnly = True
         Me.Accion.Text = "----->"
         Me.Accion.UseColumnTextForButtonValue = True
         Me.Accion.Width = 51
@@ -109,6 +113,7 @@ Partial Class frmTickets
         Me.Eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.Eliminar.HeaderText = "Eliminar"
         Me.Eliminar.Name = "Eliminar"
+        Me.Eliminar.ReadOnly = True
         Me.Eliminar.Text = "Eliminar"
         Me.Eliminar.UseColumnTextForButtonValue = True
         Me.Eliminar.Width = 49

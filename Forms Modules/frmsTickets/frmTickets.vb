@@ -23,12 +23,13 @@ Public Class frmTickets
     End Sub
 
     Private Sub dgvTickets_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTickets.CellContentClick
+        Dim id As Integer
         If dgvTickets.Columns IsNot Nothing AndAlso e.RowIndex >= 0 AndAlso e.ColumnIndex = dgvTickets.Columns("Accion").Index Then
-            Dim id As Integer = CInt(dgvTickets.Rows(e.RowIndex).Cells("ID_ticket").Value)
+            id = CInt(dgvTickets.Rows(e.RowIndex).Cells("ID_ticket").Value)
             SetPanel(New frmDetalleTicket(New ticketsDAO(myConnectionDB), id), frmMenu.PanelContent)
         End If
         If dgvTickets.Columns IsNot Nothing AndAlso e.RowIndex >= 0 AndAlso e.ColumnIndex = dgvTickets.Columns("Eliminar").Index Then
-            Dim id As Integer = CInt(dgvTickets.Rows(e.RowIndex).Cells("ID_ticket").Value)
+            id = CInt(dgvTickets.Rows(e.RowIndex).Cells("ID_ticket").Value)
             Dim confirmar As DialogResult = MessageBox.Show($"¿Estás seguro de que deseas eliminar el ticket #{id}?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If confirmar = DialogResult.Yes Then
                 Try

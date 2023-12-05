@@ -22,16 +22,16 @@ Partial Class frmDetalleTicket
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDetalleTicket))
         Me.lblTicket = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblNumeroTicket = New System.Windows.Forms.Label()
-        Me.pnlDetalle = New System.Windows.Forms.Panel()
         Me.lblDetalle = New System.Windows.Forms.Label()
         Me.btnVolver = New FontAwesome.Sharp.IconButton()
         Me.pbEvidencia = New System.Windows.Forms.PictureBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.cboCambiarEstado = New System.Windows.Forms.ComboBox()
+        Me.btnCambiarEstado = New FontAwesome.Sharp.IconButton()
         CType(Me.pbEvidencia, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -39,7 +39,7 @@ Partial Class frmDetalleTicket
         '
         Me.lblTicket.AutoSize = True
         Me.lblTicket.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTicket.Location = New System.Drawing.Point(662, 21)
+        Me.lblTicket.Location = New System.Drawing.Point(649, 46)
         Me.lblTicket.Name = "lblTicket"
         Me.lblTicket.Size = New System.Drawing.Size(0, 20)
         Me.lblTicket.TabIndex = 0
@@ -48,7 +48,7 @@ Partial Class frmDetalleTicket
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(24, 59)
+        Me.Label1.Location = New System.Drawing.Point(24, 46)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(185, 20)
@@ -59,7 +59,7 @@ Partial Class frmDetalleTicket
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(562, 21)
+        Me.Label3.Location = New System.Drawing.Point(549, 46)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(72, 20)
@@ -70,20 +70,12 @@ Partial Class frmDetalleTicket
         '
         Me.lblNumeroTicket.AutoSize = True
         Me.lblNumeroTicket.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNumeroTicket.Location = New System.Drawing.Point(638, 21)
+        Me.lblNumeroTicket.Location = New System.Drawing.Point(625, 46)
         Me.lblNumeroTicket.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblNumeroTicket.Name = "lblNumeroTicket"
         Me.lblNumeroTicket.Size = New System.Drawing.Size(101, 20)
         Me.lblNumeroTicket.TabIndex = 4
         Me.lblNumeroTicket.Text = "# Num Ticket"
-        '
-        'pnlDetalle
-        '
-        Me.pnlDetalle.Location = New System.Drawing.Point(343, 11)
-        Me.pnlDetalle.Margin = New System.Windows.Forms.Padding(2)
-        Me.pnlDetalle.Name = "pnlDetalle"
-        Me.pnlDetalle.Size = New System.Drawing.Size(107, 56)
-        Me.pnlDetalle.TabIndex = 5
         '
         'lblDetalle
         '
@@ -101,10 +93,10 @@ Partial Class frmDetalleTicket
         Me.btnVolver.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft
         Me.btnVolver.IconColor = System.Drawing.Color.Black
         Me.btnVolver.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnVolver.IconSize = 20
+        Me.btnVolver.IconSize = 22
         Me.btnVolver.Location = New System.Drawing.Point(19, 12)
         Me.btnVolver.Name = "btnVolver"
-        Me.btnVolver.Size = New System.Drawing.Size(83, 22)
+        Me.btnVolver.Size = New System.Drawing.Size(83, 31)
         Me.btnVolver.TabIndex = 7
         Me.btnVolver.Text = "Volver"
         Me.btnVolver.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -113,43 +105,45 @@ Partial Class frmDetalleTicket
         '
         'pbEvidencia
         '
+        Me.pbEvidencia.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.pbEvidencia.Image = CType(resources.GetObject("pbEvidencia.Image"), System.Drawing.Image)
         Me.pbEvidencia.Location = New System.Drawing.Point(416, 88)
         Me.pbEvidencia.Name = "pbEvidencia"
         Me.pbEvidencia.Size = New System.Drawing.Size(310, 307)
         Me.pbEvidencia.TabIndex = 8
         Me.pbEvidencia.TabStop = False
         '
-        'ComboBox1
+        'cboCambiarEstado
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(103, 407)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(219, 21)
-        Me.ComboBox1.TabIndex = 9
+        Me.cboCambiarEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCambiarEstado.FormattingEnabled = True
+        Me.cboCambiarEstado.Location = New System.Drawing.Point(118, 405)
+        Me.cboCambiarEstado.Name = "cboCambiarEstado"
+        Me.cboCambiarEstado.Size = New System.Drawing.Size(264, 21)
+        Me.cboCambiarEstado.TabIndex = 9
         '
-        'IconButton1
+        'btnCambiarEstado
         '
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IconButton1.IconColor = System.Drawing.Color.Black
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(356, 407)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(94, 23)
-        Me.IconButton1.TabIndex = 10
-        Me.IconButton1.Text = "Cambiar Estado"
-        Me.IconButton1.UseVisualStyleBackColor = True
+        Me.btnCambiarEstado.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.btnCambiarEstado.IconColor = System.Drawing.Color.Black
+        Me.btnCambiarEstado.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnCambiarEstado.Location = New System.Drawing.Point(416, 405)
+        Me.btnCambiarEstado.Name = "btnCambiarEstado"
+        Me.btnCambiarEstado.Size = New System.Drawing.Size(94, 23)
+        Me.btnCambiarEstado.TabIndex = 10
+        Me.btnCambiarEstado.Text = "Cambiar Estado"
+        Me.btnCambiarEstado.UseVisualStyleBackColor = True
         '
         'frmDetalleTicket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.IconButton1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.btnCambiarEstado)
+        Me.Controls.Add(Me.cboCambiarEstado)
         Me.Controls.Add(Me.pbEvidencia)
         Me.Controls.Add(Me.lblDetalle)
         Me.Controls.Add(Me.btnVolver)
-        Me.Controls.Add(Me.pnlDetalle)
         Me.Controls.Add(Me.lblNumeroTicket)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
@@ -166,10 +160,9 @@ Partial Class frmDetalleTicket
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents lblNumeroTicket As Label
-    Friend WithEvents pnlDetalle As Panel
     Friend WithEvents lblDetalle As Label
     Friend WithEvents btnVolver As FontAwesome.Sharp.IconButton
     Friend WithEvents pbEvidencia As PictureBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents cboCambiarEstado As ComboBox
+    Friend WithEvents btnCambiarEstado As FontAwesome.Sharp.IconButton
 End Class

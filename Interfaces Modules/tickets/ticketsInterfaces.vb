@@ -9,4 +9,8 @@
 
     Function ObtenerEvidenciaPorId(ByVal idTicket As Integer) As String
     Function EliminarTicket(ByVal ticketID As Integer) As Integer
+
+    Function ObtenerEstado() As DataTable
+
+    Function ActualizarEstadoTicket(ByVal ticketId As Integer, ByVal estadoId As Integer) As Integer
 End Interface

@@ -135,4 +135,43 @@ Public Class ticketsDAO
         End Try
         Return resultado
     End Function
+
+    Public Function ObtenerEstado() As DataTable Implements ticketsInterfaces.ObtenerEstado
+        Try
+            Using glCommand As New MySqlCommand("SP_ObtenerEstadoTicket", myConecctionDB)
+                glCommand.CommandTimeout = 0
+                glCommand.CommandType = CommandType.StoredProcedure
+                Using adapter As New MySqlDataAdapter(glCommand)
+                    Dim dtEstado As New DataTable()
+                    adapter.Fill(dtEstado)
+                    Return dtEstado
+                End Using
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al procesar la operación", ex)
+        Finally
+            If myConecctionDB.State <> ConnectionState.Closed Then myConecctionDB.Close()
+        End Try
+    End Function
+
+    Public Function ActualizarEstadoTicket(ByVal ticketId As Integer, ByVal estadoId As Integer) As Integer Implements ticketsInterfaces.ActualizarEstadoTicket
+        Dim resultado As Integer = 0
+        Try
+            Using glCommand As New MySqlCommand("SP_ActualizarEstado", myConecctionDB)
+                glCommand.CommandTimeout = 0
+                glCommand.CommandType = CommandType.StoredProcedure
+                glCommand.Parameters.AddWithValue("@p_tickets_id", ticketId)
+                glCommand.Parameters.AddWithValue("@p_estado_id", estadoId)
+                glCommand.Parameters.AddWithValue("@p_resultado", MySqlDbType.Int32)
+                glCommand.Parameters("@p_resultado").Direction = ParameterDirection.Output
+                myConecctionDB.Open()
+                resultado = glCommand.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al procesar la operación", ex)
+        Finally
+            If myConecctionDB.State <> ConnectionState.Closed Then myConecctionDB.Close()
+        End Try
+        Return resultado
+    End Function
 End Class

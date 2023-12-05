@@ -34,8 +34,8 @@
         End Select
     End Function
 
-    Function DefinicionesEstado(ByVal prioridad As Integer) As String
-        Select Case prioridad
+    Function DefinicionesEstado(ByVal estado As Integer) As String
+        Select Case estado
             Case 1
                 DefinicionesEstado = "Espera"
             Case 2
