@@ -6,9 +6,9 @@ Public Class ticketsDAO
     Public Sub New(myConnection As MySqlConnection)
         Me.myConecctionDB = myConnection
     End Sub
-    Public Function ObtenerReclamos() As DataTable Implements ticketsInterfaces.ObtenerReclamos
+    Public Function ObtenerTickets() As DataTable Implements ticketsInterfaces.ObtenerTickets
         Try
-            Using glCommand As New MySqlCommand("SP_ObtenerReclamos", myConecctionDB)
+            Using glCommand As New MySqlCommand("SP_ObtenerTickets", myConecctionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
                 Using adapter As New MySqlDataAdapter(glCommand)
