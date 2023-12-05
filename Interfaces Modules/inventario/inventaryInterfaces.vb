@@ -1,6 +1,6 @@
 ﻿Public Interface inventaryInterfaces
 
-    'Select que despliega todos los productos del inventario
+    'Select que despliega todos los productos del inventario en el datagridview
     Function VerInventario() As DataTable
 
     'Select - Insert - Update - Delete -> Productos
