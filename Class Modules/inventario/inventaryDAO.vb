@@ -10,25 +10,6 @@ Public Class inventaryDAO
         Me.myConecctionDB = myConnection
     End Sub
 
-    'Select que despliega todos los productos del inventario
-
-    Public Function VerInventario() As DataTable Implements inventaryInterfaces.VerInventario
-        Try
-            Using glCommand As New MySqlCommand("SP_VerInventario", myConnectionDB)
-                glCommand.CommandTimeout = 0
-                glCommand.CommandType = CommandType.StoredProcedure
-
-                Using adapter As New MySqlDataAdapter(glCommand)
-                    Dim datatable As New DataTable()
-                    adapter.Fill(datatable)
-                    Return datatable
-                End Using
-            End Using
-        Catch ex As Exception
-            Throw New Exception("Error al procesar la operacion:", ex)
-        End Try
-    End Function
-
     'Select -> Productos
 
     Public Function VerProductos() As DataTable Implements inventaryInterfaces.VerProductos
@@ -37,6 +18,11 @@ Public Class inventaryDAO
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
 
+                Using adapter As New MySqlDataAdapter(glCommand)
+                    Dim datatable As New DataTable()
+                    adapter.Fill(datatable)
+                    Return datatable
+                End Using
 
             End Using
         Catch ex As Exception
