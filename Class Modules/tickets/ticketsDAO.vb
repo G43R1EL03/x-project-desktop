@@ -1,5 +1,4 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports Mysqlx.XDevAPI.Common
 Public Class ticketsDAO
     Implements ticketsInterfaces
     Private myConecctionDB As MySqlConnection
@@ -67,16 +66,38 @@ Public Class ticketsDAO
         End Try
     End Function
 
-
-    Public Function ObtenerTicketPorUsuario(ByVal idUsuario As Integer, ByVal idTicket As Integer) As String Implements ticketsInterfaces.ObtenerTicketPorUsuario
+    Public Function ObtenerTicketPorId(ByVal idTicket As Integer) As String Implements ticketsInterfaces.ObtenerTicketPorId
         Try
-            Using cmd As New MySqlCommand("SP_ObtenerDetalleTickets", myConecctionDB)
+            Using cmd As New MySqlCommand("SP_ObtenerDetalleTicket", myConecctionDB)
                 cmd.CommandType = CommandType.StoredProcedure
-                cmd.Parameters.AddWithValue("@p_usuario_id", idUsuario)
                 cmd.Parameters.AddWithValue("@p_ticket_id", idTicket)
 
                 myConecctionDB.Open()
 
+
+                Dim descripcion As Object = cmd.ExecuteScalar()
+
+
+                If descripcion IsNot Nothing AndAlso Not Convert.IsDBNull(descripcion) Then
+                    Return descripcion.ToString()
+                Else
+                    Return String.Empty
+                End If
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al procesar la operación", ex)
+        Finally
+            If myConecctionDB.State <> ConnectionState.Closed Then myConecctionDB.Close()
+        End Try
+    End Function
+
+    Public Function ObtenerEvidenciaPorId(ByVal idTicket As Integer) As String Implements ticketsInterfaces.ObtenerEvidenciaPorId
+        Try
+            Using cmd As New MySqlCommand("SP_ObtenerEvidenciaTicket", myConecctionDB)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("@p_ticket_id", idTicket)
+
+                myConecctionDB.Open()
 
                 Dim descripcion As Object = cmd.ExecuteScalar()
 

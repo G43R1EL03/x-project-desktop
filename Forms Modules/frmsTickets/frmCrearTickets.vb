@@ -47,7 +47,7 @@ Public Class frmCrearTickets
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim categoriaId As Integer = Convert.ToInt32(cboCategoria.SelectedValue)
         If txtDescripcion.Text.Trim() <> "" And Not IsNumeric(txtDescripcion.Text) Then
-            Dim imagenEnBase64 As String = If(VerificarImagen(pbPreview), CodificarImagen(pbPreview.Image), "")
+            Dim imagenEnBase64 As String = If(VerificarImagen(pbPreview), CodificarImagen(pbPreview.Image, pbPreview), "")
             Try
                 Dim result As Integer = ticketsDAO.InsertarTicket(categoriaId, txtDescripcion.Text, DefinicionesCategoriaPrioridad(categoriaId), imagenEnBase64)
                 If result <> 0 Then

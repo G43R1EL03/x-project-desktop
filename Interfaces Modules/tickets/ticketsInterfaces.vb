@@ -5,5 +5,7 @@
 
     Function ObtenerCategorias() As DataTable
 
-    Function ObtenerTicketPorUsuario(ByVal idUsuario As Integer, ByVal idTicket As Integer) As String
+    Function ObtenerTicketPorId(ByVal idTicket As Integer) As String
+
+    Function ObtenerEvidenciaPorId(ByVal idTicket As Integer) As String
 End Interface

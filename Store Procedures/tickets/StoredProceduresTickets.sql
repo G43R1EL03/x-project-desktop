@@ -6,8 +6,8 @@ CREATE PROCEDURE SP_InsertarTicket (
         IN p_categoria_id INT, 
         IN p_prioridad_id INT,
         IN p_estado_id INT,
-    	IN p_descripcion VARCHAR(255),
-        IN p_evidencia VARCHAR(255),
+    	IN p_descripcion LONGTEXT,
+        IN p_evidencia LONGTEXT,
         OUT p_resultado INT
 )
 
@@ -65,6 +65,22 @@ BEGIN
     
     SELECT descripcion
     FROM Tickets
+    WHERE id_tickets = p_ticket_id;
+END //
+
+DELIMITER ;
+
+
+-- Procedimiento almacenado para obtener la evidencia de un ticket
+DELIMITER //
+
+CREATE PROCEDURE SP_ObtenerEvidenciaTicket(
+    IN p_ticket_id INT
+)
+BEGIN
+    
+    SELECT evidencia
+    FROM tickets
     WHERE id_tickets = p_ticket_id;
 END //
 

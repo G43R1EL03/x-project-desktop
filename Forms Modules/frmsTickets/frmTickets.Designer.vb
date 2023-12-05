@@ -45,6 +45,7 @@ Partial Class frmTickets
         '
         'dgvTickets
         '
+        Me.dgvTickets.AllowUserToAddRows = False
         Me.dgvTickets.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.dgvTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTickets.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_ticket, Me.Asunto, Me.Prioridad, Me.Estado, Me.Fecha, Me.Accion})
