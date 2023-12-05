@@ -48,6 +48,7 @@ Partial Class frmInventario
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.panelFrmInventario = New System.Windows.Forms.Panel()
+        Me.Eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
         tsMarcaInv = New System.Windows.Forms.ToolStripMenuItem()
         tsAgregarInv = New System.Windows.Forms.ToolStripDropDownButton()
         Me.TabControl1.SuspendLayout()
@@ -98,7 +99,6 @@ Partial Class frmInventario
         tsAgregarInv.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal
         tsAgregarInv.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         tsAgregarInv.ToolTipText = "Agregar"
-        'AddHandler tsAgregarInv.Click, AddressOf Me.tsAgregarInv_Click
         '
         'tsProductoInv
         '
@@ -211,6 +211,7 @@ Partial Class frmInventario
         Me.dgvInv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvInv.ColumnHeadersHeight = 50
         Me.dgvInv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvInv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Eliminar})
         Me.dgvInv.EnableHeadersVisualStyles = False
         Me.dgvInv.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.dgvInv.Location = New System.Drawing.Point(20, 5)
@@ -390,6 +391,16 @@ Partial Class frmInventario
         Me.panelFrmInventario.Size = New System.Drawing.Size(984, 569)
         Me.panelFrmInventario.TabIndex = 4
         '
+        'Eliminar
+        '
+        Me.Eliminar.HeaderText = "Eliminar"
+        Me.Eliminar.Name = "Eliminar"
+        Me.Eliminar.ReadOnly = True
+        Me.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.Eliminar.ToolTipText = "Eliminar"
+        Me.Eliminar.Width = 89
+        '
         'frmInventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -451,4 +462,5 @@ Partial Class frmInventario
     Friend WithEvents tsCategoriaInv As ToolStripMenuItem
     Friend WithEvents tsRealizarCompraInv As ToolStripMenuItem
     Friend WithEvents btnBuscarInv As FontAwesome.Sharp.IconButton
+    Friend WithEvents Eliminar As DataGridViewButtonColumn
 End Class
