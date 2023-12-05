@@ -30,6 +30,7 @@ Partial Class frmTickets
         Me.Estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Accion = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
         CType(Me.dgvTickets, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -37,36 +38,40 @@ Partial Class frmTickets
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(21, 55)
+        Me.Label1.Location = New System.Drawing.Point(64, 58)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(186, 24)
+        Me.Label1.Size = New System.Drawing.Size(76, 24)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Tickets pendientes"
+        Me.Label1.Text = "Tickets"
         '
         'dgvTickets
         '
         Me.dgvTickets.AllowUserToAddRows = False
         Me.dgvTickets.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.dgvTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvTickets.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_ticket, Me.Asunto, Me.Prioridad, Me.Estado, Me.Fecha, Me.Accion})
-        Me.dgvTickets.Location = New System.Drawing.Point(25, 93)
+        Me.dgvTickets.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_ticket, Me.Asunto, Me.Prioridad, Me.Estado, Me.Fecha, Me.Accion, Me.Eliminar})
+        Me.dgvTickets.Location = New System.Drawing.Point(68, 102)
         Me.dgvTickets.Name = "dgvTickets"
-        Me.dgvTickets.Size = New System.Drawing.Size(816, 304)
+        Me.dgvTickets.Size = New System.Drawing.Size(692, 304)
         Me.dgvTickets.TabIndex = 1
         '
         'ID_ticket
         '
+        Me.ID_ticket.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.ID_ticket.DataPropertyName = "id_tickets"
         Me.ID_ticket.HeaderText = "ID"
         Me.ID_ticket.Name = "ID_ticket"
         Me.ID_ticket.ReadOnly = True
+        Me.ID_ticket.Width = 43
         '
         'Asunto
         '
+        Me.Asunto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.Asunto.DataPropertyName = "categoria"
         Me.Asunto.HeaderText = "Asunto"
         Me.Asunto.Name = "Asunto"
         Me.Asunto.ReadOnly = True
+        Me.Asunto.Width = 65
         '
         'Prioridad
         '
@@ -76,22 +81,37 @@ Partial Class frmTickets
         '
         'Estado
         '
+        Me.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.Estado.DataPropertyName = "estado"
         Me.Estado.HeaderText = "Estado"
         Me.Estado.Name = "Estado"
+        Me.Estado.Width = 65
         '
         'Fecha
         '
+        Me.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.Fecha.DataPropertyName = "fecha"
         Me.Fecha.HeaderText = "Fecha"
         Me.Fecha.Name = "Fecha"
+        Me.Fecha.Width = 62
         '
         'Accion
         '
-        Me.Accion.HeaderText = "Acción"
+        Me.Accion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Accion.HeaderText = "Detalles"
         Me.Accion.Name = "Accion"
         Me.Accion.Text = "----->"
         Me.Accion.UseColumnTextForButtonValue = True
+        Me.Accion.Width = 51
+        '
+        'Eliminar
+        '
+        Me.Eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Eliminar.HeaderText = "Eliminar"
+        Me.Eliminar.Name = "Eliminar"
+        Me.Eliminar.Text = "Eliminar"
+        Me.Eliminar.UseColumnTextForButtonValue = True
+        Me.Eliminar.Width = 49
         '
         'frmTickets
         '
@@ -116,4 +136,5 @@ Partial Class frmTickets
     Friend WithEvents Estado As DataGridViewTextBoxColumn
     Friend WithEvents Fecha As DataGridViewTextBoxColumn
     Friend WithEvents Accion As DataGridViewButtonColumn
+    Friend WithEvents Eliminar As DataGridViewButtonColumn
 End Class

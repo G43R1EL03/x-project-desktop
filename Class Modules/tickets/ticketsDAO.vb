@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class ticketsDAO
     Implements ticketsInterfaces
+
     Private myConecctionDB As MySqlConnection
     Public Sub New(myConnection As MySqlConnection)
         Me.myConecctionDB = myConnection
@@ -115,4 +116,23 @@ Public Class ticketsDAO
         End Try
     End Function
 
+    Public Function EliminarTicket(ticketID As Integer) As Integer Implements ticketsInterfaces.EliminarTicket
+        Dim resultado As Integer = 0
+        Try
+            Using glCommand As New MySqlCommand("SP_EliminarTicket", myConecctionDB)
+                glCommand.CommandTimeout = 0
+                glCommand.CommandType = CommandType.StoredProcedure
+                glCommand.Parameters.AddWithValue("@p_ticket_id", ticketID)
+                glCommand.Parameters.AddWithValue("@p_resultado", MySqlDbType.Int32)
+                glCommand.Parameters("@p_resultado").Direction = ParameterDirection.Output
+                myConecctionDB.Open()
+                resultado = glCommand.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al procesar la operación", ex)
+        Finally
+            If myConecctionDB.State <> ConnectionState.Closed Then myConecctionDB.Close()
+        End Try
+        Return resultado
+    End Function
 End Class
