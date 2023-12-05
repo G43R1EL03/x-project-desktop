@@ -165,8 +165,6 @@ Partial Class frmDetalleTicket
     Friend WithEvents pbEvidencia As PictureBox
     Friend WithEvents cboCambiarEstado As ComboBox
     Friend WithEvents btnCambiarEstado As FontAwesome.Sharp.IconButton
-<<<<<<< HEAD
+
 End Class
-=======
-End Class
->>>>>>> origin/marcos-candanedo
+
