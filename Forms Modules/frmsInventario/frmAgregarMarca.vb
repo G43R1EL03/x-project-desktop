@@ -1,5 +1,4 @@
-﻿Public Class frmAgregarMarca
-    Private Sub frmAgregarMarca_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+﻿
+Public Class frmAgregarMarca
 
-    End Sub
 End Class

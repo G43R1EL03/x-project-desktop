@@ -1,6 +1,6 @@
--- Creación del procedimiento para llenar el DataGridView de Inventario
+﻿-- Creación del procedimiento para llenar el DataGridView de Inventario
 DELIMITER $$
-CREATE PROCEDURE SP_LlenarDGVInventario()
+CREATE PROCEDURE SP_VerInventario()
 
 BEGIN
 

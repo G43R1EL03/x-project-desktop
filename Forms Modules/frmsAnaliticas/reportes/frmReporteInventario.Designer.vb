@@ -1,9 +1,11 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿Imports FontAwesome.Sharp
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmReporteInventario
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,110 +22,159 @@ Partial Class frmReporteInventario
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmReporteInventario))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cboxMarcas = New System.Windows.Forms.ComboBox()
+        Me.cboxCategorias = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnExportarExcel = New System.Windows.Forms.Button()
+        Me.dgvInventarioReporte = New System.Windows.Forms.DataGridView()
+        Me.AnaliticaReporteInventarioDAOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblCantCategorias = New System.Windows.Forms.Label()
+        Me.lblCantMarcas = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblCantProductos = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        CType(Me.dgvInventarioReporte, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AnaliticaReporteInventarioDAOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(13, 72)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(775, 366)
-        Me.DataGridView1.TabIndex = 0
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(75, 9)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 20)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Marca"
         '
-        'ComboBox1
+        'cboxMarcas
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(16, 32)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(185, 28)
-        Me.ComboBox1.TabIndex = 2
+        resources.ApplyResources(Me.cboxMarcas, "cboxMarcas")
+        Me.cboxMarcas.FormattingEnabled = True
+        Me.cboxMarcas.Name = "cboxMarcas"
         '
-        'ComboBox2
+        'cboxCategorias
         '
-        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(220, 32)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(185, 28)
-        Me.ComboBox2.TabIndex = 4
+        resources.ApplyResources(Me.cboxCategorias, "cboxCategorias")
+        Me.cboxCategorias.FormattingEnabled = True
+        Me.cboxCategorias.Name = "cboxCategorias"
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(267, 9)
+        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(78, 20)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Categoría"
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(426, 32)
+        resources.ApplyResources(Me.Button1, "Button1")
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(93, 27)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Actualizar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnExportarExcel
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(535, 31)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(157, 28)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Descargar Reporte"
-        Me.Button2.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.btnExportarExcel, "btnExportarExcel")
+        Me.btnExportarExcel.Name = "btnExportarExcel"
+        Me.btnExportarExcel.UseVisualStyleBackColor = True
+        '
+        'dgvInventarioReporte
+        '
+        Me.dgvInventarioReporte.AllowUserToAddRows = False
+        Me.dgvInventarioReporte.AllowUserToDeleteRows = False
+        Me.dgvInventarioReporte.AllowUserToResizeColumns = False
+        Me.dgvInventarioReporte.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvInventarioReporte.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvInventarioReporte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvInventarioReporte.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
+        Me.dgvInventarioReporte.BackgroundColor = System.Drawing.SystemColors.ButtonFace
+        Me.dgvInventarioReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        resources.ApplyResources(Me.dgvInventarioReporte, "dgvInventarioReporte")
+        Me.dgvInventarioReporte.Name = "dgvInventarioReporte"
+        Me.dgvInventarioReporte.ReadOnly = True
+        Me.dgvInventarioReporte.TabStop = False
+        '
+        'AnaliticaReporteInventarioDAOBindingSource
+        '
+        Me.AnaliticaReporteInventarioDAOBindingSource.DataSource = GetType(x_project_desktop.analiticaReporteInventarioDAO)
+        '
+        'Label8
+        '
+        resources.ApplyResources(Me.Label8, "Label8")
+        Me.Label8.Name = "Label8"
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.Name = "Label3"
+        '
+        'lblCantCategorias
+        '
+        resources.ApplyResources(Me.lblCantCategorias, "lblCantCategorias")
+        Me.lblCantCategorias.Name = "lblCantCategorias"
+        '
+        'lblCantMarcas
+        '
+        resources.ApplyResources(Me.lblCantMarcas, "lblCantMarcas")
+        Me.lblCantMarcas.Name = "lblCantMarcas"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.Name = "Label4"
+        '
+        'lblCantProductos
+        '
+        resources.ApplyResources(Me.lblCantProductos, "lblCantProductos")
+        Me.lblCantProductos.Name = "lblCantProductos"
+        '
+        'Label6
+        '
+        resources.ApplyResources(Me.Label6, "Label6")
+        Me.Label6.Name = "Label6"
         '
         'frmReporteInventario
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.btnExportarExcel)
+        Me.Controls.Add(Me.lblCantCategorias)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.lblCantMarcas)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.lblCantProductos)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.dgvInventarioReporte)
+        Me.Controls.Add(Me.cboxCategorias)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cboxMarcas)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmReporteInventario"
-        Me.Text = "frmReporteInventario"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvInventarioReporte, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AnaliticaReporteInventarioDAOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents cboxMarcas As ComboBox
+    Friend WithEvents cboxCategorias As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnExportarExcel As Button
+    Friend WithEvents AnaliticaReporteInventarioDAOBindingSource As BindingSource
+    Friend WithEvents dgvInventarioReporte As DataGridView
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents lblCantCategorias As Label
+    Friend WithEvents lblCantMarcas As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents lblCantProductos As Label
+    Friend WithEvents Label6 As Label
 End Class

@@ -126,3 +126,56 @@ INSERT INTO tickets_estado(estado) VALUES
 ('Revisado'),
 ('Resuelto');
 
+-- Inserts para la tabla `direccion`
+INSERT INTO direccion (provincia_id, codigo_postal, telefono, detalles) VALUES (1, '12345', '987-6543210', 'Detalles Dirección 1');
+INSERT INTO direccion (provincia_id, codigo_postal, telefono, detalles) VALUES (2, '54321', '123-4567890', 'Detalles Dirección 2');
+INSERT INTO direccion (provincia_id, codigo_postal, telefono, detalles) VALUES (3, '67890', '456-7890123', 'Detalles Dirección 3');
+
+-- Inserts para la tabla `empresa`
+INSERT INTO empresa (ruc,nombre,correo, razon_social, documento, foto, telefono, detalles) VALUES ('123456789', 'Empresa A', 'correo@empresaA.com', 'Razón Social A', '123ABC', 'foto_empresaA.jpg', '123-4567890', 'Detalles Empresa A');
+INSERT INTO empresa (ruc,nombre,correo, razon_social, documento, foto, telefono, detalles) VALUES ('987654321', 'Empresa B', 'correo@empresaB.com', 'Razón Social B', '456DEF', 'foto_empresaB.jpg', '987-6543210', 'Detalles Empresa B');
+INSERT INTO empresa (ruc,nombre,correo, razon_social, documento, foto, telefono, detalles) VALUES ('456789012', 'Empresa C', 'correo@empresaC.com', 'Razón Social C', '789GHI', 'foto_empresaC.jpg', '456-7890123', 'Detalles Empresa C');
+INSERT INTO empresa (ruc,nombre,correo, razon_social, documento, foto, telefono, detalles) VALUES 
+	('987654326', 'Empresa B', '987-654-321', 'Nombre Empresa B', 'empresaB@gmail.com', 'foto_empresaB.jpg', '333-4444', 'Detalles Empresa B'),
+	('555555555', 'Empresa C', '555-555-555', 'Nombre Empresa C', 'empresaC@gmail.com', 'foto_empresaC.jpg', '666-7777', 'Detalles Empresa C'),
+	('222222222', 'Empresa D', '222-222-222', 'Nombre Empresa D', 'empresaD@gmail.com', 'foto_empresaD.jpg', '999-0000', 'Detalles Empresa D'),
+	('333333333', 'Empresa E', '333-333-333', 'Nombre Empresa E', 'empresaE@gmail.com', 'foto_empresaE.jpg', '111-2222', 'Detalles Empresa E'),
+	('444444444', 'Empresa F', '444-444-444', 'Nombre Empresa F', 'empresaF@gmail.com', 'foto_empresaF.jpg', '333-4444', 'Detalles Empresa F');
+
+-- Inserts para la tabla `empresa_direcciones`
+INSERT INTO `empresa_direcciones` VALUES (1, 1);
+INSERT INTO `empresa_direcciones` VALUES (2, 2);
+INSERT INTO `empresa_direcciones` VALUES (3, 3);
+INSERT INTO `empresa_direcciones` VALUES (6, 8), (7, 9), (8, 10), (9, 11), (10, 12);
+
+
+-- Inserts para la tabla `cliente`
+INSERT INTO cliente (nombre, apellido, cedula, empresa_id, genero, foto, telefono, detalles, tipo) VALUES ('Cliente A', 'Apellido A', '123456789', 1, 'Masculino', 'foto_clienteA.jpg', '123-4567890', 'Detalles Cliente A', 'minorista');
+INSERT INTO cliente (nombre, apellido, cedula, empresa_id, genero, foto, telefono, detalles, tipo) VALUES ('Cliente B', 'Apellido B', '987654321', 2, 'Femenino', 'foto_clienteB.jpg', '987-6543210', 'Detalles Cliente B', 'distribuidor');
+INSERT INTO cliente (nombre, apellido, cedula, empresa_id, genero, foto, telefono, detalles, tipo) VALUES ('Cliente C', 'Apellido C', '456789012', 3, 'Masculino', 'foto_clienteC.jpg', '456-7890123', 'Detalles Cliente C', 'minorista');
+INSERT INTO cliente (nombre, apellido, cedula, empresa_id, genero, foto, telefono, detalles, tipo) VALUES
+	('Maria', 'González', '0987654321', 2, 'Femenino', 'distribuidor', 'foto_maria.jpg', '222-3333', 'Detalles Maria'),
+	('Pedro', 'Rodríguez', '5678901234', 3, 'Masculino', 'minorista', 'foto_pedro.jpg', '777-8888', 'Detalles Pedro'),
+	('Laura', 'Martínez', '1357902468', 4, 'Femenino', 'minorista', 'foto_laura.jpg', '444-5555', 'Detalles Laura'),
+	('Carlos', 'López', '9876543210', 5, 'Masculino', 'distribuidor', 'foto_carlos.jpg', '111-2222', 'Detalles Carlos'),
+	('Ana', 'Gómez', '2468013579', 1, 'Femenino', 'minorista', 'foto_ana.jpg', '888-9999', 'Detalles Ana');
+
+-- Inserts para la tabla `cliente_direcciones`
+INSERT INTO `cliente_direcciones` VALUES (1, 1);
+INSERT INTO `cliente_direcciones` VALUES (2, 2);
+INSERT INTO `cliente_direcciones` VALUES (3, 3);
+INSERT INTO `cliente_direcciones` VALUES (4, 4), (5, 5), (6, 6), (7, 7);
+-- Inserts para la tabla `permisos`
+INSERT INTO `permisos` VALUES (1, 'Sí', 'Sí', 'Sí', 'Sí', 'Sí', 'Sí');
+INSERT INTO `permisos` VALUES (2, 'No', 'Sí', 'No', 'Sí', 'No', 'No');
+-- Inserts para la tabla `usuario`
+INSERT INTO usuario (cedula, nombre, apellido, correo, pass, rol, genero, foto, telefono, detalles) VALUES ('123456789', 'Usuario A', 'Apellido A', 'usuarioA@correo.com', 'contraseñaA', 'SAdmin', 'Masculino', 'foto_usuarioA.jpg', '987-6543210', 'Detalles Usuario A');
+INSERT INTO usuario (cedula, nombre, apellido, correo, pass, rol, genero, foto, telefono, detalles) VALUES ('987654321', 'Usuario B', 'Apellido B', 'usuarioB@correo.com', 'contraseñaB', 'Admin', 'Femenino', 'foto_usuarioB.jpg', '987-6543210', 'Detalles Usuario B');
+INSERT INTO usuario (cedula, nombre, apellido, correo, pass, rol, genero, foto, telefono, detalles) VALUES ('456789012', 'Usuario C', 'Apellido C', 'usuarioC@correo.com', 'contraseñaC', 'Colaborador', 'Masculino', 'foto_usuarioC.jpg', '456-7890123', 'Detalles Usuario C');
+-- Inserts para la tabla `admin`
+INSERT INTO `admin` VALUES (1, 1, 1);
+INSERT INTO `admin` VALUES (2, 2, 2);
+
+
+
+
