@@ -225,7 +225,7 @@ CREATE TABLE Tickets (
     estado_id INT,
     FOREIGN KEY (estado_id) REFERENCES Tickets_estado(id_tickets_estado),
     descripcion VARCHAR(255),
-    evidencia VARCHAR(255),
+    evidencia LONGTEXT,
     fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     fecha_cambio_estado TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

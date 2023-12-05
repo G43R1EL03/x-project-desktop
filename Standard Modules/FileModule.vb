@@ -1,23 +1,21 @@
 ﻿Imports System.Drawing.Imaging
 Imports System.IO
-Imports Google.Protobuf.WellKnownTypes
 
 Module FileModule
 
-    Function ManejoDeArchivos(ByVal imagePath As String) As String
-        Dim documentsFolder As String = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
-        Dim destinationFolder As String = Path.Combine(documentsFolder, "x-project-desktop", "Resources", "img")
-        If Not Directory.Exists(destinationFolder) Then
-            Directory.CreateDirectory(destinationFolder)
+    Sub DialogoArchivo(ByRef pbPreview As PictureBox)
+        Dim openFileDialog As New OpenFileDialog With {
+           .Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif;*.bmp",
+           .Title = "Seleccionar imagen"
+       }
+        If openFileDialog.ShowDialog() = DialogResult.OK Then
+            pbPreview.ImageLocation = openFileDialog.FileName
+            pbPreview.SizeMode = PictureBoxSizeMode.StretchImage
         End If
-        Dim destinationPath As String = Path.Combine(destinationFolder, Path.GetFileName(imagePath))
-        Try
-            File.Copy(imagePath, destinationPath, True)
-            MsgBox("Imagen almacenada en: " & destinationPath)
-        Catch ex As Exception
-            MsgBox("Error al guardar la imagen: " & ex.Message, MsgBoxStyle.Critical)
-        End Try
-        Return destinationPath
+    End Sub
+
+    Function VerificarImagen(ByRef pbPreview As PictureBox) As Boolean
+        Return If(pbPreview.Image Is Nothing, False, True)
     End Function
 
     Function CodificarImagen(ByVal image As Image) As String
@@ -25,7 +23,6 @@ Module FileModule
             image.Save(ms, ImageFormat.Jpeg)
             Dim imageBytes As Byte() = ms.ToArray()
             Dim base64String As String = Convert.ToBase64String(imageBytes)
-
             Return base64String
         End Using
     End Function
@@ -33,6 +30,6 @@ Module FileModule
 
     Function DecodificarImagen() As String
         DecodificarImagen = ""
-        'En confirmacion de si implementarlo o no, dado que genera muchos caracteres.
+        'Estamos para continuar este
     End Function
 End Module

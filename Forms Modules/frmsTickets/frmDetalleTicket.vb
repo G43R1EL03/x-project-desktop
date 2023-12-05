@@ -28,7 +28,7 @@ Public Class frmDetalleTicket
 
             Dim dao As New ticketsDAO(ObtenerConexion())
 
-            Dim detalle As String = dao.ObtenerTicketPorUsuario(_idUsuario, _idTicket)
+            Dim detalle As String = dao.ObtenerTicketPorUsuario(1, 1)
 
 
             lblDetalle.Text = detalle

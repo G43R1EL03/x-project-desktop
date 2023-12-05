@@ -54,3 +54,18 @@ Begin
 				 d.id_tickets_prioridad DESC;
 end $$
 delimiter ;
+
+-- Procedimiento almacenado para obtener los detalles de un ticket
+DELIMITER //
+
+CREATE PROCEDURE SP_ObtenerDetalleTicket(
+    IN p_ticket_id INT
+)
+BEGIN
+    
+    SELECT descripcion
+    FROM Tickets
+    WHERE id_tickets = p_ticket_id;
+END //
+
+DELIMITER ;
