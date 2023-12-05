@@ -317,7 +317,6 @@
     <Compile Include="Forms Modules\frmsInventario\frmInventario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interfaces Modules\analitica\analitycClienteInterfaces.vb" />
     <Compile Include="Interfaces Modules\analitica\analitycReporteInterfaces.vb" />
     <Compile Include="Interfaces Modules\tickets\ticketsInterfaces.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -468,11 +467,6 @@
     <Content Include="Store Procedures\tickets\StoredProceduresTickets.sql" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Store Procedures\ayuda\" />
-    <Folder Include="Store Procedures\clientes\" />
-    <Folder Include="Store Procedures\inventario\" />
-    <Folder Include="Store Procedures\ventas\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
