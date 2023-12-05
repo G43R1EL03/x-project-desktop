@@ -457,7 +457,7 @@ Partial Class frmInventario
         Me.ToolStrip1.Location = New System.Drawing.Point(137, 11)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.ToolStrip1.Size = New System.Drawing.Size(142, 33)
+        Me.ToolStrip1.Size = New System.Drawing.Size(111, 33)
         Me.ToolStrip1.Stretch = True
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
