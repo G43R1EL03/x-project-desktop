@@ -165,7 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class Modules\analitica\analiticaReporteInventarioDAO.vb" />
-    <Compile Include="Class Modules\clientes\ClientesModule.vb" />
+    <Compile Include="Class Modules\clientes\clientesDAO.vb" />
     <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
     <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.Designer.vb">
       <DependentUpon>frmDashboard.vb</DependentUpon>

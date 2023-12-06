@@ -2,9 +2,9 @@
 Imports System.Data
 Imports System.Windows.Documents
 
-Module ClientesModule
-
-    Public Function ObtenerUsuarios() As DataTable
+Public Class clientesDAO
+    Implements ClientesInterfaces
+    Public Function ObtenerUsuarios() As DataTable Implements ClientesInterfaces.ObtenerUsuarios
         Dim dtUsuarios As New DataTable()
 
         Try
@@ -30,7 +30,7 @@ Module ClientesModule
         Return dtUsuarios
     End Function
 
-    Public Function ObtenerEmpresas() As DataTable
+    Public Function ObtenerEmpresas() As DataTable Implements ClientesInterfaces.ObtenerEmpresas
         Dim dtEmpresas As New DataTable()
 
         Try
@@ -57,7 +57,7 @@ Module ClientesModule
     End Function
 
 
-    Public Function ObtenerClientes() As DataTable
+    Public Function ObtenerClientes() As DataTable Implements ClientesInterfaces.ObtenerClientes
         Dim dtClientes As New DataTable()
 
         Try
@@ -84,7 +84,7 @@ Module ClientesModule
     End Function
 
 
-    Public Sub EliminarUsuarioPorCedula(cedula As String)
+    Public Sub EliminarUsuarioPorCedula(cedula As String) Implements ClientesInterfaces.EliminarUsuarioPorCedula
         Try
             ' Abre la conexión a la base de datos
             DB_Conecction.conexionDB()
@@ -106,7 +106,7 @@ Module ClientesModule
         End Try
     End Sub
 
-    Public Sub EliminarEmpresaPorRUC(ruc As String)
+    Public Sub EliminarEmpresaPorRUC(ruc As String) Implements ClientesInterfaces.EliminarEmpresaPorRUC
         Try
             ' Abre la conexión a la base de datos
             DB_Conecction.conexionDB()
@@ -132,7 +132,7 @@ Module ClientesModule
         End Try
     End Sub
 
-    Public Sub EliminarClientePorCedula(cedula As String)
+    Public Sub EliminarClientePorCedula(cedula As String) Implements ClientesInterfaces.EliminarClientePorCedula
         Try
             ' Abre la conexión a la base de datos
             DB_Conecction.conexionDB()
@@ -158,7 +158,7 @@ Module ClientesModule
         End Try
     End Sub
 
-    Public Function ObtenerUsuarioPorCedula(cedula As String) As DataRow
+    Public Function ObtenerUsuarioPorCedula(cedula As String) As DataRow Implements ClientesInterfaces.ObtenerUsuarioPorCedula
         Dim dtUsuario As DataTable = ObtenerUsuarios()
         Dim filtro As String = $"Cedula = '{cedula}'"
         Dim resultados() As DataRow = dtUsuario.Select(filtro)
@@ -170,7 +170,7 @@ Module ClientesModule
         End If
     End Function
 
-    Public Sub ActualizarUsuario(cedula As String, nuevosDatos As Dictionary(Of String, Object))
+    Public Sub ActualizarUsuario(cedula As String, nuevosDatos As Dictionary(Of String, Object)) Implements ClientesInterfaces.ActualizarUsuario
         Try
             DB_Conecction.conexionDB()
             DB_Conecction.myConnectionDB.Open()
@@ -191,7 +191,7 @@ Module ClientesModule
         End Try
     End Sub
 
-    Public Function ObtenerEmpresaPorRUC(ruc As String) As DataRow
+    Public Function ObtenerEmpresaPorRUC(ruc As String) As DataRow Implements ClientesInterfaces.ObtenerEmpresaPorRUC
         Dim dtEmpresa As DataTable = ObtenerEmpresas()
         Dim filtro As String = $"RUC = '{ruc}'"
         Dim resultados() As DataRow = dtEmpresa.Select(filtro)
@@ -203,7 +203,7 @@ Module ClientesModule
         End If
     End Function
 
-    Public Sub ActualizarEmpresa(ruc As String, nuevosDatos As Dictionary(Of String, Object))
+    Public Sub ActualizarEmpresa(ruc As String, nuevosDatos As Dictionary(Of String, Object)) Implements ClientesInterfaces.ActualizarEmpresa
         Try
             DB_Conecction.conexionDB()
             DB_Conecction.myConnectionDB.Open()
@@ -224,7 +224,7 @@ Module ClientesModule
         End Try
     End Sub
 
-    Public Sub ActualizarCliente(cedula As String, nuevosDatos As Dictionary(Of String, Object))
+    Public Sub ActualizarCliente(cedula As String, nuevosDatos As Dictionary(Of String, Object)) Implements ClientesInterfaces.ActualizarCliente
         Try
             DB_Conecction.conexionDB()
             DB_Conecction.myConnectionDB.Open()
@@ -248,7 +248,7 @@ Module ClientesModule
 
 
 
-    Public Function ObtenerClientePorCedula(cedula As String) As DataRow
+    Public Function ObtenerClientePorCedula(cedula As String) As DataRow Implements ClientesInterfaces.ObtenerClientePorCedula
         Dim clienteData As New DataTable()
 
         Try
@@ -283,6 +283,5 @@ Module ClientesModule
         End Try
     End Function
 
-End Module
 
-
+End Class
