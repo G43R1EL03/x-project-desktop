@@ -31,7 +31,7 @@ Partial Class frmMenuReportes
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.Transparent
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InventarioGlobalToolStripMenuItem, Me.ReporteDeClientesToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
@@ -43,12 +43,14 @@ Partial Class frmMenuReportes
         '
         'InventarioGlobalToolStripMenuItem
         '
+        Me.InventarioGlobalToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(219, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.InventarioGlobalToolStripMenuItem.Name = "InventarioGlobalToolStripMenuItem"
         Me.InventarioGlobalToolStripMenuItem.Size = New System.Drawing.Size(101, 25)
         Me.InventarioGlobalToolStripMenuItem.Text = "Inventario"
         '
         'ReporteDeClientesToolStripMenuItem
         '
+        Me.ReporteDeClientesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(219, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.ReporteDeClientesToolStripMenuItem.Name = "ReporteDeClientesToolStripMenuItem"
         Me.ReporteDeClientesToolStripMenuItem.Size = New System.Drawing.Size(83, 25)
         Me.ReporteDeClientesToolStripMenuItem.Text = "Clientes"
