@@ -10,11 +10,10 @@ Public Class frmAyuda
         CustomButton(btnAyudaEntrega, IconChar.BoxOpen, "#0d1117", 35)
         CustomButton(btnAyudaUsuario, IconChar.UserAlt, "#0d1117", 35)
         CustomButton(btnAyudaPoliticas, IconChar.Passport, "#0d1117", 35)
-        CustomTextBox(txtPreguntas, "#fafafa", 20)
     End Sub
 
     Private Sub btnAyudaPedidos_Click(sender As Object, e As EventArgs) Handles btnAyudaPedidos.Click
-        SetPanel(New frmAyudaPedidos(), frmMenu.PanelContent)
+        SetPanel(New frmAyudaPedidos, frmMenu.PanelContent)
     End Sub
 
     Private Sub btnAyudaDevo_Click(sender As Object, e As EventArgs) Handles btnAyudaDevo.Click

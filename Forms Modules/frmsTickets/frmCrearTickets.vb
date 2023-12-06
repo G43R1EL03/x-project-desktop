@@ -51,7 +51,7 @@ Public Class frmCrearTickets
             Try
                 Dim result As Integer = ticketsDAO.InsertarTicket(categoriaId, txtDescripcion.Text, DefinicionesCategoriaPrioridad(categoriaId), imagenEnBase64)
                 If result <> 0 Then
-                    MsgBox("Ticket Registrado Exitosamente")
+                    MsgBox("TICKET CREADO EXITOSAMENTE")
                     txtDescripcion.Clear()
                     pbPreview.Image = Nothing
                 Else
