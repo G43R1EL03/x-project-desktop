@@ -165,11 +165,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class Modules\analitica\analiticaReporteInventarioDAO.vb" />
-    <Compile Include="Class Modules\clientes\Class3.vb" />
     <Compile Include="Class Modules\clientes\ClientesModule.vb" />
-    <Compile Include="Class Modules\inventario\Class4.vb" />
     <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
-    <Compile Include="Class Modules\ventas\Class6.vb" />
     <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.Designer.vb">
       <DependentUpon>frmDashboard.vb</DependentUpon>
     </Compile>
@@ -492,6 +489,10 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Class Modules\inventario\" />
+    <Folder Include="Class Modules\ventas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
