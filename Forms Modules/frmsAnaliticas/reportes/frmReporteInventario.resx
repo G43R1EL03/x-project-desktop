@@ -240,6 +240,9 @@
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="Button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
   <data name="Button1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
@@ -247,10 +250,10 @@
     <value>NoControl</value>
   </data>
   <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>436, 94</value>
+    <value>426, 93</value>
   </data>
   <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 27</value>
+    <value>143, 28</value>
   </data>
   <data name="Button1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -270,6 +273,9 @@
   <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="btnExportarExcel.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
   <data name="btnExportarExcel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
@@ -277,10 +283,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnExportarExcel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>575, 94</value>
+    <value>575, 93</value>
   </data>
   <data name="btnExportarExcel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 28</value>
+    <value>157, 29</value>
   </data>
   <data name="btnExportarExcel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -304,7 +310,7 @@
     <value>16, 140</value>
   </data>
   <data name="dgvInventarioReporte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1179, 499</value>
+    <value>1179, 513</value>
   </data>
   <data name="dgvInventarioReporte.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -321,9 +327,6 @@
   <data name="&gt;&gt;dgvInventarioReporte.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <metadata name="AnaliticaReporteInventarioDAOBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="Label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -552,6 +555,9 @@
   <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="AnaliticaReporteInventarioDAOBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -562,7 +568,10 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1209, 651</value>
+    <value>1209, 665</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>frmReporteInventario</value>

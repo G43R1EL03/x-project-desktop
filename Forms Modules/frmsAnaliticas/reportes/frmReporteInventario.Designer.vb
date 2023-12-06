@@ -26,7 +26,10 @@ Partial Class frmReporteInventario
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmReporteInventario))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboxMarcas = New System.Windows.Forms.ComboBox()
         Me.cboxCategorias = New System.Windows.Forms.ComboBox()
@@ -34,7 +37,6 @@ Partial Class frmReporteInventario
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnExportarExcel = New System.Windows.Forms.Button()
         Me.dgvInventarioReporte = New System.Windows.Forms.DataGridView()
-        Me.AnaliticaReporteInventarioDAOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblCantCategorias = New System.Windows.Forms.Label()
@@ -42,6 +44,7 @@ Partial Class frmReporteInventario
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblCantProductos = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.AnaliticaReporteInventarioDAOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.dgvInventarioReporte, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AnaliticaReporteInventarioDAOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -49,6 +52,7 @@ Partial Class frmReporteInventario
         'Label1
         '
         resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(232, Byte), Integer))
         Me.Label1.Name = "Label1"
         '
         'cboxMarcas
@@ -66,19 +70,24 @@ Partial Class frmReporteInventario
         'Label2
         '
         resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(232, Byte), Integer))
         Me.Label2.Name = "Label2"
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(231, Byte), Integer))
         resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.Button1.Name = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'btnExportarExcel
         '
+        Me.btnExportarExcel.BackColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(231, Byte), Integer))
         resources.ApplyResources(Me.btnExportarExcel, "btnExportarExcel")
+        Me.btnExportarExcel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.btnExportarExcel.Name = "btnExportarExcel"
-        Me.btnExportarExcel.UseVisualStyleBackColor = True
+        Me.btnExportarExcel.UseVisualStyleBackColor = False
         '
         'dgvInventarioReporte
         '
@@ -86,39 +95,69 @@ Partial Class frmReporteInventario
         Me.dgvInventarioReporte.AllowUserToDeleteRows = False
         Me.dgvInventarioReporte.AllowUserToResizeColumns = False
         Me.dgvInventarioReporte.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvInventarioReporte.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvInventarioReporte.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvInventarioReporte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvInventarioReporte.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
-        Me.dgvInventarioReporte.BackgroundColor = System.Drawing.SystemColors.ButtonFace
+        Me.dgvInventarioReporte.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(22, Byte), Integer))
+        Me.dgvInventarioReporte.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvInventarioReporte.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.dgvInventarioReporte.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(32, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(231, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvInventarioReporte.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvInventarioReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(22, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(231, Byte), Integer))
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvInventarioReporte.DefaultCellStyle = DataGridViewCellStyle7
+        Me.dgvInventarioReporte.EnableHeadersVisualStyles = False
         resources.ApplyResources(Me.dgvInventarioReporte, "dgvInventarioReporte")
         Me.dgvInventarioReporte.Name = "dgvInventarioReporte"
         Me.dgvInventarioReporte.ReadOnly = True
+        Me.dgvInventarioReporte.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvInventarioReporte.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        Me.dgvInventarioReporte.RowHeadersVisible = False
         Me.dgvInventarioReporte.TabStop = False
-        '
-        'AnaliticaReporteInventarioDAOBindingSource
-        '
-        Me.AnaliticaReporteInventarioDAOBindingSource.DataSource = GetType(x_project_desktop.analiticaReporteInventarioDAO)
         '
         'Label8
         '
         resources.ApplyResources(Me.Label8, "Label8")
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(232, Byte), Integer))
         Me.Label8.Name = "Label8"
         '
         'Label3
         '
         resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(232, Byte), Integer))
         Me.Label3.Name = "Label3"
         '
         'lblCantCategorias
         '
         resources.ApplyResources(Me.lblCantCategorias, "lblCantCategorias")
+        Me.lblCantCategorias.ForeColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(232, Byte), Integer))
         Me.lblCantCategorias.Name = "lblCantCategorias"
         '
         'lblCantMarcas
         '
         resources.ApplyResources(Me.lblCantMarcas, "lblCantMarcas")
+        Me.lblCantMarcas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(232, Byte), Integer))
         Me.lblCantMarcas.Name = "lblCantMarcas"
         '
         'Label4
@@ -129,17 +168,24 @@ Partial Class frmReporteInventario
         'lblCantProductos
         '
         resources.ApplyResources(Me.lblCantProductos, "lblCantProductos")
+        Me.lblCantProductos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(232, Byte), Integer))
         Me.lblCantProductos.Name = "lblCantProductos"
         '
         'Label6
         '
         resources.ApplyResources(Me.Label6, "Label6")
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(232, Byte), Integer))
         Me.Label6.Name = "Label6"
+        '
+        'AnaliticaReporteInventarioDAOBindingSource
+        '
+        Me.AnaliticaReporteInventarioDAOBindingSource.DataSource = GetType(x_project_desktop.analiticaReporteInventarioDAO)
         '
         'frmReporteInventario
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(22, Byte), Integer))
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnExportarExcel)
         Me.Controls.Add(Me.lblCantCategorias)
@@ -154,6 +200,7 @@ Partial Class frmReporteInventario
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cboxMarcas)
         Me.Controls.Add(Me.Label1)
+        Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Name = "frmReporteInventario"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvInventarioReporte, System.ComponentModel.ISupportInitialize).EndInit()

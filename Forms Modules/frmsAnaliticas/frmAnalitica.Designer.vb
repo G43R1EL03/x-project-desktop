@@ -39,6 +39,7 @@ Partial Class frmAnalitica
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesToolStripMenuItem1, Me.DashboardAnaliticasToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -49,6 +50,7 @@ Partial Class frmAnalitica
         'ReportesToolStripMenuItem1
         '
         Me.ReportesToolStripMenuItem1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ReportesToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(219, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.ReportesToolStripMenuItem1.Name = "ReportesToolStripMenuItem1"
         Me.ReportesToolStripMenuItem1.Size = New System.Drawing.Size(128, 36)
         Me.ReportesToolStripMenuItem1.Text = "Reportes"
@@ -56,6 +58,7 @@ Partial Class frmAnalitica
         'DashboardAnaliticasToolStripMenuItem
         '
         Me.DashboardAnaliticasToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DashboardAnaliticasToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(219, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.DashboardAnaliticasToolStripMenuItem.Name = "DashboardAnaliticasToolStripMenuItem"
         Me.DashboardAnaliticasToolStripMenuItem.Size = New System.Drawing.Size(268, 36)
         Me.DashboardAnaliticasToolStripMenuItem.Text = "Dashboard Analiticas"
