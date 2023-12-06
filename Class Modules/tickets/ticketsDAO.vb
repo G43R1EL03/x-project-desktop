@@ -1,13 +1,16 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class ticketsDAO
     Implements ticketsInterfaces
+
     Private myConecctionDB As MySqlConnection
     Public Sub New(myConnection As MySqlConnection)
         Me.myConecctionDB = myConnection
     End Sub
-    Public Function ObtenerTickets() As DataTable Implements ticketsInterfaces.ObtenerTickets
+    Public Function ObtenerTickets(ByVal estadoID As Integer) As DataTable Implements ticketsInterfaces.ObtenerTickets
         Try
+            Dim p_estado As Object = If(estadoID = 0, DBNull.Value, estadoID)
             Using glCommand As New MySqlCommand("SP_ObtenerTickets", myConecctionDB)
+                glCommand.Parameters.AddWithValue("@p_estado_id", p_estado)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
                 Using adapter As New MySqlDataAdapter(glCommand)
@@ -115,4 +118,62 @@ Public Class ticketsDAO
         End Try
     End Function
 
+    Public Function EliminarTicket(ticketID As Integer) As Integer Implements ticketsInterfaces.EliminarTicket
+        Dim resultado As Integer = 0
+        Try
+            Using glCommand As New MySqlCommand("SP_EliminarTicket", myConecctionDB)
+                glCommand.CommandTimeout = 0
+                glCommand.CommandType = CommandType.StoredProcedure
+                glCommand.Parameters.AddWithValue("@p_ticket_id", ticketID)
+                glCommand.Parameters.AddWithValue("@p_resultado", MySqlDbType.Int32)
+                glCommand.Parameters("@p_resultado").Direction = ParameterDirection.Output
+                myConecctionDB.Open()
+                resultado = glCommand.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al procesar la operación", ex)
+        Finally
+            If myConecctionDB.State <> ConnectionState.Closed Then myConecctionDB.Close()
+        End Try
+        Return resultado
+    End Function
+
+    Public Function ObtenerEstado() As DataTable Implements ticketsInterfaces.ObtenerEstado
+        Try
+            Using glCommand As New MySqlCommand("SP_ObtenerEstadoTicket", myConecctionDB)
+                glCommand.CommandTimeout = 0
+                glCommand.CommandType = CommandType.StoredProcedure
+                Using adapter As New MySqlDataAdapter(glCommand)
+                    Dim dtEstado As New DataTable()
+                    adapter.Fill(dtEstado)
+                    Return dtEstado
+                End Using
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al procesar la operación", ex)
+        Finally
+            If myConecctionDB.State <> ConnectionState.Closed Then myConecctionDB.Close()
+        End Try
+    End Function
+
+    Public Function ActualizarEstadoTicket(ByVal ticketId As Integer, ByVal estadoId As Integer) As Integer Implements ticketsInterfaces.ActualizarEstadoTicket
+        Dim resultado As Integer = 0
+        Try
+            Using glCommand As New MySqlCommand("SP_ActualizarEstado", myConecctionDB)
+                glCommand.CommandTimeout = 0
+                glCommand.CommandType = CommandType.StoredProcedure
+                glCommand.Parameters.AddWithValue("@p_tickets_id", ticketId)
+                glCommand.Parameters.AddWithValue("@p_estado_id", estadoId)
+                glCommand.Parameters.AddWithValue("@p_resultado", MySqlDbType.Int32)
+                glCommand.Parameters("@p_resultado").Direction = ParameterDirection.Output
+                myConecctionDB.Open()
+                resultado = glCommand.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al procesar la operación", ex)
+        Finally
+            If myConecctionDB.State <> ConnectionState.Closed Then myConecctionDB.Close()
+        End Try
+        Return resultado
+    End Function
 End Class

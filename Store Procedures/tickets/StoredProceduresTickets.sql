@@ -43,15 +43,17 @@ DELIMITER ;
 
 -- Procedimiento almacenado para obtener tickets
 Delimiter $$
-CREATE PROCEDURE `SP_ObtenerTickets`()
+CREATE PROCEDURE SP_ObtenerTickets(in p_estado_id int)
 Begin
-	SELECT a.id_tickets, b.categoria, d.prioridad, c.estado, a.fecha
+	SELECT a.id_tickets, b.categoria, d.prioridad, c.estado, a.fecha_cambio_estado
 		from tickets a
         inner join tickets_categoria b on a.categoria_id = b.id_tickets_categoria
         inner join tickets_estado c on a.estado_id = c.id_tickets_estado
         inner join tickets_prioridad d on a.prioridad_id = d.id_tickets_prioridad
+        where (p_estado_id IS NULL OR a.estado_id = p_estado_id)
         order by c.id_tickets_estado ASC,
 				 d.id_tickets_prioridad DESC;
+		
 end $$
 delimiter ;
 
@@ -84,4 +86,68 @@ BEGIN
     WHERE id_tickets = p_ticket_id;
 END //
 
+DELIMITER ;
+
+-- Procedimiento almacenado para eliminar ticket
+delimiter $$
+CREATE PROCEDURE SP_EliminarTicket (
+        IN p_ticket_id INT,
+        OUT p_resultado INT
+)
+
+BEGIN
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION
+        BEGIN
+            ROLLBACK;
+            SET p_resultado = 0;
+        END;
+        START TRANSACTION;
+        Delete from tickets where id_tickets = p_ticket_id;
+        SELECT ROW_COUNT() INTO p_resultado;
+    	COMMIT;
+END $$
+ 
+DELIMITER ;
+
+
+-- Procedimiento almacenado para obtener el estado de un ticket
+DELIMITER $$
+
+CREATE PROCEDURE SP_ObtenerEstadoTicket()
+READS SQL DATA
+BEGIN
+    SELECT id_tickets_estado, estado FROM tickets_estado;
+END $$
+
+DELIMITER ;
+
+
+
+-- Creación de Procedimiento Almacenado SP_ActualizarEstado
+DELIMITER $$
+
+CREATE PROCEDURE SP_ActualizarEstado (
+        IN p_tickets_id INT,
+        IN p_estado_id INT,
+        OUT p_resultado INT
+)
+
+BEGIN
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION
+        BEGIN
+            ROLLBACK;
+            SET p_resultado = 0;
+        END;
+
+        START TRANSACTION;
+        
+        UPDATE tickets 
+    	SET estado_id = p_estado_id,
+        fecha_cambio_estado = CURRENT_TIMESTAMP
+    	WHERE id_tickets = p_tickets_id;
+        
+        SELECT ROW_COUNT() INTO p_resultado;
+    	COMMIT;
+END $$
+ 
 DELIMITER ;

@@ -13,6 +13,7 @@
         Finally
             If myConnectionDB.State <> ConnectionState.Closed Then myConnectionDB.Close()
         End Try
+        SetPanel(New frmTickets(New ticketsDAO(myConnectionDB)), panelHomeTicket)
     End Sub
 
     Private Sub CrearTicketsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CrearTicketsToolStripMenuItem.Click

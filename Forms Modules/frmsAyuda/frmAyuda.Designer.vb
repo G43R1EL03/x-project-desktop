@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmAyuda
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,10 @@ Partial Class frmAyuda
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.gbAyuda = New System.Windows.Forms.GroupBox()
-        Me.txtPreguntas = New System.Windows.Forms.TextBox()
         Me.btnAyudaPoliticas = New FontAwesome.Sharp.IconButton()
         Me.btnAyudaUsuario = New FontAwesome.Sharp.IconButton()
         Me.btnAyudaPedidos = New FontAwesome.Sharp.IconButton()
@@ -38,7 +37,7 @@ Partial Class frmAyuda
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(42, 24)
+        Me.Label1.Location = New System.Drawing.Point(156, 53)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(229, 25)
         Me.Label1.TabIndex = 0
@@ -58,15 +57,6 @@ Partial Class frmAyuda
         Me.gbAyuda.Size = New System.Drawing.Size(746, 387)
         Me.gbAyuda.TabIndex = 5
         Me.gbAyuda.TabStop = False
-        '
-        'txtPreguntas
-        '
-        Me.txtPreguntas.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPreguntas.Location = New System.Drawing.Point(47, 61)
-        Me.txtPreguntas.Multiline = True
-        Me.txtPreguntas.Name = "txtPreguntas"
-        Me.txtPreguntas.Size = New System.Drawing.Size(417, 34)
-        Me.txtPreguntas.TabIndex = 6
         '
         'btnAyudaPoliticas
         '
@@ -164,7 +154,6 @@ Partial Class frmAyuda
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(207, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(794, 481)
-        Me.Controls.Add(Me.txtPreguntas)
         Me.Controls.Add(Me.gbAyuda)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmAyuda"
@@ -183,5 +172,4 @@ Partial Class frmAyuda
     Friend WithEvents gbAyuda As GroupBox
     Friend WithEvents btnAyudaPoliticas As FontAwesome.Sharp.IconButton
     Friend WithEvents btnAyudaUsuario As FontAwesome.Sharp.IconButton
-    Friend WithEvents txtPreguntas As TextBox
 End Class

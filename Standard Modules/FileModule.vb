@@ -46,4 +46,22 @@ Module FileModule
         Return encode
     End Function
 
+    Function ImagenPredeterminada()
+        Dim rutaImagenPorDefecto As String = "\x-project-desktop\Resources\sin_imagen.png"
+
+        ' Verificar si la ruta de la imagen por defecto existe
+        If IO.File.Exists(rutaImagenPorDefecto) Then
+            ' Crear una instancia de la clase Bitmap con la imagen por defecto
+            Dim imagenPorDefecto As New Bitmap(rutaImagenPorDefecto)
+
+            ' Asignar la imagen por defecto al PictureBox
+            ImagenPredeterminada = imagenPorDefecto
+        Else
+            ' Manejar el caso en que la imagen por defecto no existe
+            MessageBox.Show("La imagen por defecto no pudo ser cargada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ImagenPredeterminada = Nothing
+        End If
+
+    End Function
+
 End Module
