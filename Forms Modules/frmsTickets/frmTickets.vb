@@ -1,7 +1,9 @@
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports System.Windows.Interop
 
 Public Class frmTickets
     Private ticketsDAO As ticketsInterfaces
+    Dim id_estado As Integer
     Public Sub New(ticketsDAO As ticketsInterfaces)
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
@@ -10,12 +12,17 @@ Public Class frmTickets
         Me.ticketsDAO = ticketsDAO
     End Sub
     Private Sub frmTickets_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CargarTickets()
+        CargarTickets(id_estado)
+        cboFiltrarEstado.SelectedIndex = -1
     End Sub
 
-    Private Sub CargarTickets()
+    Private Sub CargarTickets(id_estado)
         Try
-            Dim dtReclamos As DataTable = ticketsDAO.ObtenerTickets()
+            EstadoCbo()
+            If cboFiltrarEstado.SelectedValue = Nothing Then
+                id_estado = 0
+            End If
+            Dim dtReclamos As DataTable = ticketsDAO.ObtenerTickets(id_estado)
             dgvTickets.DataSource = dtReclamos
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -39,7 +46,7 @@ Public Class frmTickets
                     Else
                         MsgBox("Error al eliminar su ticket")
                     End If
-                    CargarTickets()
+                    CargarTickets(id_estado)
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try
@@ -75,4 +82,23 @@ Public Class frmTickets
         End If
     End Sub
 
+    Private Sub EstadoCbo()
+        Dim dtEstado As DataTable = ticketsDAO.ObtenerEstado()
+        If dtEstado.Rows.Count <> 0 Then
+            With cboFiltrarEstado
+                .DataSource = dtEstado
+                .ValueMember = "id_tickets_estado"
+                .DisplayMember = "estado"
+            End With
+        End If
+    End Sub
+
+    Private Sub btnFiltrar_Click(sender As Object, e As EventArgs) Handles btnFiltrar.Click
+        CargarTickets(cboFiltrarEstado.SelectedValue)
+    End Sub
+
+    Private Sub btnLimpiarFiltro_Click(sender As Object, e As EventArgs) Handles btnLimpiarFiltro.Click
+        CargarTickets(0)
+        cboFiltrarEstado.SelectedIndex = -1
+    End Sub
 End Class

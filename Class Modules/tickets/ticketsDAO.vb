@@ -6,9 +6,11 @@ Public Class ticketsDAO
     Public Sub New(myConnection As MySqlConnection)
         Me.myConecctionDB = myConnection
     End Sub
-    Public Function ObtenerTickets() As DataTable Implements ticketsInterfaces.ObtenerTickets
+    Public Function ObtenerTickets(ByVal estadoID As Integer) As DataTable Implements ticketsInterfaces.ObtenerTickets
         Try
+            Dim p_estado As Object = If(estadoID = 0, DBNull.Value, estadoID)
             Using glCommand As New MySqlCommand("SP_ObtenerTickets", myConecctionDB)
+                glCommand.Parameters.AddWithValue("@p_estado_id", p_estado)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
                 Using adapter As New MySqlDataAdapter(glCommand)

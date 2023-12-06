@@ -31,6 +31,9 @@ Partial Class frmTickets
         Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Accion = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.cboFiltrarEstado = New System.Windows.Forms.ComboBox()
+        Me.btnFiltrar = New FontAwesome.Sharp.IconButton()
+        Me.btnLimpiarFiltro = New FontAwesome.Sharp.IconButton()
         CType(Me.dgvTickets, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -118,11 +121,45 @@ Partial Class frmTickets
         Me.Eliminar.UseColumnTextForButtonValue = True
         Me.Eliminar.Width = 49
         '
+        'cboFiltrarEstado
+        '
+        Me.cboFiltrarEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboFiltrarEstado.FormattingEnabled = True
+        Me.cboFiltrarEstado.Location = New System.Drawing.Point(480, 63)
+        Me.cboFiltrarEstado.Name = "cboFiltrarEstado"
+        Me.cboFiltrarEstado.Size = New System.Drawing.Size(121, 21)
+        Me.cboFiltrarEstado.TabIndex = 2
+        '
+        'btnFiltrar
+        '
+        Me.btnFiltrar.IconChar = FontAwesome.Sharp.IconChar.Filter
+        Me.btnFiltrar.IconColor = System.Drawing.Color.Black
+        Me.btnFiltrar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnFiltrar.Location = New System.Drawing.Point(624, 58)
+        Me.btnFiltrar.Name = "btnFiltrar"
+        Me.btnFiltrar.Size = New System.Drawing.Size(46, 31)
+        Me.btnFiltrar.TabIndex = 4
+        Me.btnFiltrar.UseVisualStyleBackColor = True
+        '
+        'btnLimpiarFiltro
+        '
+        Me.btnLimpiarFiltro.IconChar = FontAwesome.Sharp.IconChar.FilterCircleXmark
+        Me.btnLimpiarFiltro.IconColor = System.Drawing.Color.Black
+        Me.btnLimpiarFiltro.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnLimpiarFiltro.Location = New System.Drawing.Point(676, 58)
+        Me.btnLimpiarFiltro.Name = "btnLimpiarFiltro"
+        Me.btnLimpiarFiltro.Size = New System.Drawing.Size(49, 31)
+        Me.btnLimpiarFiltro.TabIndex = 5
+        Me.btnLimpiarFiltro.UseVisualStyleBackColor = True
+        '
         'frmTickets
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(879, 450)
+        Me.Controls.Add(Me.btnLimpiarFiltro)
+        Me.Controls.Add(Me.btnFiltrar)
+        Me.Controls.Add(Me.cboFiltrarEstado)
         Me.Controls.Add(Me.dgvTickets)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmTickets"
@@ -142,4 +179,7 @@ Partial Class frmTickets
     Friend WithEvents Fecha As DataGridViewTextBoxColumn
     Friend WithEvents Accion As DataGridViewButtonColumn
     Friend WithEvents Eliminar As DataGridViewButtonColumn
+    Friend WithEvents cboFiltrarEstado As ComboBox
+    Friend WithEvents btnFiltrar As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnLimpiarFiltro As FontAwesome.Sharp.IconButton
 End Class

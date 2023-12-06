@@ -1,5 +1,5 @@
 ﻿Public Interface ticketsInterfaces
-    Function ObtenerTickets() As DataTable
+    Function ObtenerTickets(ByVal estadoID As Integer) As DataTable
 
     Function InsertarTicket(ByVal categoriaId As Integer, ByVal descripcion As String, ByVal prioridadId As Integer, ByVal rutaImagen As String) As Integer
 
