@@ -14,7 +14,7 @@ Public Class frmAyuda
     End Sub
 
     Private Sub btnAyudaPedidos_Click(sender As Object, e As EventArgs) Handles btnAyudaPedidos.Click
-        SetPanel(New frmAyudaPedidos(), frmMenu.PanelContent)
+        SetPanel(New frmAyudaPedidos, frmMenu.PanelContent)
     End Sub
 
     Private Sub btnAyudaDevo_Click(sender As Object, e As EventArgs) Handles btnAyudaDevo.Click
